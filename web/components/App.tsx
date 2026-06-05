@@ -7,7 +7,9 @@ import type { Socio, SeridoVereador } from "../lib/data";
 import OverviewTab from "./tabs/OverviewTab";
 import MapTab from "./tabs/MapTab";
 import VereadoresTab from "./tabs/VereadoresTab";
+import MapaVotacaoTab from "./tabs/MapaVotacaoTab";
 import EvolucaoTab from "./tabs/EvolucaoTab";
+import ConsultasTab from "./tabs/ConsultasTab";
 import SobreTab from "./tabs/SobreTab";
 
 export type Bundle = {
@@ -19,15 +21,25 @@ export type Bundle = {
   nameByCode: Map<number, string>;
 };
 
-export type SectionId = "visao" | "mapa" | "vereadores" | "evolucao" | "sobre";
+export type SectionId = "visao" | "mapa" | "vereadores" | "mapavotacao" | "evolucao" | "consultas" | "sobre";
 
-const MENU: { id: SectionId; label: string; desc: string; icon: (a: boolean) => React.ReactNode }[] = [
-  { id: "visao", label: "Visão Geral", desc: "Panorama do estado", icon: (a) => <IGrid a={a} /> },
-  { id: "mapa", label: "Mapa do RN", desc: "167 municípios", icon: (a) => <IMap a={a} /> },
-  { id: "vereadores", label: "Vereadores", desc: "Currais Novos · Seridó", icon: (a) => <IUsers a={a} /> },
-  { id: "evolucao", label: "Evolução", desc: "Tendência 2012–2024", icon: (a) => <ITrend a={a} /> },
-  { id: "sobre", label: "Sobre", desc: "Metodologia e fontes", icon: (a) => <IInfo a={a} /> },
+type Item = { id: SectionId; label: string; desc: string; icon: (a: boolean) => React.ReactNode };
+const GROUPS: { grupo: string; itens: Item[] }[] = [
+  { grupo: "Estado", itens: [
+    { id: "visao", label: "Visão Geral", desc: "Panorama do RN", icon: (a) => <IGrid a={a} /> },
+    { id: "mapa", label: "Mapa do RN", desc: "167 municípios", icon: (a) => <IMap a={a} /> },
+  ]},
+  { grupo: "Currais Novos", itens: [
+    { id: "mapavotacao", label: "Mapa de Votação", desc: "Redutos por seção", icon: (a) => <IPin a={a} /> },
+    { id: "vereadores", label: "Vereadores", desc: "Filtros e exportação", icon: (a) => <IUsers a={a} /> },
+    { id: "evolucao", label: "Evolução", desc: "Tendência 2012–2024", icon: (a) => <ITrend a={a} /> },
+    { id: "consultas", label: "Consultas", desc: "Cruzar dados e insights", icon: (a) => <ISearch a={a} /> },
+  ]},
+  { grupo: "Info", itens: [
+    { id: "sobre", label: "Sobre", desc: "Metodologia e fontes", icon: (a) => <IInfo a={a} /> },
+  ]},
 ];
+const ALL_ITEMS = GROUPS.flatMap((g) => g.itens);
 
 export default function App() {
   const [bundle, setBundle] = useState<Bundle | null>(null);
@@ -53,12 +65,12 @@ export default function App() {
   }, []);
 
   const go = (id: SectionId) => { setSection(id); setMenuOpen(false); };
-  const current = MENU.find((m) => m.id === section)!;
+  const current = ALL_ITEMS.find((m) => m.id === section)!;
 
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[260px_1fr]">
       {/* Sidebar */}
-      <Sidebar menu={MENU} section={section} go={go} open={menuOpen} setOpen={setMenuOpen} />
+      <Sidebar section={section} go={go} open={menuOpen} setOpen={setMenuOpen} />
 
       {/* Conteúdo */}
       <div className="flex flex-col min-h-screen min-w-0">
@@ -72,8 +84,10 @@ export default function App() {
               <motion.div key={section} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.38, ease: [0.2, 0.7, 0.2, 1] }}>
                 {section === "visao" && <OverviewTab b={bundle} goTo={go} />}
                 {section === "mapa" && <MapTab b={bundle} />}
+                {section === "mapavotacao" && <MapaVotacaoTab b={bundle} />}
                 {section === "vereadores" && <VereadoresTab b={bundle} />}
                 {section === "evolucao" && <EvolucaoTab b={bundle} />}
+                {section === "consultas" && <ConsultasTab b={bundle} />}
                 {section === "sobre" && <SobreTab />}
               </motion.div>
             </AnimatePresence>
@@ -90,7 +104,7 @@ export default function App() {
   );
 }
 
-function Sidebar({ menu, section, go, open, setOpen }: { menu: typeof MENU; section: SectionId; go: (i: SectionId) => void; open: boolean; setOpen: (b: boolean) => void }) {
+function Sidebar({ section, go, open, setOpen }: { section: SectionId; go: (i: SectionId) => void; open: boolean; setOpen: (b: boolean) => void }) {
   return (
     <>
       {open && <div className="lg:hidden fixed inset-0 bg-black/30 z-40" onClick={() => setOpen(false)} />}
@@ -100,22 +114,28 @@ function Sidebar({ menu, section, go, open, setOpen }: { menu: typeof MENU; sect
           <div className="wordmark text-[19px] leading-none"><span style={{ color: "var(--navy)" }}>RN</span><span style={{ color: "var(--royal)" }}> Analytics</span></div>
         </button>
 
-        <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
-          <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--muted)] px-3 py-2">Painel</div>
-          {menu.map((m) => {
-            const active = section === m.id;
-            return (
-              <button key={m.id} onClick={() => go(m.id)} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition relative group"
-                style={{ background: active ? "rgba(12,82,154,0.08)" : "transparent" }}>
-                {active && <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full" style={{ background: "var(--royal)" }} />}
-                <span className="shrink-0">{m.icon(active)}</span>
-                <span className="text-left min-w-0">
-                  <span className="block text-sm font-semibold leading-tight" style={{ color: active ? "var(--royal)" : "var(--ink)" }}>{m.label}</span>
-                  <span className="block text-[11px] text-[color:var(--muted)] truncate">{m.desc}</span>
-                </span>
-              </button>
-            );
-          })}
+        <nav className="flex-1 p-3 overflow-y-auto">
+          {GROUPS.map((g) => (
+            <div key={g.grupo} className="mb-2">
+              <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--muted)] px-3 py-2">{g.grupo}</div>
+              <div className="space-y-1">
+                {g.itens.map((m) => {
+                  const active = section === m.id;
+                  return (
+                    <button key={m.id} onClick={() => go(m.id)} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition relative"
+                      style={{ background: active ? "rgba(12,82,154,0.08)" : "transparent" }}>
+                      {active && <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full" style={{ background: "var(--royal)" }} />}
+                      <span className="shrink-0">{m.icon(active)}</span>
+                      <span className="text-left min-w-0">
+                        <span className="block text-sm font-semibold leading-tight" style={{ color: active ? "var(--royal)" : "var(--ink)" }}>{m.label}</span>
+                        <span className="block text-[11px] text-[color:var(--muted)] truncate">{m.desc}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </nav>
 
         <div className="p-4 border-t border-[color:var(--line)]">
@@ -171,3 +191,5 @@ const IMap = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M9 4 3 6v14l6-
 const IUsers = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="9" cy="8" r="3" /><path d="M3 20c0-3 3-5 6-5s6 2 6 5" /><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2-1.5-3.5-3.5-4" /></svg>);
 const ITrend = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M3 17l6-6 4 4 7-7" /><path d="M14 7h6v6" /></svg>);
 const IInfo = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></svg>);
+const IPin = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>);
+const ISearch = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>);
