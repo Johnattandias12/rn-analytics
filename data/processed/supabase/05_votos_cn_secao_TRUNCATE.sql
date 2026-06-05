@@ -1,0 +1,1 @@
+truncate rn_analytics.votos_secao_cn_2024;
