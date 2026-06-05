@@ -1,22 +1,37 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import type { Bundle } from "../App";
 import { Card, Mini, SectionTitle } from "../ui";
-import { fmtInt, partidoLabel, type MunicipioVereador } from "../../lib/data";
+import { fmtInt, partidoLabel, type MunicipioVereador, type SeridoVereador } from "../../lib/data";
 import { exportCSV, exportXLSX, exportPDF } from "../../lib/export";
 
 type SortKey = "votos_desc" | "votos_asc" | "nome" | "numero";
+const ANOS = [2012, 2016, 2020, 2024];
 
 export default function VereadoresTab({ b }: { b: Bundle }) {
+  const [ano, setAno] = useState(2024);
+  const cache = useRef<Map<number, SeridoVereador>>(new Map([[2024, b.serido]]));
+  const [serido, setSerido] = useState<SeridoVereador>(b.serido);
+
+  useEffect(() => {
+    let alive = true;
+    if (cache.current.has(ano)) { setSerido(cache.current.get(ano)!); return; }
+    fetch(`/data/eleicao/serido-vereador-${ano}.json`).then((r) => r.json()).then((d: SeridoVereador) => {
+      cache.current.set(ano, d);
+      if (alive) setSerido(d);
+    });
+    return () => { alive = false; };
+  }, [ano, b.serido]);
+
   const seridoMuns = useMemo(
-    () => b.serido.municipios.slice().sort((a, z) => a.nome.localeCompare(z.nome, "pt-BR")),
-    [b.serido]
+    () => serido.municipios.slice().sort((a, z) => a.nome.localeCompare(z.nome, "pt-BR")),
+    [serido]
   );
   const [munCod, setMunCod] = useState<number>(2403103); // Currais Novos
   const mun: MunicipioVereador =
-    b.serido.municipios.find((m) => m.codigo_ibge === munCod) ?? b.serido.municipios[0];
+    serido.municipios.find((m) => m.codigo_ibge === munCod) ?? serido.municipios[0];
 
   const [busca, setBusca] = useState("");
   const [partidos, setPartidos] = useState<Set<string>>(new Set());
@@ -75,7 +90,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
     "Votos (legenda + nominais)": p.votos,
     "% do total": totalNominais ? ((p.votos / totalNominais) * 100).toFixed(2).replace(".", ",") + "%" : "—",
   }));
-  const baseName = `vereadores_${mun.nome.replace(/\s+/g, "_").toLowerCase()}_2024`;
+  const baseName = `vereadores_${mun.nome.replace(/\s+/g, "_").toLowerCase()}_${ano}`;
 
   const doCSV = () => exportCSV(`${baseName}.csv`, rowsExport);
   const doXLSX = () => exportXLSX(`${baseName}.xlsx`, [
@@ -85,7 +100,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
   const doPDF = () =>
     exportPDF({
       filename: `${baseName}.pdf`,
-      title: `Vereadores de ${mun.nome} — Eleição 2024`,
+      title: `Vereadores de ${mun.nome} — Eleição ${ano}`,
       subtitle: `${filtrados.length} de ${mun.candidatos.length} candidatos${partidos.size ? ` · partidos: ${[...partidos].map(partidoLabel).join(", ")}` : ""}${busca ? ` · busca: "${busca}"` : ""}`,
       kpis: [
         { label: "Candidatos", value: fmtInt(filtrados.length) },
@@ -103,14 +118,21 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
     <div>
       <div className="flex items-start justify-between gap-4 flex-wrap mb-5">
         <SectionTitle
-          kicker="Inteligência eleitoral · 2024"
+          kicker={`Inteligência eleitoral · ${ano}`}
           title={`Vereadores de ${mun.nome}`}
-          desc="Filtre por nome, partido e faixa de votos para encontrar padrões e redutos. Exporte o recorte em PDF ou planilha."
+          desc="Filtre por ano, nome, partido e faixa de votos para encontrar padrões e redutos. Exporte o recorte em PDF ou planilha."
         />
-        <div className="flex gap-2">
-          <button onClick={doPDF} className="btn btn-ghost text-sm"><IconPdf /> PDF</button>
-          <button onClick={doXLSX} className="btn btn-ghost text-sm"><IconSheet /> Planilha</button>
-          <button onClick={doCSV} className="btn btn-primary text-sm"><IconDown /> CSV</button>
+        <div className="flex flex-col items-end gap-2">
+          <div className="segment">
+            {ANOS.map((y) => (
+              <button key={y} data-active={ano === y} onClick={() => setAno(y)}>{y}</button>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <button onClick={doPDF} className="btn btn-ghost text-sm"><IconPdf /> PDF</button>
+            <button onClick={doXLSX} className="btn btn-ghost text-sm"><IconSheet /> Planilha</button>
+            <button onClick={doCSV} className="btn btn-primary text-sm"><IconDown /> CSV</button>
+          </div>
         </div>
       </div>
 

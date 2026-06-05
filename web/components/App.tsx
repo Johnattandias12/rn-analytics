@@ -7,6 +7,7 @@ import type { Socio, SeridoVereador } from "../lib/data";
 import OverviewTab from "./tabs/OverviewTab";
 import MapTab from "./tabs/MapTab";
 import VereadoresTab from "./tabs/VereadoresTab";
+import EvolucaoTab from "./tabs/EvolucaoTab";
 import SobreTab from "./tabs/SobreTab";
 
 export type Bundle = {
@@ -18,17 +19,20 @@ export type Bundle = {
   nameByCode: Map<number, string>;
 };
 
-const TABS = [
-  { id: "visao", label: "Visão Geral" },
-  { id: "mapa", label: "Mapa do RN" },
-  { id: "vereadores", label: "Vereadores · Currais Novos" },
-  { id: "sobre", label: "Sobre" },
-] as const;
-type TabId = (typeof TABS)[number]["id"];
+export type SectionId = "visao" | "mapa" | "vereadores" | "evolucao" | "sobre";
+
+const MENU: { id: SectionId; label: string; desc: string; icon: (a: boolean) => React.ReactNode }[] = [
+  { id: "visao", label: "Visão Geral", desc: "Panorama do estado", icon: (a) => <IGrid a={a} /> },
+  { id: "mapa", label: "Mapa do RN", desc: "167 municípios", icon: (a) => <IMap a={a} /> },
+  { id: "vereadores", label: "Vereadores", desc: "Currais Novos · Seridó", icon: (a) => <IUsers a={a} /> },
+  { id: "evolucao", label: "Evolução", desc: "Tendência 2012–2024", icon: (a) => <ITrend a={a} /> },
+  { id: "sobre", label: "Sobre", desc: "Metodologia e fontes", icon: (a) => <IInfo a={a} /> },
+];
 
 export default function App() {
   const [bundle, setBundle] = useState<Bundle | null>(null);
-  const [tab, setTab] = useState<TabId>("visao");
+  const [section, setSection] = useState<SectionId>("visao");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -39,70 +43,102 @@ export default function App() {
       ]);
       const socio: Socio[] = s.municipios;
       const serido: SeridoVereador = v;
-      const socioByCode = new Map(socio.map((m) => [m.codigo_ibge, m]));
-      const nameByCode = new Map(socio.map((m) => [m.codigo_ibge, m.nome]));
-      const seridoSet = new Set(serido.municipios.map((m) => m.codigo_ibge).filter(Boolean) as number[]);
-      setBundle({ geo, socio, serido, socioByCode, seridoSet, nameByCode });
+      setBundle({
+        geo, socio, serido,
+        socioByCode: new Map(socio.map((m) => [m.codigo_ibge, m])),
+        nameByCode: new Map(socio.map((m) => [m.codigo_ibge, m.nome])),
+        seridoSet: new Set(serido.municipios.map((m) => m.codigo_ibge).filter(Boolean) as number[]),
+      });
     })();
   }, []);
 
+  const go = (id: SectionId) => { setSection(id); setMenuOpen(false); };
+  const current = MENU.find((m) => m.id === section)!;
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <Nav tab={tab} setTab={setTab} />
+    <div className="min-h-screen lg:grid lg:grid-cols-[260px_1fr]">
+      {/* Sidebar */}
+      <Sidebar menu={MENU} section={section} go={go} open={menuOpen} setOpen={setMenuOpen} />
 
-      <main className="flex-1 w-full max-w-[1240px] mx-auto px-4 sm:px-6 pt-6 pb-24">
-        {!bundle ? (
-          <Loading />
-        ) : (
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={tab}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.4, ease: [0.2, 0.7, 0.2, 1] }}
-            >
-              {tab === "visao" && <OverviewTab b={bundle} goTo={setTab} />}
-              {tab === "mapa" && <MapTab b={bundle} />}
-              {tab === "vereadores" && <VereadoresTab b={bundle} />}
-              {tab === "sobre" && <SobreTab />}
-            </motion.div>
-          </AnimatePresence>
-        )}
-      </main>
+      {/* Conteúdo */}
+      <div className="flex flex-col min-h-screen min-w-0">
+        <Topbar title={current.label} desc={current.desc} onMenu={() => setMenuOpen(true)} />
 
-      <Footer />
+        <main className="flex-1 w-full max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          {!bundle ? (
+            <Loading />
+          ) : (
+            <AnimatePresence mode="wait">
+              <motion.div key={section} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.38, ease: [0.2, 0.7, 0.2, 1] }}>
+                {section === "visao" && <OverviewTab b={bundle} goTo={go} />}
+                {section === "mapa" && <MapTab b={bundle} />}
+                {section === "vereadores" && <VereadoresTab b={bundle} />}
+                {section === "evolucao" && <EvolucaoTab b={bundle} />}
+                {section === "sobre" && <SobreTab />}
+              </motion.div>
+            </AnimatePresence>
+          )}
+        </main>
+
+        <footer className="border-t border-[color:var(--line)] py-5 text-center">
+          <p className="text-xs text-[color:var(--muted)]">
+            Fontes: TSE (Dados Abertos) e IBGE · dados públicos agregados · nenhum dado individual de eleitor é utilizado.
+          </p>
+        </footer>
+      </div>
     </div>
   );
 }
 
-function Nav({ tab, setTab }: { tab: TabId; setTab: (t: TabId) => void }) {
+function Sidebar({ menu, section, go, open, setOpen }: { menu: typeof MENU; section: SectionId; go: (i: SectionId) => void; open: boolean; setOpen: (b: boolean) => void }) {
   return (
-    <header className="glass sticky top-0 z-40 border-b border-[color:var(--line)]">
-      <div className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-        <button onClick={() => setTab("visao")} className="flex items-center gap-2.5 shrink-0">
+    <>
+      {open && <div className="lg:hidden fixed inset-0 bg-black/30 z-40" onClick={() => setOpen(false)} />}
+      <aside className={`fixed lg:sticky top-0 z-50 lg:z-auto h-screen w-[260px] shrink-0 bg-white border-r border-[color:var(--line)] flex flex-col transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}>
+        <button onClick={() => go("visao")} className="flex items-center gap-2.5 px-5 h-16 border-b border-[color:var(--line)]">
           <Logo />
-          <div className="wordmark text-xl leading-none">
-            <span style={{ color: "var(--navy)" }}>RN</span>
-            <span style={{ color: "var(--royal)" }}> Analytics</span>
-          </div>
+          <div className="wordmark text-[19px] leading-none"><span style={{ color: "var(--navy)" }}>RN</span><span style={{ color: "var(--royal)" }}> Analytics</span></div>
         </button>
 
-        <nav className="hidden md:flex segment">
-          {TABS.map((t) => (
-            <button key={t.id} data-active={tab === t.id} onClick={() => setTab(t.id)}>
-              {t.label}
-            </button>
-          ))}
+        <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
+          <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--muted)] px-3 py-2">Painel</div>
+          {menu.map((m) => {
+            const active = section === m.id;
+            return (
+              <button key={m.id} onClick={() => go(m.id)} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition relative group"
+                style={{ background: active ? "rgba(12,82,154,0.08)" : "transparent" }}>
+                {active && <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full" style={{ background: "var(--royal)" }} />}
+                <span className="shrink-0">{m.icon(active)}</span>
+                <span className="text-left min-w-0">
+                  <span className="block text-sm font-semibold leading-tight" style={{ color: active ? "var(--royal)" : "var(--ink)" }}>{m.label}</span>
+                  <span className="block text-[11px] text-[color:var(--muted)] truncate">{m.desc}</span>
+                </span>
+              </button>
+            );
+          })}
         </nav>
 
-        <select
-          value={tab}
-          onChange={(e) => setTab(e.target.value as TabId)}
-          className="md:hidden border border-[color:var(--line)] rounded-xl px-3 py-2 text-sm font-semibold text-[color:var(--navy)] bg-white"
-        >
-          {TABS.map((t) => <option key={t.id} value={t.id}>{t.label}</option>)}
-        </select>
+        <div className="p-4 border-t border-[color:var(--line)]">
+          <div className="rounded-xl p-3 text-center text-white text-xs relative overflow-hidden" style={{ background: "linear-gradient(120deg, var(--navy), var(--royal))" }}>
+            <p className="opacity-80">Desenvolvido pela</p>
+            <p className="wordmark text-sm mt-0.5">Beyonder IA · 2026</p>
+            <p className="opacity-80 mt-0.5">Johnattan Dias</p>
+          </div>
+        </div>
+      </aside>
+    </>
+  );
+}
+
+function Topbar({ title, desc, onMenu }: { title: string; desc: string; onMenu: () => void }) {
+  return (
+    <header className="glass sticky top-0 z-30 border-b border-[color:var(--line)] h-16 flex items-center px-4 sm:px-6 lg:px-8">
+      <button onClick={onMenu} className="lg:hidden mr-3 p-2 -ml-2 rounded-lg hover:bg-black/5" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2.2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+      <div>
+        <h1 className="text-lg font-extrabold text-[color:var(--navy)] leading-tight" style={{ letterSpacing: "-0.02em" }}>{title}</h1>
+        <p className="text-xs text-[color:var(--muted)] -mt-0.5">{desc}</p>
       </div>
     </header>
   );
@@ -128,17 +164,10 @@ function Loading() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-[color:var(--line)] bg-white/60">
-      <div className="w-full max-w-[1240px] mx-auto px-6 py-8 text-center">
-        <p className="text-sm text-[color:var(--ink-2)] font-medium">
-          Desenvolvido pela <span className="font-bold text-[color:var(--navy)]">Beyonder IA</span> — 2026 · Johnattan Dias
-        </p>
-        <p className="text-xs text-[color:var(--muted)] mt-1.5 max-w-2xl mx-auto">
-          Fontes: TSE (Dados Abertos — votação por seção) e IBGE (Censo 2022, PIB Municípios, Malhas). Dados públicos agregados; nenhum dado individual de eleitor é utilizado.
-        </p>
-      </div>
-    </footer>
-  );
-}
+// ---- ícones do menu ----
+const ic = (a: boolean) => ({ stroke: a ? "var(--royal)" : "var(--muted)", width: 20, height: 20, fill: "none", strokeWidth: 2, viewBox: "0 0 24 24" } as const);
+const IGrid = ({ a }: { a: boolean }) => (<svg {...ic(a)}><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></svg>);
+const IMap = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" /><path d="M9 4v14M15 6v14" /></svg>);
+const IUsers = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="9" cy="8" r="3" /><path d="M3 20c0-3 3-5 6-5s6 2 6 5" /><path d="M16 6a3 3 0 0 1 0 6M21 20c0-2-1.5-3.5-3.5-4" /></svg>);
+const ITrend = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M3 17l6-6 4 4 7-7" /><path d="M14 7h6v6" /></svg>);
+const IInfo = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></svg>);

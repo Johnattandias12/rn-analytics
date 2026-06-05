@@ -1,10 +1,9 @@
 {
   "meta": {
-    "source": "TSE votacao_secao 2024 RN",
+    "source": "TSE votacao_secao",
     "ano": 2024,
     "cargo": "Vereador",
-    "accessedAt": "2026-06-05",
-    "nota": "Votos nominais por candidato. Branco/nulo não somados aqui."
+    "accessedAt": "2026-06-05"
   },
   "municipios": [
     {

@@ -1,0 +1,5187 @@
+{
+  "meta": {
+    "source": "TSE votacao_secao (consolidado)",
+    "cargo": "Vereador",
+    "anos": [
+      2012,
+      2016,
+      2020,
+      2024
+    ],
+    "accessedAt": "2026-06-05"
+  },
+  "municipios": {
+    "2400109": {
+      "codigo_ibge": 2400109,
+      "cd_tse": 16012,
+      "nome": "ACARI",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 7706,
+          "brancos": 97,
+          "nulos": 166,
+          "candidatos": 27,
+          "top": [
+            {
+              "nome": "ALBERVANIA SILVA DE MEDEIROS COSTA",
+              "numero": "22111",
+              "partido": "22",
+              "votos": 774
+            },
+            {
+              "nome": "STELLA BARBARA FERNANDES DE MACEDO",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 754
+            },
+            {
+              "nome": "MARINEIDE ALVES DANTAS DE MEDEIROS",
+              "numero": "15666",
+              "partido": "15",
+              "votos": 649
+            },
+            {
+              "nome": "LEONARDO FERREIRA DE AZEVEDO",
+              "numero": "22333",
+              "partido": "22",
+              "votos": 555
+            },
+            {
+              "nome": "JOSENALDO RODRIGUES GUIMARÃES FILHO",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 549
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 7559,
+          "brancos": 92,
+          "nulos": 197,
+          "candidatos": 27,
+          "top": [
+            {
+              "nome": "JOSE ARI BEZERRA DANTAS",
+              "numero": "15000",
+              "partido": "15",
+              "votos": 934
+            },
+            {
+              "nome": "GIRLENE EDSON DE OLIVEIRA AMARO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 627
+            },
+            {
+              "nome": "ALBERVANIA SILVA DE MEDEIROS COSTA",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 595
+            },
+            {
+              "nome": "ZUIL RIBEIRO DA SILVA",
+              "numero": "22444",
+              "partido": "22",
+              "votos": 589
+            },
+            {
+              "nome": "ARMANDO ETELVINO DE MEDEIROS",
+              "numero": "51111",
+              "partido": "51",
+              "votos": 577
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 6903,
+          "brancos": 91,
+          "nulos": 247,
+          "candidatos": 37,
+          "top": [
+            {
+              "nome": "RAFAEL BEZERRA DE BRITO ARAÚJO",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 607
+            },
+            {
+              "nome": "ZUIL RIBEIRO DA SILVA",
+              "numero": "40444",
+              "partido": "40",
+              "votos": 509
+            },
+            {
+              "nome": "MARINEIDE ALVES DANTAS",
+              "numero": "15666",
+              "partido": "15",
+              "votos": 479
+            },
+            {
+              "nome": "JOSE RIVALDO LIMA",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 454
+            },
+            {
+              "nome": "PALOMA VITÓRIA DA SILVA BARACHO",
+              "numero": "77123",
+              "partido": "77",
+              "votos": 434
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 7155,
+          "brancos": 106,
+          "nulos": 253,
+          "candidatos": 34,
+          "top": [
+            {
+              "nome": "RAFAEL BEZERRA DE BRITO ARAUJO",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 679
+            },
+            {
+              "nome": "NENILVAN RODRIGUES BEZERRA",
+              "numero": "40123",
+              "partido": "40",
+              "votos": 556
+            },
+            {
+              "nome": "IARA CABRAL DE MEDEIROS SILVA",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 518
+            },
+            {
+              "nome": "DIOGO BEZERRA DUARTE",
+              "numero": "20111",
+              "partido": "20",
+              "votos": 483
+            },
+            {
+              "nome": "ZUIL RIBEIRO DA SILVA",
+              "numero": "40444",
+              "partido": "40",
+              "votos": 452
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2016": 226
+        },
+        "11": {
+          "2012": 34
+        },
+        "13": {
+          "2012": 93,
+          "2016": 148,
+          "2020": 618
+        },
+        "14": {
+          "2012": 18
+        },
+        "15": {
+          "2012": 3920,
+          "2016": 3141,
+          "2020": 2032,
+          "2024": 1955
+        },
+        "20": {
+          "2024": 2453
+        },
+        "22": {
+          "2012": 2419,
+          "2016": 1461,
+          "2024": 955
+        },
+        "23": {
+          "2016": 5
+        },
+        "25": {
+          "2012": 69,
+          "2016": 425
+        },
+        "33": {
+          "2012": 7
+        },
+        "40": {
+          "2012": 1292,
+          "2016": 1,
+          "2020": 2354,
+          "2024": 1975
+        },
+        "45": {
+          "2016": 84
+        },
+        "51": {
+          "2016": 691
+        },
+        "55": {
+          "2012": 290,
+          "2016": 1067
+        },
+        "65": {
+          "2016": 19
+        },
+        "70": {
+          "2016": 3
+        },
+        "77": {
+          "2016": 111,
+          "2020": 2171
+        },
+        "90": {
+          "2016": 495
+        }
+      }
+    },
+    "2401651": {
+      "codigo_ibge": 2401651,
+      "cd_tse": 16101,
+      "nome": "BODÓ",
+      "microrregiao": "Serra de Santana",
+      "por_ano": {
+        "2012": {
+          "nominais": 2387,
+          "brancos": 31,
+          "nulos": 93,
+          "candidatos": 44,
+          "top": [
+            {
+              "nome": "JOSÉ FÉLIX NETO",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 140
+            },
+            {
+              "nome": "ANDRÉ LUIZ ALVES DOS SANTOS",
+              "numero": "25625",
+              "partido": "25",
+              "votos": 118
+            },
+            {
+              "nome": "ADRIANO PAZ PEREIRA",
+              "numero": "22000",
+              "partido": "22",
+              "votos": 107
+            },
+            {
+              "nome": "EVALDO BEZERRA DE ARAÚJO",
+              "numero": "25321",
+              "partido": "25",
+              "votos": 104
+            },
+            {
+              "nome": "IRACI DE LIMA JUVINO",
+              "numero": "25222",
+              "partido": "25",
+              "votos": 104
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 2618,
+          "brancos": 36,
+          "nulos": 65,
+          "candidatos": 39,
+          "top": [
+            {
+              "nome": "ÁLVARO ANDRIELLYS DE BRITO ALVES",
+              "numero": "25625",
+              "partido": "25",
+              "votos": 179
+            },
+            {
+              "nome": "CICERO ANTUNES DA SILVA",
+              "numero": "14444",
+              "partido": "14",
+              "votos": 164
+            },
+            {
+              "nome": "ADRIANO PAZ PEREIRA",
+              "numero": "22000",
+              "partido": "22",
+              "votos": 147
+            },
+            {
+              "nome": "CARLOS ANTONIO DA SILVA",
+              "numero": "25123",
+              "partido": "25",
+              "votos": 141
+            },
+            {
+              "nome": "LUIZ LUPERCIO DA SILVA JÚNIOR",
+              "numero": "19999",
+              "partido": "19",
+              "votos": 137
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 2744,
+          "brancos": 26,
+          "nulos": 92,
+          "candidatos": 46,
+          "top": [
+            {
+              "nome": "JOSÉ VILANIO ASSUNÇÃO DE MELO LULA",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 236
+            },
+            {
+              "nome": "ISMAEL CARLOS DE OLIVEIRA",
+              "numero": "55222",
+              "partido": "55",
+              "votos": 202
+            },
+            {
+              "nome": "CÍCERO ANTUNES DA SILVA",
+              "numero": "10444",
+              "partido": "10",
+              "votos": 190
+            },
+            {
+              "nome": "ÁLVARO ANDRIELLYS DE BRITO ALVES",
+              "numero": "10111",
+              "partido": "10",
+              "votos": 171
+            },
+            {
+              "nome": "LUIZ LUPÉRCIO DA SILVA JÚNIOR",
+              "numero": "10999",
+              "partido": "10",
+              "votos": 144
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 3118,
+          "brancos": 21,
+          "nulos": 80,
+          "candidatos": 34,
+          "top": [
+            {
+              "nome": "JOSÉ VILÂNIO ASSUNÇÃO DE MELO LULA",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 251
+            },
+            {
+              "nome": "JOÃO RANIERE GUIMARÃES SANTOS",
+              "numero": "20777",
+              "partido": "20",
+              "votos": 221
+            },
+            {
+              "nome": "LUIZ LUPERCIO DA SILVA JUNIOR",
+              "numero": "15999",
+              "partido": "15",
+              "votos": 211
+            },
+            {
+              "nome": "ISMAEL CARLOS DE OLIVEIRA",
+              "numero": "20222",
+              "partido": "20",
+              "votos": 205
+            },
+            {
+              "nome": "ALYSSON ANDRIELLYSON DE BRITO ALVES",
+              "numero": "44111",
+              "partido": "44",
+              "votos": 191
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2016": 119,
+          "2020": 992
+        },
+        "11": {
+          "2012": 111,
+          "2016": 260
+        },
+        "13": {
+          "2020": 102
+        },
+        "14": {
+          "2016": 168
+        },
+        "15": {
+          "2012": 673,
+          "2024": 650
+        },
+        "19": {
+          "2016": 147
+        },
+        "20": {
+          "2024": 1104
+        },
+        "22": {
+          "2012": 458,
+          "2016": 410,
+          "2020": 467,
+          "2024": 963
+        },
+        "25": {
+          "2012": 916,
+          "2016": 518
+        },
+        "36": {
+          "2016": 4
+        },
+        "40": {
+          "2012": 164,
+          "2016": 109
+        },
+        "43": {
+          "2012": 1,
+          "2016": 183
+        },
+        "44": {
+          "2012": 106,
+          "2024": 486
+        },
+        "45": {
+          "2012": 90
+        },
+        "55": {
+          "2012": 7,
+          "2016": 397,
+          "2020": 763
+        },
+        "65": {
+          "2016": 1
+        },
+        "77": {
+          "2016": 445,
+          "2020": 573
+        }
+      }
+    },
+    "2402006": {
+      "codigo_ibge": 2402006,
+      "cd_tse": 16390,
+      "nome": "CAICÓ",
+      "microrregiao": "Seridó Ocidental",
+      "por_ano": {
+        "2012": {
+          "nominais": 35319,
+          "brancos": 724,
+          "nulos": 689,
+          "candidatos": 131,
+          "top": [
+            {
+              "nome": "IVANILDO DOS SANTOS DA COSTA",
+              "numero": "25222",
+              "partido": "25",
+              "votos": 1931
+            },
+            {
+              "nome": "ROBSON DE ARAUJO",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 1326
+            },
+            {
+              "nome": "NILDSON MEDEIROS DANTAS",
+              "numero": "25555",
+              "partido": "25",
+              "votos": 1270
+            },
+            {
+              "nome": "RAIMUNDO INACIO FILHO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 1266
+            },
+            {
+              "nome": "JULIO GREGORIO DE AZEVEDO",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 1257
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 34000,
+          "brancos": 628,
+          "nulos": 1262,
+          "candidatos": 196,
+          "top": [
+            {
+              "nome": "IVANILDO DOS SANTOS DA COSTA",
+              "numero": "90222",
+              "partido": "90",
+              "votos": 1310
+            },
+            {
+              "nome": "ALISSON JACKSON DOS SANTOS",
+              "numero": "90999",
+              "partido": "90",
+              "votos": 1288
+            },
+            {
+              "nome": "ARTUR JOSUÉ DE ARAÚJO MAYNARD",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 1117
+            },
+            {
+              "nome": "ANDERSON CLAYTON DUARTE DE MEDEIROS",
+              "numero": "44111",
+              "partido": "44",
+              "votos": 1052
+            },
+            {
+              "nome": "RAIMUNDO INÁCIO FILHO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 1016
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 33029,
+          "brancos": 596,
+          "nulos": 1170,
+          "candidatos": 193,
+          "top": [
+            {
+              "nome": "IVANILDO DOS SANTOS DA COSTA",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 1410
+            },
+            {
+              "nome": "THALES RANGEL DA COSTA",
+              "numero": "12112",
+              "partido": "12",
+              "votos": 1070
+            },
+            {
+              "nome": "CÍCERO BEZERRA DE QUEIROZ",
+              "numero": "15015",
+              "partido": "15",
+              "votos": 1041
+            },
+            {
+              "nome": "FRANKSLÂNEO DIOGO DA SILVA",
+              "numero": "90000",
+              "partido": "90",
+              "votos": 1037
+            },
+            {
+              "nome": "JULIO CESAR FERNANDES DE AZEVEDO",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 1023
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 35989,
+          "brancos": 582,
+          "nulos": 1068,
+          "candidatos": 93,
+          "top": [
+            {
+              "nome": "IVANILDO DOS SANTOS DA COSTA",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 2098
+            },
+            {
+              "nome": "FRANCISCO FÁBIO DE ARAÚJO",
+              "numero": "45222",
+              "partido": "45",
+              "votos": 1874
+            },
+            {
+              "nome": "ARTUR JOSUÉ DE ARAÚJO MAYNARD",
+              "numero": "45444",
+              "partido": "45",
+              "votos": 1827
+            },
+            {
+              "nome": "ALISSON JACKSON DOS SANTOS",
+              "numero": "45999",
+              "partido": "45",
+              "votos": 1756
+            },
+            {
+              "nome": "THALES RANGEL DA COSTA",
+              "numero": "43123",
+              "partido": "43",
+              "votos": 1739
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2016": 738,
+          "2020": 307,
+          "2024": 4935
+        },
+        "11": {
+          "2012": 2100,
+          "2016": 4479,
+          "2020": 3894
+        },
+        "12": {
+          "2012": 949,
+          "2016": 1108,
+          "2020": 4498
+        },
+        "13": {
+          "2012": 960,
+          "2016": 578,
+          "2020": 930,
+          "2024": 2272
+        },
+        "14": {
+          "2012": 12,
+          "2020": 16
+        },
+        "15": {
+          "2012": 8182,
+          "2016": 4563,
+          "2020": 5659
+        },
+        "17": {
+          "2016": 285
+        },
+        "18": {
+          "2016": 82
+        },
+        "19": {
+          "2012": 214,
+          "2016": 378
+        },
+        "20": {
+          "2012": 97,
+          "2016": 123,
+          "2020": 2400,
+          "2024": 4280
+        },
+        "22": {
+          "2012": 3276,
+          "2016": 918,
+          "2020": 1834,
+          "2024": 2174
+        },
+        "23": {
+          "2012": 1675,
+          "2024": 1351
+        },
+        "25": {
+          "2012": 6031
+        },
+        "27": {
+          "2012": 3306,
+          "2016": 766
+        },
+        "31": {
+          "2012": 2013,
+          "2016": 3359
+        },
+        "33": {
+          "2012": 767,
+          "2016": 634
+        },
+        "36": {
+          "2012": 1,
+          "2016": 797
+        },
+        "40": {
+          "2012": 5316,
+          "2016": 2229,
+          "2020": 2809
+        },
+        "43": {
+          "2012": 922,
+          "2020": 170,
+          "2024": 4723
+        },
+        "44": {
+          "2012": 29,
+          "2016": 3621
+        },
+        "45": {
+          "2012": 21,
+          "2016": 376,
+          "2020": 6528,
+          "2024": 13163
+        },
+        "50": {
+          "2016": 179
+        },
+        "51": {
+          "2016": 874
+        },
+        "55": {
+          "2016": 643
+        },
+        "65": {
+          "2012": 517,
+          "2016": 946,
+          "2024": 962
+        },
+        "70": {
+          "2012": 642,
+          "2016": 797
+        },
+        "77": {
+          "2016": 1754,
+          "2020": 1808,
+          "2024": 2804
+        },
+        "90": {
+          "2016": 5274,
+          "2020": 3379
+        }
+      }
+    },
+    "2402402": {
+      "codigo_ibge": 2402402,
+      "cd_tse": 16470,
+      "nome": "CARNAÚBA DOS DANTAS",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 5107,
+          "brancos": 70,
+          "nulos": 84,
+          "candidatos": 26,
+          "top": [
+            {
+              "nome": "GILSON DANTAS DE OLIVEIRA",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 578
+            },
+            {
+              "nome": "MARFRAN DE MEDEIROS SANTOS",
+              "numero": "55888",
+              "partido": "55",
+              "votos": 526
+            },
+            {
+              "nome": "MARIA JOSIENE DE MACEDO DANTAS PEREIRA",
+              "numero": "55333",
+              "partido": "55",
+              "votos": 519
+            },
+            {
+              "nome": "JOSÉ DE AZEVEDO DANTAS",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 467
+            },
+            {
+              "nome": "MARLI DE MEDEIROS DANTAS",
+              "numero": "40444",
+              "partido": "40",
+              "votos": 421
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 5097,
+          "brancos": 59,
+          "nulos": 126,
+          "candidatos": 23,
+          "top": [
+            {
+              "nome": "FABIANO DE ARAÚJO MEDEIROS",
+              "numero": "13111",
+              "partido": "13",
+              "votos": 619
+            },
+            {
+              "nome": "MARIA JOSIENE DE MACEDO DANTAS PEREIRA",
+              "numero": "55333",
+              "partido": "55",
+              "votos": 428
+            },
+            {
+              "nome": "MARCELO DE MEDEIROS DANTAS",
+              "numero": "43333",
+              "partido": "43",
+              "votos": 415
+            },
+            {
+              "nome": "JOÃO MARIA LUCIANO",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 383
+            },
+            {
+              "nome": "JOSE DE AZEVEDO DANTAS",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 360
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 4763,
+          "brancos": 64,
+          "nulos": 188,
+          "candidatos": 35,
+          "top": [
+            {
+              "nome": "JOSE DE AZEVEDO DANTAS",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 509
+            },
+            {
+              "nome": "JOSE GILVAN DANTAS",
+              "numero": "90888",
+              "partido": "90",
+              "votos": 463
+            },
+            {
+              "nome": "MARCELO DE MEDEIROS DANTAS",
+              "numero": "90333",
+              "partido": "90",
+              "votos": 379
+            },
+            {
+              "nome": "MARLI DE MEDEIROS DANTAS",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 325
+            },
+            {
+              "nome": "CLESIO NELSON DANTAS",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 304
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 5353,
+          "brancos": 46,
+          "nulos": 134,
+          "candidatos": 34,
+          "top": [
+            {
+              "nome": "JARDEL DANTAS DA SILVA",
+              "numero": "10555",
+              "partido": "10",
+              "votos": 414
+            },
+            {
+              "nome": "MARIA DAS VITÓRIAS BEZERRA DANTAS",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 386
+            },
+            {
+              "nome": "JEMMIFRAN DA SILVA DANTAS",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 385
+            },
+            {
+              "nome": "LUCIANO FRANCIMARO DANTAS",
+              "numero": "10123",
+              "partido": "10",
+              "votos": 363
+            },
+            {
+              "nome": "MARFRAN DE MEDEIROS SANTOS",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 363
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2016": 1,
+          "2024": 1942
+        },
+        "11": {
+          "2012": 35
+        },
+        "12": {
+          "2016": 21
+        },
+        "13": {
+          "2012": 186,
+          "2016": 629,
+          "2020": 313,
+          "2024": 279
+        },
+        "14": {
+          "2012": 3,
+          "2016": 975
+        },
+        "15": {
+          "2012": 1665,
+          "2016": 1301,
+          "2020": 2492,
+          "2024": 2234
+        },
+        "20": {
+          "2020": 482
+        },
+        "22": {
+          "2012": 234,
+          "2016": 236
+        },
+        "25": {
+          "2012": 118
+        },
+        "33": {
+          "2012": 3
+        },
+        "40": {
+          "2012": 1084,
+          "2016": 133
+        },
+        "43": {
+          "2016": 420
+        },
+        "45": {
+          "2016": 339,
+          "2024": 1023
+        },
+        "55": {
+          "2012": 1950,
+          "2016": 911
+        },
+        "65": {
+          "2012": 18,
+          "2016": 11
+        },
+        "90": {
+          "2016": 284,
+          "2020": 1675
+        }
+      }
+    },
+    "2402709": {
+      "codigo_ibge": 2402709,
+      "cd_tse": 16535,
+      "nome": "CERRO CORÁ",
+      "microrregiao": "Serra de Santana",
+      "por_ano": {
+        "2012": {
+          "nominais": 6300,
+          "brancos": 113,
+          "nulos": 249,
+          "candidatos": 31,
+          "top": [
+            {
+              "nome": "MARIA DAS GRAÇAS DE MEDEIROS OLIVEIRA",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 506
+            },
+            {
+              "nome": "JOSÉ ERIVANALDO DE ALBUQUERQUE",
+              "numero": "14444",
+              "partido": "14",
+              "votos": 502
+            },
+            {
+              "nome": "VALDERI JOAQUIM BORGES",
+              "numero": "25123",
+              "partido": "25",
+              "votos": 499
+            },
+            {
+              "nome": "EVERALDO ARAUJO DE LIMA",
+              "numero": "25111",
+              "partido": "25",
+              "votos": 462
+            },
+            {
+              "nome": "MANOEL JOSÉ DE MARIA",
+              "numero": "15690",
+              "partido": "15",
+              "votos": 445
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 6497,
+          "brancos": 87,
+          "nulos": 188,
+          "candidatos": 29,
+          "top": [
+            {
+              "nome": "MACIEL DOS SANTOS FREIRE",
+              "numero": "14555",
+              "partido": "14",
+              "votos": 547
+            },
+            {
+              "nome": "JOSE ERIVANALDO DE ALBUQUERQUE",
+              "numero": "14444",
+              "partido": "14",
+              "votos": 537
+            },
+            {
+              "nome": "VALDERI JOAQUIM BORGES",
+              "numero": "25123",
+              "partido": "25",
+              "votos": 445
+            },
+            {
+              "nome": "FELIPE DA SILVA",
+              "numero": "25555",
+              "partido": "25",
+              "votos": 437
+            },
+            {
+              "nome": "RODOLFO GUEDES DOS SANTOS",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 391
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 6721,
+          "brancos": 90,
+          "nulos": 239,
+          "candidatos": 43,
+          "top": [
+            {
+              "nome": "ALVARO BRENO ARAUJO BEZERRA",
+              "numero": "55888",
+              "partido": "55",
+              "votos": 503
+            },
+            {
+              "nome": "VAGTON LUIZ SILVA DE FRANÇA",
+              "numero": "55444",
+              "partido": "55",
+              "votos": 482
+            },
+            {
+              "nome": "FRANCISCO DE ASSIS DOS SANTOS",
+              "numero": "55678",
+              "partido": "55",
+              "votos": 433
+            },
+            {
+              "nome": "RODOLFO GUEDES DOS SANTOS",
+              "numero": "10222",
+              "partido": "10",
+              "votos": 418
+            },
+            {
+              "nome": "JOÃO MARIA ALEXANDRE",
+              "numero": "11112",
+              "partido": "11",
+              "votos": 333
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 7655,
+          "brancos": 81,
+          "nulos": 309,
+          "candidatos": 36,
+          "top": [
+            {
+              "nome": "ALVARO BRENO ARAÚJO BEZERRA",
+              "numero": "22888",
+              "partido": "22",
+              "votos": 713
+            },
+            {
+              "nome": "VAGTON LUIZ SILVA DE FRANÇA",
+              "numero": "40444",
+              "partido": "40",
+              "votos": 674
+            },
+            {
+              "nome": "FELIPE DA SILVA",
+              "numero": "22555",
+              "partido": "22",
+              "votos": 632
+            },
+            {
+              "nome": "JOSE MARIA GOMES",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 565
+            },
+            {
+              "nome": "FRANCISCO DE ASSIS SILVA",
+              "numero": "44111",
+              "partido": "44",
+              "votos": 537
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2012": 2,
+          "2016": 272,
+          "2020": 1667
+        },
+        "11": {
+          "2012": 31,
+          "2016": 280,
+          "2020": 1349,
+          "2024": 1259
+        },
+        "12": {
+          "2016": 36
+        },
+        "13": {
+          "2012": 578,
+          "2016": 33
+        },
+        "14": {
+          "2012": 506,
+          "2016": 1106
+        },
+        "15": {
+          "2012": 1097,
+          "2016": 1193
+        },
+        "19": {
+          "2016": 80
+        },
+        "20": {
+          "2024": 408
+        },
+        "22": {
+          "2012": 454,
+          "2016": 25,
+          "2024": 1872
+        },
+        "23": {
+          "2012": 601,
+          "2016": 309
+        },
+        "25": {
+          "2012": 1615,
+          "2016": 1610
+        },
+        "31": {
+          "2012": 348
+        },
+        "40": {
+          "2012": 268,
+          "2016": 376,
+          "2024": 1804
+        },
+        "43": {
+          "2012": 356
+        },
+        "44": {
+          "2024": 2455
+        },
+        "45": {
+          "2012": 59,
+          "2016": 405,
+          "2020": 1216
+        },
+        "51": {
+          "2016": 242
+        },
+        "55": {
+          "2012": 845,
+          "2016": 556,
+          "2020": 2911
+        },
+        "65": {
+          "2016": 302
+        },
+        "77": {
+          "2016": 168
+        },
+        "90": {
+          "2016": 1
+        }
+      }
+    },
+    "2403004": {
+      "codigo_ibge": 2403004,
+      "cd_tse": 16594,
+      "nome": "CRUZETA",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 5918,
+          "brancos": 60,
+          "nulos": 132,
+          "candidatos": 24,
+          "top": [
+            {
+              "nome": "ELISMÁRIA CATARINA PINTO",
+              "numero": "15613",
+              "partido": "15",
+              "votos": 569
+            },
+            {
+              "nome": "GERALDO RAIMUNDO DA CRUZ",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 491
+            },
+            {
+              "nome": "ALDEILSA CARNEIRO DA SILVA",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 483
+            },
+            {
+              "nome": "ITAN LOBO DE MEDEIROS",
+              "numero": "40222",
+              "partido": "40",
+              "votos": 469
+            },
+            {
+              "nome": "MONICA MARIA DE MEDEIROS SILVA",
+              "numero": "40111",
+              "partido": "40",
+              "votos": 458
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 5845,
+          "brancos": 77,
+          "nulos": 100,
+          "candidatos": 22,
+          "top": [
+            {
+              "nome": "ARILUZIA SASNARA DE ARAUJO",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 833
+            },
+            {
+              "nome": "CYPRIANO PINHEIRO MEDEIROS DE ARAUJO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 576
+            },
+            {
+              "nome": "MARIA DE LOURDES DA SILVA",
+              "numero": "15620",
+              "partido": "15",
+              "votos": 569
+            },
+            {
+              "nome": "GABRIELA MICARLA  SILVA DE GOIS PEREIRA",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 527
+            },
+            {
+              "nome": "JOSÉ ETHEL STEPHAN USANDO SALES CANUTO DE MORAES",
+              "numero": "19999",
+              "partido": "19",
+              "votos": 522
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 5449,
+          "brancos": 68,
+          "nulos": 216,
+          "candidatos": 29,
+          "top": [
+            {
+              "nome": "CYPRIANO PINHEIRO MEDEIROS DE ARAÚJO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 499
+            },
+            {
+              "nome": "WALFREDO CESINO DE MEDEIROS",
+              "numero": "40333",
+              "partido": "40",
+              "votos": 465
+            },
+            {
+              "nome": "JOSÉ ETHEL STEPHAN USANDO SALES CANUTO DE MORAES",
+              "numero": "15999",
+              "partido": "15",
+              "votos": 460
+            },
+            {
+              "nome": "PATRÍCIO SINDERLEY ARAÚJO DE ASSIS",
+              "numero": "45678",
+              "partido": "45",
+              "votos": 428
+            },
+            {
+              "nome": "ARILÚZIA SASNARA DE ARAÚJO MEDEIROS",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 405
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 5672,
+          "brancos": 68,
+          "nulos": 202,
+          "candidatos": 16,
+          "top": [
+            {
+              "nome": "ARILUZIA SASNARA DE ARAÚJO MEDEIROS",
+              "numero": "15000",
+              "partido": "15",
+              "votos": 583
+            },
+            {
+              "nome": "ITAN LOBO DE MEDEIROS",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 579
+            },
+            {
+              "nome": "WALFREDO CESINO DE MEDEIROS",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 567
+            },
+            {
+              "nome": "CYPRIANO PINHEIRO MEDEIROS DE ARAÚJO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 559
+            },
+            {
+              "nome": "GABRIELLA LAISY SILVA DE ARAÚJO",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 524
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2012": 211,
+          "2016": 119
+        },
+        "12": {
+          "2016": 83
+        },
+        "13": {
+          "2012": 104,
+          "2016": 95
+        },
+        "14": {
+          "2012": 10
+        },
+        "15": {
+          "2012": 3105,
+          "2016": 2576,
+          "2020": 1549,
+          "2024": 4523
+        },
+        "19": {
+          "2016": 530
+        },
+        "22": {
+          "2012": 329,
+          "2016": 844
+        },
+        "23": {
+          "2024": 3
+        },
+        "25": {
+          "2012": 175,
+          "2016": 2
+        },
+        "40": {
+          "2012": 2242,
+          "2020": 1421
+        },
+        "43": {
+          "2016": 10
+        },
+        "45": {
+          "2016": 475,
+          "2020": 2650,
+          "2024": 1254
+        },
+        "55": {
+          "2016": 974
+        },
+        "77": {
+          "2016": 432
+        }
+      }
+    },
+    "2403103": {
+      "codigo_ibge": 2403103,
+      "cd_tse": 16616,
+      "nome": "CURRAIS NOVOS",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 23814,
+          "brancos": 826,
+          "nulos": 713,
+          "candidatos": 83,
+          "top": [
+            {
+              "nome": "EDUARDO BASTOS DE PONTES",
+              "numero": "22221",
+              "partido": "22",
+              "votos": 1515
+            },
+            {
+              "nome": "JOSEFA MARIA DA SILVA MOURA",
+              "numero": "23333",
+              "partido": "23",
+              "votos": 1443
+            },
+            {
+              "nome": "MARIA APARECIDA ALVES OTHON",
+              "numero": "14333",
+              "partido": "14",
+              "votos": 1334
+            },
+            {
+              "nome": "ODON OLIVEIRA DE SOUZA JÚNIOR",
+              "numero": "13222",
+              "partido": "13",
+              "votos": 1333
+            },
+            {
+              "nome": "GILCÉLIA MARIA DANTAS DE MEDEIROS",
+              "numero": "14555",
+              "partido": "14",
+              "votos": 1137
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 22087,
+          "brancos": 728,
+          "nulos": 1215,
+          "candidatos": 132,
+          "top": [
+            {
+              "nome": "EDMILSON FRANCISCO DE SOUZA",
+              "numero": "25222",
+              "partido": "25",
+              "votos": 914
+            },
+            {
+              "nome": "SEBASTIAO CABRAL DE LIMA",
+              "numero": "77800",
+              "partido": "77",
+              "votos": 828
+            },
+            {
+              "nome": "JOÃO JOSÉ DA SILVA NETO",
+              "numero": "55000",
+              "partido": "55",
+              "votos": 817
+            },
+            {
+              "nome": "FRANCISCO WILTON DA SILVA",
+              "numero": "45678",
+              "partido": "45",
+              "votos": 817
+            },
+            {
+              "nome": "ADAILSON PEREIRA DE ARAUJO",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 804
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 22127,
+          "brancos": 552,
+          "nulos": 1304,
+          "candidatos": 197,
+          "top": [
+            {
+              "nome": "EZEQUIEL PEREIRA DA SILVA NETO",
+              "numero": "11222",
+              "partido": "11",
+              "votos": 745
+            },
+            {
+              "nome": "SEBASTIÃO CABRAL DE LIMA",
+              "numero": "11800",
+              "partido": "11",
+              "votos": 736
+            },
+            {
+              "nome": "DANIEL BESERRA DO NASCIMENTO",
+              "numero": "40222",
+              "partido": "40",
+              "votos": 689
+            },
+            {
+              "nome": "EDMILSON FRANCISCO DE SOUSA",
+              "numero": "90222",
+              "partido": "90",
+              "votos": 652
+            },
+            {
+              "nome": "LEILZA PALMEIRA DE MEDEIROS",
+              "numero": "23123",
+              "partido": "23",
+              "votos": 575
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 24331,
+          "brancos": 530,
+          "nulos": 794,
+          "candidatos": 113,
+          "top": [
+            {
+              "nome": "EZEQUIEL PEREIRA DA SILVA NETO",
+              "numero": "11222",
+              "partido": "11",
+              "votos": 1071
+            },
+            {
+              "nome": "REGINALDO FRANCISCO",
+              "numero": "13555",
+              "partido": "13",
+              "votos": 994
+            },
+            {
+              "nome": "JOÃO GUSTAVO COELHO GOMES GUIMARÃES",
+              "numero": "65222",
+              "partido": "65",
+              "votos": 973
+            },
+            {
+              "nome": "SEBASTIÃO CABRAL DE LIMA",
+              "numero": "11800",
+              "partido": "11",
+              "votos": 908
+            },
+            {
+              "nome": "MATTSON RANIER GOMES DE ARAÚJO",
+              "numero": "13000",
+              "partido": "13",
+              "votos": 874
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2012": 194,
+          "2016": 1247,
+          "2020": 1379
+        },
+        "11": {
+          "2012": 658,
+          "2016": 879,
+          "2020": 2462,
+          "2024": 3987
+        },
+        "12": {
+          "2016": 940
+        },
+        "13": {
+          "2012": 1729,
+          "2016": 1487,
+          "2020": 3313,
+          "2024": 4760
+        },
+        "14": {
+          "2012": 2751
+        },
+        "15": {
+          "2012": 2451,
+          "2016": 778
+        },
+        "16": {
+          "2016": 74
+        },
+        "17": {
+          "2020": 959
+        },
+        "18": {
+          "2024": 2119
+        },
+        "20": {
+          "2012": 11,
+          "2020": 1147,
+          "2024": 2549
+        },
+        "22": {
+          "2012": 3562,
+          "2016": 1539,
+          "2024": 2224
+        },
+        "23": {
+          "2012": 3211,
+          "2020": 1462,
+          "2024": 710
+        },
+        "25": {
+          "2012": 4151,
+          "2016": 2377,
+          "2020": 1353
+        },
+        "27": {
+          "2012": 2805
+        },
+        "31": {
+          "2016": 1965
+        },
+        "33": {
+          "2016": 84
+        },
+        "40": {
+          "2012": 3416,
+          "2016": 753,
+          "2020": 1948
+        },
+        "43": {
+          "2020": 471,
+          "2024": 2
+        },
+        "44": {
+          "2012": 668,
+          "2016": 744,
+          "2024": 1227
+        },
+        "45": {
+          "2016": 2512,
+          "2020": 905,
+          "2024": 2194
+        },
+        "50": {
+          "2016": 2599,
+          "2020": 1260,
+          "2024": 595
+        },
+        "55": {
+          "2016": 2068,
+          "2020": 843,
+          "2024": 2872
+        },
+        "65": {
+          "2016": 228,
+          "2020": 951,
+          "2024": 1499
+        },
+        "70": {
+          "2020": 776
+        },
+        "77": {
+          "2016": 3107,
+          "2020": 1203,
+          "2024": 459
+        },
+        "90": {
+          "2016": 130,
+          "2020": 2539
+        }
+      }
+    },
+    "2403400": {
+      "codigo_ibge": 2403400,
+      "cd_tse": 16675,
+      "nome": "EQUADOR",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 3967,
+          "brancos": 58,
+          "nulos": 99,
+          "candidatos": 29,
+          "top": [
+            {
+              "nome": "JOSE DIRCEU DOS SANTOS",
+              "numero": "33333",
+              "partido": "33",
+              "votos": 319
+            },
+            {
+              "nome": "CLETSON RIVALDO DE OLIVEIRA",
+              "numero": "22333",
+              "partido": "22",
+              "votos": 306
+            },
+            {
+              "nome": "JOSE GERALDO DA SILVA JUNIOR",
+              "numero": "13000",
+              "partido": "13",
+              "votos": 297
+            },
+            {
+              "nome": "RAÚ GUEDES DE OLIVEIRA",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 290
+            },
+            {
+              "nome": "MARIANO NOBERTO DA SILVA",
+              "numero": "55888",
+              "partido": "55",
+              "votos": 289
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 3697,
+          "brancos": 52,
+          "nulos": 92,
+          "candidatos": 32,
+          "top": [
+            {
+              "nome": "JOSENILDO ALEXANDRINO DA NOBREGA",
+              "numero": "25000",
+              "partido": "25",
+              "votos": 308
+            },
+            {
+              "nome": "MARIANO NOBERTO DA SILVA",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 286
+            },
+            {
+              "nome": "JOSÉ GERALDO DA SILVA JÚNIOR",
+              "numero": "13000",
+              "partido": "13",
+              "votos": 283
+            },
+            {
+              "nome": "FABIO AURELIO BULCAO",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 279
+            },
+            {
+              "nome": "ANTONIO MARCOS DE ARAUJO",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 259
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 3610,
+          "brancos": 55,
+          "nulos": 193,
+          "candidatos": 31,
+          "top": [
+            {
+              "nome": "FÁBIO AURÉLIO BULCÃO",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 378
+            },
+            {
+              "nome": "LUTEMBERGUE GUEDES VANDERLEI",
+              "numero": "55111",
+              "partido": "55",
+              "votos": 353
+            },
+            {
+              "nome": "JOSE FRANKINEY DE SOUZA ANDRADE",
+              "numero": "55222",
+              "partido": "55",
+              "votos": 311
+            },
+            {
+              "nome": "JOSÉ GERALDO DA SILVA JÚNIOR",
+              "numero": "13000",
+              "partido": "13",
+              "votos": 291
+            },
+            {
+              "nome": "MARIANO NOBERTO DA SILVA",
+              "numero": "25555",
+              "partido": "25",
+              "votos": 227
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 4040,
+          "brancos": 32,
+          "nulos": 100,
+          "candidatos": 44,
+          "top": [
+            {
+              "nome": "PEDRO MIGUEL DE MEDEIROS NETO",
+              "numero": "20000",
+              "partido": "20",
+              "votos": 354
+            },
+            {
+              "nome": "LUIZ CARLOS PEREIRA DA SILVA",
+              "numero": "77444",
+              "partido": "77",
+              "votos": 325
+            },
+            {
+              "nome": "JOSE GERALDO DA SILVA JUNIOR",
+              "numero": "13000",
+              "partido": "13",
+              "votos": 288
+            },
+            {
+              "nome": "CRYSTIANO GOMES DE ANDRADE SANTOS",
+              "numero": "15666",
+              "partido": "15",
+              "votos": 286
+            },
+            {
+              "nome": "FÁBIO AURÉLIO BULCÃO",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 278
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2012": 340,
+          "2016": 256,
+          "2024": 490
+        },
+        "12": {
+          "2016": 77
+        },
+        "13": {
+          "2012": 402,
+          "2016": 290,
+          "2020": 455,
+          "2024": 472
+        },
+        "14": {
+          "2012": 194
+        },
+        "15": {
+          "2012": 1023,
+          "2016": 1002,
+          "2024": 1514
+        },
+        "19": {
+          "2016": 216
+        },
+        "20": {
+          "2024": 763
+        },
+        "22": {
+          "2012": 611,
+          "2016": 317,
+          "2020": 473
+        },
+        "25": {
+          "2012": 181,
+          "2016": 1120,
+          "2020": 743
+        },
+        "33": {
+          "2012": 321
+        },
+        "45": {
+          "2012": 256,
+          "2016": 330
+        },
+        "55": {
+          "2012": 826,
+          "2016": 306,
+          "2020": 2061
+        },
+        "77": {
+          "2024": 943
+        }
+      }
+    },
+    "2403806": {
+      "codigo_ibge": 2403806,
+      "cd_tse": 16756,
+      "nome": "FLORÂNIA",
+      "microrregiao": "Serra de Santana",
+      "por_ano": {
+        "2012": {
+          "nominais": 6513,
+          "brancos": 105,
+          "nulos": 131,
+          "candidatos": 42,
+          "top": [
+            {
+              "nome": "SAINT CLAY ALCANTARA SILVA DE MEDEIROS",
+              "numero": "55222",
+              "partido": "55",
+              "votos": 540
+            },
+            {
+              "nome": "PAULO DEHON NOBRE DE ARAÚJO",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 498
+            },
+            {
+              "nome": "GEOVANI PEREIRA CRUZ",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 466
+            },
+            {
+              "nome": "FRANCISCO TOSCANO DE MEDEIROS",
+              "numero": "25456",
+              "partido": "25",
+              "votos": 387
+            },
+            {
+              "nome": "JONAS MOREIRA DA SILVA",
+              "numero": "43143",
+              "partido": "43",
+              "votos": 368
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 6473,
+          "brancos": 71,
+          "nulos": 179,
+          "candidatos": 34,
+          "top": [
+            {
+              "nome": "MANOEL PINTO NETO",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 617
+            },
+            {
+              "nome": "SAINT CLAY ALCANTARA SILVA DE MEDEIROS",
+              "numero": "45222",
+              "partido": "45",
+              "votos": 599
+            },
+            {
+              "nome": "LUCAS HENRIQUE DA SILVA SANTOS",
+              "numero": "90777",
+              "partido": "90",
+              "votos": 432
+            },
+            {
+              "nome": "EDNILSON PINHEIRO BORGES",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 404
+            },
+            {
+              "nome": "JOELZIA TEIXEIRA DE MEDEIROS",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 374
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 6159,
+          "brancos": 49,
+          "nulos": 249,
+          "candidatos": 45,
+          "top": [
+            {
+              "nome": "MANOEL PINTO NETO",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 464
+            },
+            {
+              "nome": "FRANCISCO TOSCANO DE MEDEIROS",
+              "numero": "40444",
+              "partido": "40",
+              "votos": 437
+            },
+            {
+              "nome": "JEAN MARCEL AZEVEDO DE OLIVEIRA",
+              "numero": "45111",
+              "partido": "45",
+              "votos": 415
+            },
+            {
+              "nome": "JOSE ROSIVAN DE MEDEIROS",
+              "numero": "40222",
+              "partido": "40",
+              "votos": 400
+            },
+            {
+              "nome": "JOSÉ PATRICIO DE OLIVEIRA JUNIOR",
+              "numero": "45333",
+              "partido": "45",
+              "votos": 363
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 7070,
+          "brancos": 55,
+          "nulos": 151,
+          "candidatos": 56,
+          "top": [
+            {
+              "nome": "MANOEL PINTO NETO",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 670
+            },
+            {
+              "nome": "JEAN MARCEL AZEVEDO DE OLIVEIRA",
+              "numero": "45111",
+              "partido": "45",
+              "votos": 606
+            },
+            {
+              "nome": "JOSÉ PATRÍCIO DE OLIVEIRA JÚNIOR",
+              "numero": "45333",
+              "partido": "45",
+              "votos": 579
+            },
+            {
+              "nome": "JERLANY HOLANDA DA COSTA",
+              "numero": "44777",
+              "partido": "44",
+              "votos": 502
+            },
+            {
+              "nome": "GEOVANI PEREIRA CRUZ",
+              "numero": "44000",
+              "partido": "44",
+              "votos": 440
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2012": 629
+        },
+        "11": {
+          "2020": 986,
+          "2024": 694
+        },
+        "12": {
+          "2012": 324,
+          "2016": 797
+        },
+        "13": {
+          "2012": 126,
+          "2020": 149,
+          "2024": 730
+        },
+        "14": {
+          "2012": 342
+        },
+        "15": {
+          "2012": 353,
+          "2016": 1032
+        },
+        "22": {
+          "2012": 623,
+          "2016": 996,
+          "2024": 211
+        },
+        "23": {
+          "2024": 2
+        },
+        "25": {
+          "2012": 906,
+          "2016": 718
+        },
+        "27": {
+          "2012": 15
+        },
+        "31": {
+          "2012": 439
+        },
+        "33": {
+          "2012": 44
+        },
+        "40": {
+          "2012": 474,
+          "2016": 265,
+          "2020": 2555
+        },
+        "43": {
+          "2012": 1387,
+          "2016": 295,
+          "2024": 1
+        },
+        "44": {
+          "2016": 161,
+          "2024": 2305
+        },
+        "45": {
+          "2012": 77,
+          "2016": 1236,
+          "2020": 2645,
+          "2024": 2751
+        },
+        "51": {
+          "2016": 132
+        },
+        "55": {
+          "2012": 1139,
+          "2016": 521
+        },
+        "70": {
+          "2024": 583
+        },
+        "77": {
+          "2020": 161
+        },
+        "90": {
+          "2016": 658
+        }
+      }
+    },
+    "2404804": {
+      "codigo_ibge": 2404804,
+      "cd_tse": 16934,
+      "nome": "IPUEIRA",
+      "microrregiao": "Seridó Ocidental",
+      "por_ano": {
+        "2012": {
+          "nominais": 1639,
+          "brancos": 9,
+          "nulos": 29,
+          "candidatos": 17,
+          "top": [
+            {
+              "nome": "DIEGO ARAÚJO MACEDO",
+              "numero": "25444",
+              "partido": "25",
+              "votos": 306
+            },
+            {
+              "nome": "ADEMIR JOSÉ DE MEDEIROS",
+              "numero": "25222",
+              "partido": "25",
+              "votos": 219
+            },
+            {
+              "nome": "ELIAS MEDEIROS",
+              "numero": "25123",
+              "partido": "25",
+              "votos": 148
+            },
+            {
+              "nome": "MARIA DE FÁTIMA MEDEIROS",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 134
+            },
+            {
+              "nome": "VALDIMIR ARAUJO DE MEDEIROS",
+              "numero": "25333",
+              "partido": "25",
+              "votos": 117
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 1665,
+          "brancos": 8,
+          "nulos": 40,
+          "candidatos": 35,
+          "top": [
+            {
+              "nome": "ADEMIR JOSE DE MEDEIROS",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 153
+            },
+            {
+              "nome": "JOSÉ RIBAMAR LEITE NÓBREGA",
+              "numero": "15666",
+              "partido": "15",
+              "votos": 138
+            },
+            {
+              "nome": "VICTOR HUGO MEDEIROS PESSOA DO NASCIMENTO",
+              "numero": "25555",
+              "partido": "25",
+              "votos": 126
+            },
+            {
+              "nome": "NILMARA DE ASSIS LIMA",
+              "numero": "77888",
+              "partido": "77",
+              "votos": 123
+            },
+            {
+              "nome": "SANDRA MEDEIROS DA SILVA",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 120
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 1794,
+          "brancos": 4,
+          "nulos": 43,
+          "candidatos": 22,
+          "top": [
+            {
+              "nome": "ADEMIR JOSÉ DE MEDEIROS",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 205
+            },
+            {
+              "nome": "VICTOR HUGO MEDEIROS PESSOA DO NASCIMENTO",
+              "numero": "22555",
+              "partido": "22",
+              "votos": 186
+            },
+            {
+              "nome": "NILMARA DE ASSIS LIMA",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 163
+            },
+            {
+              "nome": "BRUNO LOPES DOS SANTOS FILHO",
+              "numero": "22333",
+              "partido": "22",
+              "votos": 154
+            },
+            {
+              "nome": "JOÃO ALBERTO DE MORAIS FILHO",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 136
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 2070,
+          "brancos": 7,
+          "nulos": 25,
+          "candidatos": 20,
+          "top": [
+            {
+              "nome": "NILMARA DE ASSIS LIMA",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 276
+            },
+            {
+              "nome": "BRUNO LOPES DOS SANTOS FILHO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 192
+            },
+            {
+              "nome": "JOSÉ RAFAEL LOPES DE MEDEIROS",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 170
+            },
+            {
+              "nome": "VICTOR HUGO RODRIGUES DE SOUZA ARAUJO",
+              "numero": "15000",
+              "partido": "15",
+              "votos": 168
+            },
+            {
+              "nome": "VICTOR HUGO MEDEIROS PESSOA DO NASCIMENTO",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 155
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "12": {
+          "2012": 10,
+          "2016": 187
+        },
+        "13": {
+          "2012": 45,
+          "2016": 71,
+          "2024": 783
+        },
+        "15": {
+          "2012": 519,
+          "2016": 538,
+          "2020": 1046,
+          "2024": 1311
+        },
+        "22": {
+          "2012": 9,
+          "2020": 790
+        },
+        "25": {
+          "2012": 1048,
+          "2016": 360
+        },
+        "31": {
+          "2016": 155
+        },
+        "33": {
+          "2012": 68
+        },
+        "40": {
+          "2016": 119
+        },
+        "55": {
+          "2016": 156
+        },
+        "77": {
+          "2016": 141
+        }
+      }
+    },
+    "2405603": {
+      "codigo_ibge": 2405603,
+      "cd_tse": 17094,
+      "nome": "JARDIM DE PIRANHAS",
+      "microrregiao": "Seridó Ocidental",
+      "por_ano": {
+        "2012": {
+          "nominais": 9476,
+          "brancos": 195,
+          "nulos": 162,
+          "candidatos": 30,
+          "top": [
+            {
+              "nome": "LUIS SOARES DE ARAÚJO",
+              "numero": "14789",
+              "partido": "14",
+              "votos": 1166
+            },
+            {
+              "nome": "JOSÉ SOARES BATISTA",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 864
+            },
+            {
+              "nome": "GUTEMBERG DANTAS DE QUEIRÓZ",
+              "numero": "55123",
+              "partido": "55",
+              "votos": 861
+            },
+            {
+              "nome": "JARLES ALEXANDRE DUTRA CAVALCANTI",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 798
+            },
+            {
+              "nome": "JOÃO DANTAS SARAIVA",
+              "numero": "14444",
+              "partido": "14",
+              "votos": 796
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 8487,
+          "brancos": 204,
+          "nulos": 259,
+          "candidatos": 30,
+          "top": [
+            {
+              "nome": "JOAO DANTAS SARAIVA",
+              "numero": "14444",
+              "partido": "14",
+              "votos": 903
+            },
+            {
+              "nome": "JOAO MARIA SOARES DE BRITO",
+              "numero": "14789",
+              "partido": "14",
+              "votos": 863
+            },
+            {
+              "nome": "GUTEMBERG DANTAS DE QUEIROZ",
+              "numero": "55123",
+              "partido": "55",
+              "votos": 858
+            },
+            {
+              "nome": "FRANCISCO JUNIOR ALVES",
+              "numero": "14333",
+              "partido": "14",
+              "votos": 780
+            },
+            {
+              "nome": "ROSIMIRA ARAUJO DOS SANTOS",
+              "numero": "14567",
+              "partido": "14",
+              "votos": 714
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 8212,
+          "brancos": 121,
+          "nulos": 242,
+          "candidatos": 46,
+          "top": [
+            {
+              "nome": "JOÃO MARIA DE OLIVEIRA GONÇALVES",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 927
+            },
+            {
+              "nome": "DAVY SOARES DA COSTA",
+              "numero": "15789",
+              "partido": "15",
+              "votos": 923
+            },
+            {
+              "nome": "EMANOEL RENEGE SOARES BATISTA",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 738
+            },
+            {
+              "nome": "GUTEMBERG DANTAS DE QUEIROZ",
+              "numero": "55123",
+              "partido": "55",
+              "votos": 646
+            },
+            {
+              "nome": "FRANCISCO JUNIOR ALVES",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 628
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 9730,
+          "brancos": 63,
+          "nulos": 237,
+          "candidatos": 23,
+          "top": [
+            {
+              "nome": "EMANOEL RENEGE SOARES BATISTA",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 1314
+            },
+            {
+              "nome": "FABRÍCIO ANTÔNIO DOS SANTOS",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 1279
+            },
+            {
+              "nome": "JOÃO MARIA DE OLIVEIRA GONÇALVES",
+              "numero": "11222",
+              "partido": "11",
+              "votos": 1267
+            },
+            {
+              "nome": "VALMIR PEREIRA DA COSTA NETO",
+              "numero": "11333",
+              "partido": "11",
+              "votos": 1083
+            },
+            {
+              "nome": "DAVY SOARES DA COSTA",
+              "numero": "15789",
+              "partido": "15",
+              "votos": 906
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2012": 613,
+          "2016": 564
+        },
+        "11": {
+          "2012": 36,
+          "2016": 602,
+          "2020": 450,
+          "2024": 3826
+        },
+        "12": {
+          "2012": 43,
+          "2016": 32
+        },
+        "13": {
+          "2012": 547,
+          "2016": 20,
+          "2024": 60
+        },
+        "14": {
+          "2012": 3540,
+          "2016": 3319
+        },
+        "15": {
+          "2016": 145,
+          "2020": 4611,
+          "2024": 6033
+        },
+        "20": {
+          "2016": 593
+        },
+        "22": {
+          "2012": 1286,
+          "2016": 15,
+          "2020": 383
+        },
+        "25": {
+          "2012": 219,
+          "2016": 4
+        },
+        "31": {
+          "2016": 116
+        },
+        "40": {
+          "2016": 3
+        },
+        "43": {
+          "2012": 610,
+          "2016": 590
+        },
+        "45": {
+          "2016": 173
+        },
+        "50": {
+          "2016": 18
+        },
+        "51": {
+          "2016": 408
+        },
+        "55": {
+          "2012": 2902,
+          "2016": 2180,
+          "2020": 2469
+        },
+        "65": {
+          "2012": 138,
+          "2016": 3
+        },
+        "77": {
+          "2016": 182,
+          "2020": 716
+        }
+      }
+    },
+    "2405702": {
+      "codigo_ibge": 2405702,
+      "cd_tse": 17116,
+      "nome": "JARDIM DO SERIDÓ",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 8956,
+          "brancos": 130,
+          "nulos": 139,
+          "candidatos": 42,
+          "top": [
+            {
+              "nome": "IRON LUCAS DE OLIVEIRA JUNIOR",
+              "numero": "55111",
+              "partido": "55",
+              "votos": 1040
+            },
+            {
+              "nome": "GILBERTO DE LIMA BRITO",
+              "numero": "40555",
+              "partido": "40",
+              "votos": 831
+            },
+            {
+              "nome": "FRANCISCO JOSÉ DE AZEVEDO",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 787
+            },
+            {
+              "nome": "JOSÉ DA NOITE DE MEDEIROS",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 601
+            },
+            {
+              "nome": "JOACI COSTA DE ARAÚJO",
+              "numero": "15605",
+              "partido": "15",
+              "votos": 581
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 8632,
+          "brancos": 136,
+          "nulos": 224,
+          "candidatos": 29,
+          "top": [
+            {
+              "nome": "IRON LUCAS DE OLIVEIRA JÚNIOR",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 1239
+            },
+            {
+              "nome": "DORMIRO GERALDO DE MEDEIROS FILHO",
+              "numero": "55111",
+              "partido": "55",
+              "votos": 698
+            },
+            {
+              "nome": "RONALTTY NERI DOS SANTOS",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 687
+            },
+            {
+              "nome": "JOSÉ DA NOITE DE MEDEIROS",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 631
+            },
+            {
+              "nome": "ALCIDES AZEVEDO DA CUNHA",
+              "numero": "40111",
+              "partido": "40",
+              "votos": 592
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 7627,
+          "brancos": 149,
+          "nulos": 368,
+          "candidatos": 26,
+          "top": [
+            {
+              "nome": "STEPHANY KAROLINE SANTOS DE OLIVEIRA",
+              "numero": "70000",
+              "partido": "70",
+              "votos": 788
+            },
+            {
+              "nome": "RONALTTY NERI DOS SANTOS",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 787
+            },
+            {
+              "nome": "JOSÉ WILSON DA SILVA",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 722
+            },
+            {
+              "nome": "JEFERSON MAURÍCIO DO NASCIMENTO",
+              "numero": "55222",
+              "partido": "55",
+              "votos": 608
+            },
+            {
+              "nome": "CÁSSIO LÚCIO JESUS CUNHA DE MEDEIROS",
+              "numero": "55666",
+              "partido": "55",
+              "votos": 603
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 8708,
+          "brancos": 110,
+          "nulos": 254,
+          "candidatos": 32,
+          "top": [
+            {
+              "nome": "IRON LUCAS DE OLIVEIRA JUNIOR",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 1202
+            },
+            {
+              "nome": "EMERSON ANTONIO DE AZEVEDO",
+              "numero": "10123",
+              "partido": "10",
+              "votos": 863
+            },
+            {
+              "nome": "JARBAS SILVA DO NASCIMENTO",
+              "numero": "10222",
+              "partido": "10",
+              "votos": 708
+            },
+            {
+              "nome": "CASSIO LUCIO JESUS CUNHA DE MEDEIROS",
+              "numero": "11333",
+              "partido": "11",
+              "votos": 626
+            },
+            {
+              "nome": "RONALTTY NERI DOS SANTOS",
+              "numero": "11555",
+              "partido": "11",
+              "votos": 609
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2016": 86,
+          "2024": 2904
+        },
+        "11": {
+          "2012": 185,
+          "2016": 162,
+          "2024": 2804
+        },
+        "12": {
+          "2012": 694,
+          "2016": 428
+        },
+        "13": {
+          "2012": 552,
+          "2016": 4,
+          "2024": 267
+        },
+        "14": {
+          "2012": 427,
+          "2016": 56
+        },
+        "15": {
+          "2012": 2577,
+          "2016": 1482,
+          "2020": 2164,
+          "2024": 2954
+        },
+        "22": {
+          "2012": 723,
+          "2016": 636
+        },
+        "23": {
+          "2012": 4
+        },
+        "33": {
+          "2012": 6
+        },
+        "36": {
+          "2016": 105
+        },
+        "40": {
+          "2012": 1643,
+          "2016": 1857
+        },
+        "43": {
+          "2012": 262,
+          "2016": 34
+        },
+        "45": {
+          "2012": 11,
+          "2016": 2106
+        },
+        "51": {
+          "2016": 117
+        },
+        "55": {
+          "2012": 2265,
+          "2016": 1207,
+          "2020": 3932
+        },
+        "65": {
+          "2012": 17,
+          "2016": 573
+        },
+        "70": {
+          "2016": 122,
+          "2020": 1888
+        }
+      }
+    },
+    "2406502": {
+      "codigo_ibge": 2406502,
+      "cd_tse": 17299,
+      "nome": "LAGOA NOVA",
+      "microrregiao": "Serra de Santana",
+      "por_ano": {
+        "2012": {
+          "nominais": 8516,
+          "brancos": 221,
+          "nulos": 315,
+          "candidatos": 33,
+          "top": [
+            {
+              "nome": "NAZARENO ULISSES ALVES",
+              "numero": "22123",
+              "partido": "22",
+              "votos": 724
+            },
+            {
+              "nome": "LEANDRO DE SOUZA COSTA",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 705
+            },
+            {
+              "nome": "ANTONIO DOMINGOS SOARES",
+              "numero": "43123",
+              "partido": "43",
+              "votos": 634
+            },
+            {
+              "nome": "ARISTEU GOMES PEREIRA",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 561
+            },
+            {
+              "nome": "ANTONIO CARLOS PEREIRA",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 533
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 9278,
+          "brancos": 209,
+          "nulos": 295,
+          "candidatos": 41,
+          "top": [
+            {
+              "nome": "LEANDRO DE SOUZA COSTA",
+              "numero": "55000",
+              "partido": "55",
+              "votos": 711
+            },
+            {
+              "nome": "LOURIVAL FRANCISCO DA SILVA OLIVEIRA",
+              "numero": "14444",
+              "partido": "14",
+              "votos": 665
+            },
+            {
+              "nome": "JOSE IVAMAR DOMINGOS",
+              "numero": "15456",
+              "partido": "15",
+              "votos": 647
+            },
+            {
+              "nome": "NAZARENO ULISSES ALVES",
+              "numero": "51111",
+              "partido": "51",
+              "votos": 566
+            },
+            {
+              "nome": "ERIVALDO TRINDADE DE ARAÚJO",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 564
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 8814,
+          "brancos": 146,
+          "nulos": 327,
+          "candidatos": 54,
+          "top": [
+            {
+              "nome": "ELIABE DAVI ALVES",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 538
+            },
+            {
+              "nome": "LOURIVAL FRANCISCO DA SILVA OLIVEIRA",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 508
+            },
+            {
+              "nome": "JOSE MIRANDA DA SILVA",
+              "numero": "15777",
+              "partido": "15",
+              "votos": 464
+            },
+            {
+              "nome": "PAULO EDUARDO GUIMARAES",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 456
+            },
+            {
+              "nome": "ERIVAN DE SOUZA COSTA FILHO",
+              "numero": "55000",
+              "partido": "55",
+              "votos": 415
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 10013,
+          "brancos": 159,
+          "nulos": 377,
+          "candidatos": 42,
+          "top": [
+            {
+              "nome": "JOAO ALVES GALVAO JUNIOR",
+              "numero": "44888",
+              "partido": "44",
+              "votos": 868
+            },
+            {
+              "nome": "JEAN CARLO DA SILVA DANTAS",
+              "numero": "10000",
+              "partido": "10",
+              "votos": 727
+            },
+            {
+              "nome": "EDILBERTO DAS NEVES DE OLIVEIRA",
+              "numero": "44456",
+              "partido": "44",
+              "votos": 661
+            },
+            {
+              "nome": "MARINALVO VICENTE DA SILVA LIMA",
+              "numero": "10456",
+              "partido": "10",
+              "votos": 637
+            },
+            {
+              "nome": "ERIVALDO TRINDADE DE ARAUJO",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 445
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2024": 3323
+        },
+        "11": {
+          "2020": 436
+        },
+        "13": {
+          "2012": 273
+        },
+        "14": {
+          "2012": 1142,
+          "2016": 864
+        },
+        "15": {
+          "2012": 1926,
+          "2016": 2641,
+          "2020": 4349,
+          "2024": 2512
+        },
+        "20": {
+          "2020": 525
+        },
+        "22": {
+          "2012": 756,
+          "2016": 834
+        },
+        "25": {
+          "2012": 1701,
+          "2016": 746
+        },
+        "27": {
+          "2012": 96,
+          "2016": 42
+        },
+        "40": {
+          "2012": 1134,
+          "2020": 447,
+          "2024": 791
+        },
+        "43": {
+          "2012": 1190
+        },
+        "44": {
+          "2016": 376,
+          "2024": 3682
+        },
+        "45": {
+          "2012": 292
+        },
+        "51": {
+          "2016": 591
+        },
+        "55": {
+          "2012": 573,
+          "2016": 2813,
+          "2020": 3288
+        },
+        "65": {
+          "2016": 289,
+          "2020": 343
+        },
+        "77": {
+          "2016": 173
+        },
+        "90": {
+          "2016": 519
+        }
+      }
+    },
+    "2408508": {
+      "codigo_ibge": 2408508,
+      "cd_tse": 17698,
+      "nome": "OURO BRANCO",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 3586,
+          "brancos": 37,
+          "nulos": 43,
+          "candidatos": 28,
+          "top": [
+            {
+              "nome": "GENILDO DA SILVA MEDEIROS",
+              "numero": "12345",
+              "partido": "12",
+              "votos": 417
+            },
+            {
+              "nome": "JOSÉ NOGUEIRA DO NASCIMENTO JUNIOR",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 329
+            },
+            {
+              "nome": "ROGÉRIO AZEVEDO DE LUCENA",
+              "numero": "14444",
+              "partido": "14",
+              "votos": 292
+            },
+            {
+              "nome": "EURINETE DOS SANTOS SILVA",
+              "numero": "31111",
+              "partido": "31",
+              "votos": 288
+            },
+            {
+              "nome": "FRANCISCO CELSO DA SILVA NETO",
+              "numero": "45111",
+              "partido": "45",
+              "votos": 278
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 3641,
+          "brancos": 28,
+          "nulos": 67,
+          "candidatos": 28,
+          "top": [
+            {
+              "nome": "JOSE NOGUEIRA DO NASCIMENTO JUNIOR",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 369
+            },
+            {
+              "nome": "FRANCISCO CELSO DA SILVA NETO",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 307
+            },
+            {
+              "nome": "ADRIANO  DE MEDEIROS SILVA",
+              "numero": "13222",
+              "partido": "13",
+              "votos": 292
+            },
+            {
+              "nome": "ROGERIO AZEVEDO DE LUCENA",
+              "numero": "45678",
+              "partido": "45",
+              "votos": 284
+            },
+            {
+              "nome": "GENILDO DA SILVA MEDEIROS",
+              "numero": "12345",
+              "partido": "12",
+              "votos": 242
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 3407,
+          "brancos": 32,
+          "nulos": 124,
+          "candidatos": 27,
+          "top": [
+            {
+              "nome": "FRANCISCO LUCENA DE ARAÚJO FILHO",
+              "numero": "45123",
+              "partido": "45",
+              "votos": 307
+            },
+            {
+              "nome": "FRANCISCO CELSO DA SILVA NETO",
+              "numero": "22555",
+              "partido": "22",
+              "votos": 298
+            },
+            {
+              "nome": "JOSÉ NOGUEIRA DO NASCIMENTO JÚNIOR",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 279
+            },
+            {
+              "nome": "MARCOS ANTÔNIO DE MORAIS COSTA",
+              "numero": "22111",
+              "partido": "22",
+              "votos": 267
+            },
+            {
+              "nome": "JOSUE JOSEDEC DE MOURA",
+              "numero": "22666",
+              "partido": "22",
+              "votos": 267
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 3821,
+          "brancos": 30,
+          "nulos": 107,
+          "candidatos": 20,
+          "top": [
+            {
+              "nome": "FRANCISCO CELSO DA SILVA NETO",
+              "numero": "11555",
+              "partido": "11",
+              "votos": 370
+            },
+            {
+              "nome": "JOSÉ NOGUEIRA DO NASCIMENTO JÚNIOR",
+              "numero": "11777",
+              "partido": "11",
+              "votos": 354
+            },
+            {
+              "nome": "ROGÉRIO AZEVEDO DE LUCENA",
+              "numero": "11444",
+              "partido": "11",
+              "votos": 311
+            },
+            {
+              "nome": "LUCAS BATISTA FONSECA DE LUCENA",
+              "numero": "45333",
+              "partido": "45",
+              "votos": 294
+            },
+            {
+              "nome": "ANA MAIZA DA SILVA MEDEIROS",
+              "numero": "45123",
+              "partido": "45",
+              "votos": 293
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2012": 166,
+          "2016": 15,
+          "2024": 2148
+        },
+        "12": {
+          "2012": 506,
+          "2016": 294
+        },
+        "13": {
+          "2012": 562,
+          "2016": 727,
+          "2024": 223
+        },
+        "14": {
+          "2012": 495
+        },
+        "15": {
+          "2012": 336,
+          "2016": 315
+        },
+        "17": {
+          "2020": 98
+        },
+        "19": {
+          "2016": 242
+        },
+        "22": {
+          "2012": 491,
+          "2016": 472,
+          "2020": 1918
+        },
+        "23": {
+          "2012": 136,
+          "2016": 209,
+          "2024": 1
+        },
+        "25": {
+          "2012": 5
+        },
+        "31": {
+          "2012": 292,
+          "2016": 8
+        },
+        "33": {
+          "2012": 1
+        },
+        "40": {
+          "2012": 166,
+          "2016": 210
+        },
+        "43": {
+          "2012": 15,
+          "2024": 2
+        },
+        "45": {
+          "2012": 596,
+          "2016": 703,
+          "2020": 1532,
+          "2024": 1529
+        },
+        "55": {
+          "2016": 291
+        },
+        "65": {
+          "2016": 199
+        },
+        "77": {
+          "2016": 88
+        }
+      }
+    },
+    "2408904": {
+      "codigo_ibge": 2408904,
+      "cd_tse": 17779,
+      "nome": "PARELHAS",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 13403,
+          "brancos": 355,
+          "nulos": 275,
+          "candidatos": 43,
+          "top": [
+            {
+              "nome": "ROMISELIA ARAUJO SANTOS SILVA",
+              "numero": "25888",
+              "partido": "25",
+              "votos": 1044
+            },
+            {
+              "nome": "MESSIAS MEDEIROS",
+              "numero": "13333",
+              "partido": "13",
+              "votos": 811
+            },
+            {
+              "nome": "MARIA DA GUIA DANTAS ARAÚJO",
+              "numero": "45123",
+              "partido": "45",
+              "votos": 767
+            },
+            {
+              "nome": "ENIO ANGELO DANTAS",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 735
+            },
+            {
+              "nome": "FRANCISCO GENIDSON DE AZEVEDO DANTAS",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 732
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 13617,
+          "brancos": 335,
+          "nulos": 488,
+          "candidatos": 34,
+          "top": [
+            {
+              "nome": "HUMBERTO ALVES GONDIM",
+              "numero": "55123",
+              "partido": "55",
+              "votos": 1347
+            },
+            {
+              "nome": "ALYSON WAGNER DE OLIVEIRA",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 1268
+            },
+            {
+              "nome": "ROMISELIA ARAUJO SANTOS SILVA",
+              "numero": "25888",
+              "partido": "25",
+              "votos": 975
+            },
+            {
+              "nome": "ZENILDA SALUSTIO DA COSTA MONTENEGRO BEZERRA",
+              "numero": "25123",
+              "partido": "25",
+              "votos": 926
+            },
+            {
+              "nome": "FRANK KLEBER DE LIMA",
+              "numero": "13123",
+              "partido": "13",
+              "votos": 743
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 12839,
+          "brancos": 323,
+          "nulos": 638,
+          "candidatos": 46,
+          "top": [
+            {
+              "nome": "ALYSON WAGNER DE OLIVEIRA",
+              "numero": "45456",
+              "partido": "45",
+              "votos": 1088
+            },
+            {
+              "nome": "ROMISELIA ARAUJO SANTOS SILVA",
+              "numero": "45888",
+              "partido": "45",
+              "votos": 1043
+            },
+            {
+              "nome": "FELISBERTO DO NASCIMENTO SILVA",
+              "numero": "28888",
+              "partido": "28",
+              "votos": 954
+            },
+            {
+              "nome": "ZENILDA SALUSTIO DA COSTA MONTENEGRO BEZERRA",
+              "numero": "45678",
+              "partido": "45",
+              "votos": 799
+            },
+            {
+              "nome": "WELLINGTON ARAUJO SILVA",
+              "numero": "15601",
+              "partido": "15",
+              "votos": 730
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 13294,
+          "brancos": 405,
+          "nulos": 614,
+          "candidatos": 34,
+          "top": [
+            {
+              "nome": "ROMISELIA ARAUJO SANTOS SILVA",
+              "numero": "45888",
+              "partido": "45",
+              "votos": 1494
+            },
+            {
+              "nome": "ALYSON WAGNER DE OLIVEIRA",
+              "numero": "45456",
+              "partido": "45",
+              "votos": 1489
+            },
+            {
+              "nome": "LEANDRO JOSÉ DA SILVA SANTOS",
+              "numero": "45045",
+              "partido": "45",
+              "votos": 1420
+            },
+            {
+              "nome": "VERA LUCIA DE SOUZA LIMA",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 905
+            },
+            {
+              "nome": "ZENILDA SALUSTIO DA COSTA MONTENEGRO BEZERRA",
+              "numero": "45678",
+              "partido": "45",
+              "votos": 872
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2012": 1040,
+          "2016": 43
+        },
+        "11": {
+          "2012": 1758,
+          "2016": 474
+        },
+        "13": {
+          "2012": 2341,
+          "2016": 1298,
+          "2020": 1929,
+          "2024": 2101
+        },
+        "14": {
+          "2012": 45
+        },
+        "15": {
+          "2012": 4002,
+          "2016": 4447,
+          "2020": 2781,
+          "2024": 1802
+        },
+        "19": {
+          "2016": 297
+        },
+        "20": {
+          "2016": 1
+        },
+        "22": {
+          "2012": 344,
+          "2016": 289
+        },
+        "23": {
+          "2024": 1
+        },
+        "25": {
+          "2012": 2994,
+          "2016": 3233
+        },
+        "27": {
+          "2012": 84,
+          "2016": 1
+        },
+        "28": {
+          "2020": 1896
+        },
+        "40": {
+          "2016": 489
+        },
+        "43": {
+          "2024": 2
+        },
+        "45": {
+          "2012": 847,
+          "2016": 477,
+          "2020": 6989,
+          "2024": 9919
+        },
+        "50": {
+          "2012": 221
+        },
+        "55": {
+          "2012": 474,
+          "2016": 3048
+        },
+        "65": {
+          "2012": 1,
+          "2024": 3
+        },
+        "77": {
+          "2016": 86
+        },
+        "90": {
+          "2016": 3
+        }
+      }
+    },
+    "2411429": {
+      "codigo_ibge": 2411429,
+      "cd_tse": 18252,
+      "nome": "SANTANA DO SERIDÓ",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 2146,
+          "brancos": 11,
+          "nulos": 52,
+          "candidatos": 20,
+          "top": [
+            {
+              "nome": "IVAN DANTAS DE SOUZA",
+              "numero": "55111",
+              "partido": "55",
+              "votos": 226
+            },
+            {
+              "nome": "JOSÉ VICENTE DE MORAIS",
+              "numero": "55222",
+              "partido": "55",
+              "votos": 226
+            },
+            {
+              "nome": "THIAGO CABRAL SANTOS",
+              "numero": "13333",
+              "partido": "13",
+              "votos": 217
+            },
+            {
+              "nome": "TATIANA FÁTIMA FERREIRA",
+              "numero": "55444",
+              "partido": "55",
+              "votos": 168
+            },
+            {
+              "nome": "JUAREZ BEZERRA DE AZEVEDO",
+              "numero": "55000",
+              "partido": "55",
+              "votos": 160
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 2213,
+          "brancos": 12,
+          "nulos": 32,
+          "candidatos": 25,
+          "top": [
+            {
+              "nome": "CAIO CABRAL BEZERRA",
+              "numero": "55123",
+              "partido": "55",
+              "votos": 241
+            },
+            {
+              "nome": "IVAN DANTAS DE SOUZA",
+              "numero": "55111",
+              "partido": "55",
+              "votos": 219
+            },
+            {
+              "nome": "JUAREZ BEZERRA DE AZEVEDO",
+              "numero": "55000",
+              "partido": "55",
+              "votos": 180
+            },
+            {
+              "nome": "BRUNO AUGUSTO BEZERRA JOTA",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 173
+            },
+            {
+              "nome": "LUIZ ROBERTO DE MEDEIROS",
+              "numero": "55888",
+              "partido": "55",
+              "votos": 170
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 2156,
+          "brancos": 16,
+          "nulos": 54,
+          "candidatos": 18,
+          "top": [
+            {
+              "nome": "CAIO CABRAL BEZERRA",
+              "numero": "55123",
+              "partido": "55",
+              "votos": 289
+            },
+            {
+              "nome": "IVAN DANTAS DE SOUZA",
+              "numero": "55111",
+              "partido": "55",
+              "votos": 283
+            },
+            {
+              "nome": "ANA PAULA DE OLIVEIRA MEDEIROS",
+              "numero": "55888",
+              "partido": "55",
+              "votos": 213
+            },
+            {
+              "nome": "RICARDO JOSE DE MEDEIROS",
+              "numero": "55555",
+              "partido": "55",
+              "votos": 208
+            },
+            {
+              "nome": "JUAREZ BEZERRA DE AZEVEDO",
+              "numero": "55000",
+              "partido": "55",
+              "votos": 179
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 2326,
+          "brancos": 8,
+          "nulos": 72,
+          "candidatos": 16,
+          "top": [
+            {
+              "nome": "IVAN DANTAS DE SOUZA",
+              "numero": "20111",
+              "partido": "20",
+              "votos": 280
+            },
+            {
+              "nome": "FLAVIO AZEVEDO DE MACEDO",
+              "numero": "13555",
+              "partido": "13",
+              "votos": 226
+            },
+            {
+              "nome": "BRUNO AUGUSTO BEZERRA JOTA",
+              "numero": "13333",
+              "partido": "13",
+              "votos": 220
+            },
+            {
+              "nome": "RICARDO JOSÉ DE MEDEIROS",
+              "numero": "20555",
+              "partido": "20",
+              "votos": 212
+            },
+            {
+              "nome": "JUAREZ BEZERRA DE AZEVEDO",
+              "numero": "20000",
+              "partido": "20",
+              "votos": 212
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "13": {
+          "2012": 249,
+          "2016": 125,
+          "2020": 569,
+          "2024": 582
+        },
+        "15": {
+          "2012": 817,
+          "2016": 853
+        },
+        "20": {
+          "2024": 1791
+        },
+        "22": {
+          "2016": 149
+        },
+        "40": {
+          "2016": 26
+        },
+        "55": {
+          "2012": 1136,
+          "2016": 1063,
+          "2020": 1660
+        },
+        "65": {
+          "2024": 2
+        },
+        "77": {
+          "2016": 58
+        }
+      }
+    },
+    "2411809": {
+      "codigo_ibge": 2411809,
+      "cd_tse": 18350,
+      "nome": "SÃO FERNANDO",
+      "microrregiao": "Seridó Ocidental",
+      "por_ano": {
+        "2012": {
+          "nominais": 2862,
+          "brancos": 18,
+          "nulos": 79,
+          "candidatos": 16,
+          "top": [
+            {
+              "nome": "FRANCISCO PEDRO FILHO",
+              "numero": "40111",
+              "partido": "40",
+              "votos": 352
+            },
+            {
+              "nome": "FRANCISCO DAS CHAGAS MEDEIROS",
+              "numero": "15150",
+              "partido": "15",
+              "votos": 279
+            },
+            {
+              "nome": "JOSÉ ORLANDO DE MEDEIROS",
+              "numero": "40999",
+              "partido": "40",
+              "votos": 256
+            },
+            {
+              "nome": "JOSÉ DINOVAN DE ARAÚJO",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 251
+            },
+            {
+              "nome": "FERNANDA LINS DE MEDEIROS MAIA",
+              "numero": "40777",
+              "partido": "40",
+              "votos": 248
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 2950,
+          "brancos": 18,
+          "nulos": 54,
+          "candidatos": 25,
+          "top": [
+            {
+              "nome": "GILVANEA DE OLIVEIRA ARAÚJO",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 296
+            },
+            {
+              "nome": "WELLIGTHON NIVAN DE MEDEIROS",
+              "numero": "25555",
+              "partido": "25",
+              "votos": 287
+            },
+            {
+              "nome": "FERNANDA LINS DE MEDEIROS MAIA",
+              "numero": "65777",
+              "partido": "65",
+              "votos": 245
+            },
+            {
+              "nome": "JOSÉ DINOVAN DE ARAÚJO",
+              "numero": "27777",
+              "partido": "27",
+              "votos": 227
+            },
+            {
+              "nome": "RUBINALDO DANTAS",
+              "numero": "65555",
+              "partido": "65",
+              "votos": 215
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 2922,
+          "brancos": 23,
+          "nulos": 60,
+          "candidatos": 19,
+          "top": [
+            {
+              "nome": "WELLIGTHON NIVAN DE MEDEIROS",
+              "numero": "22555",
+              "partido": "22",
+              "votos": 400
+            },
+            {
+              "nome": "FRANCISCO DAS CHAGAS MEDEIROS",
+              "numero": "15150",
+              "partido": "15",
+              "votos": 311
+            },
+            {
+              "nome": "MISAEL BRUNO DE ARAUJO SILVA",
+              "numero": "45444",
+              "partido": "45",
+              "votos": 306
+            },
+            {
+              "nome": "GILVANEA DE OLIVEIRA ARAÚJO",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 287
+            },
+            {
+              "nome": "FERNANDA LINS DE MEDEIROS MAIA",
+              "numero": "22777",
+              "partido": "22",
+              "votos": 277
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 3191,
+          "brancos": 10,
+          "nulos": 116,
+          "candidatos": 12,
+          "top": [
+            {
+              "nome": "MISAEL BRUNO DE ARAÚJO SILVA",
+              "numero": "44444",
+              "partido": "44",
+              "votos": 476
+            },
+            {
+              "nome": "WELLINGTHON NIVAN DE MEDEIROS",
+              "numero": "44555",
+              "partido": "44",
+              "votos": 429
+            },
+            {
+              "nome": "FERNANDA LINS DE MEDEIROS MAIA",
+              "numero": "44777",
+              "partido": "44",
+              "votos": 423
+            },
+            {
+              "nome": "JOSÉ DINOVAN DE ARAÚJO",
+              "numero": "44999",
+              "partido": "44",
+              "votos": 311
+            },
+            {
+              "nome": "DIONÍSIO EULÂMPIO DOS SANTOS NETO",
+              "numero": "44333",
+              "partido": "44",
+              "votos": 285
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2016": 305,
+          "2020": 341
+        },
+        "12": {
+          "2016": 239
+        },
+        "14": {
+          "2012": 228
+        },
+        "15": {
+          "2012": 314,
+          "2016": 306,
+          "2020": 322,
+          "2024": 683
+        },
+        "22": {
+          "2012": 5,
+          "2016": 198,
+          "2020": 1754
+        },
+        "25": {
+          "2016": 293
+        },
+        "27": {
+          "2016": 229
+        },
+        "36": {
+          "2016": 214
+        },
+        "40": {
+          "2012": 2168,
+          "2016": 62
+        },
+        "44": {
+          "2024": 2537
+        },
+        "45": {
+          "2016": 253,
+          "2020": 593
+        },
+        "51": {
+          "2016": 120
+        },
+        "55": {
+          "2012": 230
+        },
+        "65": {
+          "2016": 684
+        },
+        "77": {
+          "2016": 143
+        }
+      }
+    },
+    "2412104": {
+      "codigo_ibge": 2412104,
+      "cd_tse": 18392,
+      "nome": "SÃO JOÃO DO SABUGI",
+      "microrregiao": "Seridó Ocidental",
+      "por_ano": {
+        "2012": {
+          "nominais": 4611,
+          "brancos": 38,
+          "nulos": 105,
+          "candidatos": 32,
+          "top": [
+            {
+              "nome": "ISAIAS JOSE DO PATRICINIO FERNANDES DE MORAIS",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 394
+            },
+            {
+              "nome": "YURI GIORDANO DE ARAUJO MEDEIROS",
+              "numero": "15999",
+              "partido": "15",
+              "votos": 335
+            },
+            {
+              "nome": "APRIGIO PEREIRA DE ARAUJO NETO",
+              "numero": "15155",
+              "partido": "15",
+              "votos": 332
+            },
+            {
+              "nome": "MARCILIO DE MEDEIROS DANTAS",
+              "numero": "15660",
+              "partido": "15",
+              "votos": 324
+            },
+            {
+              "nome": "RUTENIO HUMBERTO DE ARAUJO MEDEIROS",
+              "numero": "25678",
+              "partido": "25",
+              "votos": 295
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 4594,
+          "brancos": 42,
+          "nulos": 113,
+          "candidatos": 33,
+          "top": [
+            {
+              "nome": "ANDRE LUIZ FERNANDES DE MEDEIROS",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 479
+            },
+            {
+              "nome": "MARCILIO DE MEDEIROS DANTAS",
+              "numero": "15660",
+              "partido": "15",
+              "votos": 392
+            },
+            {
+              "nome": "RUTÊNIO HUMBERTO DE ARAÚJO MEDEIROS",
+              "numero": "45888",
+              "partido": "45",
+              "votos": 316
+            },
+            {
+              "nome": "QUINTINO LIBERALINO DE ARAUJO",
+              "numero": "15666",
+              "partido": "15",
+              "votos": 295
+            },
+            {
+              "nome": "MANOEL REGINALDO DE MEDEIROS",
+              "numero": "25000",
+              "partido": "25",
+              "votos": 288
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 4158,
+          "brancos": 31,
+          "nulos": 141,
+          "candidatos": 30,
+          "top": [
+            {
+              "nome": "ISAIAS JOSE DO PATROCINIO FERNANDES DE MORAIS",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 404
+            },
+            {
+              "nome": "ANDRE LUIZ FERNANDES DE MEDEIROS",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 379
+            },
+            {
+              "nome": "MARCILIO DE MEDEIROS DANTAS",
+              "numero": "15660",
+              "partido": "15",
+              "votos": 356
+            },
+            {
+              "nome": "APRIGIO PEREIRA DE ARAUJO NETO",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 328
+            },
+            {
+              "nome": "CIPRIANO ALVES DA COSTA NETO",
+              "numero": "40888",
+              "partido": "40",
+              "votos": 323
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 4632,
+          "brancos": 41,
+          "nulos": 90,
+          "candidatos": 23,
+          "top": [
+            {
+              "nome": "ANDRE LUIZ FERNANDES DE MEDEIROS",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 574
+            },
+            {
+              "nome": "PAULO EDUARDO FONSECA MAFRA",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 536
+            },
+            {
+              "nome": "CARLOS EDUARDO FLORÊNCIO DE MEDEIROS FERNANDES",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 525
+            },
+            {
+              "nome": "APRIGÍO PEREIRA DE ARAÚJO NETO",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 474
+            },
+            {
+              "nome": "QUINTINO LIBERALINO DE ARAÚJO",
+              "numero": "15666",
+              "partido": "15",
+              "votos": 383
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2016": 91
+        },
+        "11": {
+          "2024": 1391
+        },
+        "12": {
+          "2012": 98
+        },
+        "13": {
+          "2012": 151,
+          "2016": 266,
+          "2020": 642,
+          "2024": 204
+        },
+        "15": {
+          "2012": 2734,
+          "2016": 2268,
+          "2020": 2345,
+          "2024": 3156
+        },
+        "22": {
+          "2012": 121
+        },
+        "25": {
+          "2012": 1401,
+          "2016": 296
+        },
+        "40": {
+          "2012": 351,
+          "2016": 714,
+          "2020": 868
+        },
+        "45": {
+          "2016": 619
+        },
+        "55": {
+          "2016": 39
+        },
+        "65": {
+          "2016": 474,
+          "2020": 16
+        },
+        "77": {
+          "2020": 469
+        }
+      }
+    },
+    "2412401": {
+      "codigo_ibge": 2412401,
+      "cd_tse": 18457,
+      "nome": "SÃO JOSÉ DO SERIDÓ",
+      "microrregiao": "Seridó Oriental",
+      "por_ano": {
+        "2012": {
+          "nominais": 3446,
+          "brancos": 41,
+          "nulos": 88,
+          "candidatos": 16,
+          "top": [
+            {
+              "nome": "MARIA DALVA MEDEIROS DE ARAÚJO",
+              "numero": "15000",
+              "partido": "15",
+              "votos": 467
+            },
+            {
+              "nome": "LEODÔNIO MEDEIROS DANTAS",
+              "numero": "15604",
+              "partido": "15",
+              "votos": 356
+            },
+            {
+              "nome": "JAEDSON DANTAS",
+              "numero": "15602",
+              "partido": "15",
+              "votos": 354
+            },
+            {
+              "nome": "MARCO MACIEL DANTAS DE MEDEIROS",
+              "numero": "40111",
+              "partido": "40",
+              "votos": 316
+            },
+            {
+              "nome": "CILMÁRIA DOS SANTOS COSTA",
+              "numero": "15666",
+              "partido": "15",
+              "votos": 315
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 3530,
+          "brancos": 33,
+          "nulos": 92,
+          "candidatos": 18,
+          "top": [
+            {
+              "nome": "CLAYTON MARIANO DE SÁ",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 439
+            },
+            {
+              "nome": "VINICIUS PEREIRA DANTAS",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 343
+            },
+            {
+              "nome": "JOSE CARLOS DANTAS COSTA",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 342
+            },
+            {
+              "nome": "LUCIANA KADIDJA DANTAS",
+              "numero": "90999",
+              "partido": "90",
+              "votos": 306
+            },
+            {
+              "nome": "JOSENI SANTOS DE MEDEIROS",
+              "numero": "90777",
+              "partido": "90",
+              "votos": 269
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 3655,
+          "brancos": 20,
+          "nulos": 84,
+          "candidatos": 25,
+          "top": [
+            {
+              "nome": "JOSÉ CARLOS DANTAS COSTA",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 389
+            },
+            {
+              "nome": "JUSSIENE DANTAS PEREIRA",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 328
+            },
+            {
+              "nome": "CLAYTON MARIANO DE SÁ",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 307
+            },
+            {
+              "nome": "FRANCISCO SALES DE MEDEIROS NETO",
+              "numero": "15221",
+              "partido": "15",
+              "votos": 288
+            },
+            {
+              "nome": "DANIEL ANDSON DA COSTA",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 273
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 3833,
+          "brancos": 40,
+          "nulos": 92,
+          "candidatos": 19,
+          "top": [
+            {
+              "nome": "MARIA ISABEL DANTAS DE MEDEIROS",
+              "numero": "11222",
+              "partido": "11",
+              "votos": 489
+            },
+            {
+              "nome": "CLAYTON MARIANO DE SÁ",
+              "numero": "15123",
+              "partido": "15",
+              "votos": 437
+            },
+            {
+              "nome": "JUSSIÊNE DANTAS PEREIRA",
+              "numero": "15888",
+              "partido": "15",
+              "votos": 412
+            },
+            {
+              "nome": "JOSÉ CARLOS DANTAS COSTA",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 365
+            },
+            {
+              "nome": "JOAN SIDERLEY BERNARDINO",
+              "numero": "15999",
+              "partido": "15",
+              "votos": 307
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2012": 202,
+          "2016": 6,
+          "2020": 699,
+          "2024": 1431
+        },
+        "13": {
+          "2012": 153,
+          "2020": 664
+        },
+        "15": {
+          "2012": 2198,
+          "2016": 2358,
+          "2020": 2443,
+          "2024": 2491
+        },
+        "22": {
+          "2012": 1
+        },
+        "40": {
+          "2012": 1059,
+          "2016": 506
+        },
+        "77": {
+          "2016": 226
+        },
+        "90": {
+          "2016": 584
+        }
+      }
+    },
+    "2413003": {
+      "codigo_ibge": 2413003,
+      "cd_tse": 18570,
+      "nome": "SÃO VICENTE",
+      "microrregiao": "Serra de Santana",
+      "por_ano": {
+        "2012": {
+          "nominais": 3996,
+          "brancos": 46,
+          "nulos": 117,
+          "candidatos": 26,
+          "top": [
+            {
+              "nome": "ERIVAN FREITAS DE MEDEIROS",
+              "numero": "55147",
+              "partido": "55",
+              "votos": 400
+            },
+            {
+              "nome": "JOSÉ MECIFRAN DE MEDEIROS",
+              "numero": "22456",
+              "partido": "22",
+              "votos": 373
+            },
+            {
+              "nome": "JOSÉ NETO COSTA DINIZ",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 371
+            },
+            {
+              "nome": "CARLOS ALBERTO FERNANDES SOARES DE MARIA",
+              "numero": "55666",
+              "partido": "55",
+              "votos": 352
+            },
+            {
+              "nome": "IRACEMA PEREIRA DE LIMA",
+              "numero": "15999",
+              "partido": "15",
+              "votos": 317
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 3984,
+          "brancos": 75,
+          "nulos": 148,
+          "candidatos": 29,
+          "top": [
+            {
+              "nome": "JOSÉ MECIFRAN DE MEDEIROS",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 500
+            },
+            {
+              "nome": "JOSÉ NETO COSTA DINIZ",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 428
+            },
+            {
+              "nome": "FRANCISCO GINALDO ALVES DOS SANTOS",
+              "numero": "15678",
+              "partido": "15",
+              "votos": 366
+            },
+            {
+              "nome": "ERIVAN FREITAS DE MEDEIROS",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 347
+            },
+            {
+              "nome": "FRANCISCO LINS DE MEDEIROS",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 325
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 3965,
+          "brancos": 48,
+          "nulos": 246,
+          "candidatos": 36,
+          "top": [
+            {
+              "nome": "JOSÉ JEOVAN BATISTA SOARES",
+              "numero": "22555",
+              "partido": "22",
+              "votos": 369
+            },
+            {
+              "nome": "MARIA IVONE DA MATA SANTOS",
+              "numero": "45678",
+              "partido": "45",
+              "votos": 260
+            },
+            {
+              "nome": "JOSE NETO COSTA DINIZ",
+              "numero": "45000",
+              "partido": "45",
+              "votos": 243
+            },
+            {
+              "nome": "CARLOS ALBERTO FERNANDES SOARES DE MARIA",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 216
+            },
+            {
+              "nome": "MARIA GENI DE HOLANDA MEDEIROS",
+              "numero": "45111",
+              "partido": "45",
+              "votos": 210
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 4420,
+          "brancos": 45,
+          "nulos": 183,
+          "candidatos": 21,
+          "top": [
+            {
+              "nome": "JOSÉ JEOVAN BATISTA SOARES",
+              "numero": "11222",
+              "partido": "11",
+              "votos": 577
+            },
+            {
+              "nome": "FRANCISCO LINS DE MEDEIROS",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 474
+            },
+            {
+              "nome": "JOSÉ MECIFRAN DE MEDEIROS",
+              "numero": "11444",
+              "partido": "11",
+              "votos": 402
+            },
+            {
+              "nome": "JOSÉ NETO COSTA DINIZ",
+              "numero": "43000",
+              "partido": "43",
+              "votos": 326
+            },
+            {
+              "nome": "MARIA IVONE DA MATA SANTOS",
+              "numero": "43456",
+              "partido": "43",
+              "votos": 289
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2016": 630,
+          "2024": 2686
+        },
+        "12": {
+          "2012": 85
+        },
+        "13": {
+          "2024": 404
+        },
+        "14": {
+          "2012": 130
+        },
+        "15": {
+          "2012": 1528,
+          "2016": 941
+        },
+        "20": {
+          "2024": 403
+        },
+        "22": {
+          "2012": 390,
+          "2016": 602,
+          "2020": 1104
+        },
+        "25": {
+          "2012": 30,
+          "2016": 6
+        },
+        "33": {
+          "2012": 16
+        },
+        "40": {
+          "2012": 659,
+          "2016": 432
+        },
+        "43": {
+          "2024": 997
+        },
+        "44": {
+          "2016": 209
+        },
+        "45": {
+          "2016": 333,
+          "2020": 1882
+        },
+        "55": {
+          "2012": 1332,
+          "2016": 666
+        },
+        "65": {
+          "2012": 78
+        },
+        "77": {
+          "2020": 1138
+        },
+        "90": {
+          "2016": 373
+        }
+      }
+    },
+    "2413409": {
+      "codigo_ibge": 2413409,
+      "cd_tse": 18651,
+      "nome": "SERRA NEGRA DO NORTE",
+      "microrregiao": "Seridó Ocidental",
+      "por_ano": {
+        "2012": {
+          "nominais": 5137,
+          "brancos": 55,
+          "nulos": 124,
+          "candidatos": 29,
+          "top": [
+            {
+              "nome": "ERALDO ALVES DE ARAUJO",
+              "numero": "13333",
+              "partido": "13",
+              "votos": 419
+            },
+            {
+              "nome": "JARBAS FARIA DE ARAUJO",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 383
+            },
+            {
+              "nome": "MARIA JOSE DA SILVA",
+              "numero": "13222",
+              "partido": "13",
+              "votos": 344
+            },
+            {
+              "nome": "ANA KARINNE ARAÚJO DA NÓBREGA",
+              "numero": "45666",
+              "partido": "45",
+              "votos": 343
+            },
+            {
+              "nome": "IGOR VERAS BEZERRA",
+              "numero": "25888",
+              "partido": "25",
+              "votos": 324
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 5192,
+          "brancos": 57,
+          "nulos": 108,
+          "candidatos": 21,
+          "top": [
+            {
+              "nome": "ERALDO ALVES DE ARAÚJO",
+              "numero": "13333",
+              "partido": "13",
+              "votos": 527
+            },
+            {
+              "nome": "JARBAS FARIA DE ARAÚJO",
+              "numero": "12222",
+              "partido": "12",
+              "votos": 508
+            },
+            {
+              "nome": "JARBAS RIBEIRO DA COSTA",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 473
+            },
+            {
+              "nome": "DAMIÃO GALVÃO DE FIGUEIRÊDO",
+              "numero": "22333",
+              "partido": "22",
+              "votos": 432
+            },
+            {
+              "nome": "VANIA FERNANDES DE MEDEIROS",
+              "numero": "45888",
+              "partido": "45",
+              "votos": 415
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 5166,
+          "brancos": 39,
+          "nulos": 238,
+          "candidatos": 21,
+          "top": [
+            {
+              "nome": "SESIOM QUININO WANDERLEY",
+              "numero": "13111",
+              "partido": "13",
+              "votos": 580
+            },
+            {
+              "nome": "FLÁVIO BARROS BEZERRA",
+              "numero": "45678",
+              "partido": "45",
+              "votos": 469
+            },
+            {
+              "nome": "ANA KARINNE ARAÚJO DA NÓBREGA",
+              "numero": "45666",
+              "partido": "45",
+              "votos": 438
+            },
+            {
+              "nome": "VÂNIA FERNANDES DE MEDEIROS",
+              "numero": "45888",
+              "partido": "45",
+              "votos": 420
+            },
+            {
+              "nome": "ALYSSON MOISES DE MEDEIROS",
+              "numero": "13555",
+              "partido": "13",
+              "votos": 398
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 5449,
+          "brancos": 64,
+          "nulos": 152,
+          "candidatos": 19,
+          "top": [
+            {
+              "nome": "STENIO GOMES ARAÚJO",
+              "numero": "43111",
+              "partido": "43",
+              "votos": 617
+            },
+            {
+              "nome": "VANIA FERNANDES DE MEDEIROS",
+              "numero": "45888",
+              "partido": "45",
+              "votos": 573
+            },
+            {
+              "nome": "FRANCISCO INÁCIO NETO",
+              "numero": "43333",
+              "partido": "43",
+              "votos": 524
+            },
+            {
+              "nome": "JOSÉ ROBERTO GARCIA DE ARAÚJO",
+              "numero": "13777",
+              "partido": "13",
+              "votos": 448
+            },
+            {
+              "nome": "ANA KARINNE ARAUJO DA NOBREGA",
+              "numero": "45666",
+              "partido": "45",
+              "votos": 446
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2012": 501,
+          "2016": 250
+        },
+        "12": {
+          "2012": 21,
+          "2016": 686
+        },
+        "13": {
+          "2012": 1190,
+          "2016": 930,
+          "2020": 2480,
+          "2024": 1112
+        },
+        "15": {
+          "2012": 176,
+          "2016": 446
+        },
+        "22": {
+          "2012": 821,
+          "2016": 920
+        },
+        "23": {
+          "2024": 1
+        },
+        "25": {
+          "2012": 575
+        },
+        "33": {
+          "2012": 205
+        },
+        "40": {
+          "2012": 922,
+          "2016": 627
+        },
+        "43": {
+          "2024": 1738
+        },
+        "45": {
+          "2012": 1003,
+          "2016": 1460,
+          "2020": 2821,
+          "2024": 2697
+        },
+        "55": {
+          "2016": 63
+        },
+        "77": {
+          "2016": 61
+        },
+        "90": {
+          "2016": 1
+        }
+      }
+    },
+    "2414159": {
+      "codigo_ibge": 2414159,
+      "cd_tse": 16004,
+      "nome": "TENENTE LAURENTINO CRUZ",
+      "microrregiao": "Serra de Santana",
+      "por_ano": {
+        "2012": {
+          "nominais": 3941,
+          "brancos": 38,
+          "nulos": 118,
+          "candidatos": 31,
+          "top": [
+            {
+              "nome": "ELIODELSON BEZERRA DA SILVA",
+              "numero": "15789",
+              "partido": "15",
+              "votos": 288
+            },
+            {
+              "nome": "FRANCISCO MACEDO DA SILVA",
+              "numero": "15444",
+              "partido": "15",
+              "votos": 269
+            },
+            {
+              "nome": "JOAO GONÇALO DOS SANTOS",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 234
+            },
+            {
+              "nome": "ROZENILDA LUCIA TOMAZ MEDEIROS",
+              "numero": "22111",
+              "partido": "22",
+              "votos": 222
+            },
+            {
+              "nome": "FRANCISCO ASSIS DE MORAIS ARAUJO",
+              "numero": "14147",
+              "partido": "14",
+              "votos": 216
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 4068,
+          "brancos": 45,
+          "nulos": 128,
+          "candidatos": 36,
+          "top": [
+            {
+              "nome": "ELIODELSON BEZERRA DA SILVA",
+              "numero": "15789",
+              "partido": "15",
+              "votos": 350
+            },
+            {
+              "nome": "FRANCISCO CLEUDIMAR DA SILVA FERREIRA",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 299
+            },
+            {
+              "nome": "ASSIS FRANCISCO ALVES",
+              "numero": "11222",
+              "partido": "11",
+              "votos": 279
+            },
+            {
+              "nome": "ANA PAULA GALDINO SOARES DE MEDEIROS",
+              "numero": "45789",
+              "partido": "45",
+              "votos": 272
+            },
+            {
+              "nome": "JOÃO GONÇALO DOS SANTOS",
+              "numero": "15555",
+              "partido": "15",
+              "votos": 268
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 4105,
+          "brancos": 35,
+          "nulos": 159,
+          "candidatos": 22,
+          "top": [
+            {
+              "nome": "ELIODELSON BEZERRA DA SILVA",
+              "numero": "22789",
+              "partido": "22",
+              "votos": 395
+            },
+            {
+              "nome": "TOMAZ ARAUJO CRUZ",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 383
+            },
+            {
+              "nome": "FRANCISCO CLEUDIMAR DA SILVA FERREIRA",
+              "numero": "22111",
+              "partido": "22",
+              "votos": 379
+            },
+            {
+              "nome": "JOSÉ RICARDO DE MORAIS",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 336
+            },
+            {
+              "nome": "JERONIMO SOUZA DE MEDEIROS",
+              "numero": "45666",
+              "partido": "45",
+              "votos": 328
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 4527,
+          "brancos": 46,
+          "nulos": 117,
+          "candidatos": 27,
+          "top": [
+            {
+              "nome": "ELIODELSON BEZERRA DA SILVA",
+              "numero": "11789",
+              "partido": "11",
+              "votos": 464
+            },
+            {
+              "nome": "JOAO GONÇALO DOS SANTOS",
+              "numero": "11555",
+              "partido": "11",
+              "votos": 415
+            },
+            {
+              "nome": "MARIA DAS VITORIA DE MEDEIROS",
+              "numero": "11444",
+              "partido": "11",
+              "votos": 408
+            },
+            {
+              "nome": "FRANCISCO CLEUDIMAR DA SILVA FERREIRA",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 383
+            },
+            {
+              "nome": "ARTHUR MANOEL DE MEDEIROS ALVES",
+              "numero": "11123",
+              "partido": "11",
+              "votos": 358
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "11": {
+          "2012": 479,
+          "2016": 349,
+          "2024": 3197
+        },
+        "13": {
+          "2024": 343
+        },
+        "14": {
+          "2012": 253
+        },
+        "15": {
+          "2012": 1624,
+          "2016": 1401
+        },
+        "20": {
+          "2024": 666
+        },
+        "22": {
+          "2012": 837,
+          "2016": 447,
+          "2020": 2773
+        },
+        "25": {
+          "2012": 312,
+          "2016": 177
+        },
+        "40": {
+          "2012": 623,
+          "2016": 264
+        },
+        "44": {
+          "2024": 427
+        },
+        "45": {
+          "2016": 1615,
+          "2020": 1506
+        },
+        "65": {
+          "2024": 1
+        }
+      }
+    },
+    "2414308": {
+      "codigo_ibge": 2414308,
+      "cd_tse": 18830,
+      "nome": "TIMBAÚBA DOS BATISTAS",
+      "microrregiao": "Seridó Ocidental",
+      "por_ano": {
+        "2012": {
+          "nominais": 2038,
+          "brancos": 11,
+          "nulos": 43,
+          "candidatos": 25,
+          "top": [
+            {
+              "nome": "PEDRO CLESIO SANTOS",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 246
+            },
+            {
+              "nome": "VITELMA BATISTA DOS SANTOS",
+              "numero": "22111",
+              "partido": "22",
+              "votos": 217
+            },
+            {
+              "nome": "ROMUALDO DOS SANTOS",
+              "numero": "15000",
+              "partido": "15",
+              "votos": 181
+            },
+            {
+              "nome": "KARIBELE BATISTA TEIXEIRA",
+              "numero": "45555",
+              "partido": "45",
+              "votos": 170
+            },
+            {
+              "nome": "ERIVONALDO DA SILVA",
+              "numero": "40555",
+              "partido": "40",
+              "votos": 163
+            }
+          ]
+        },
+        "2016": {
+          "nominais": 2187,
+          "brancos": 11,
+          "nulos": 25,
+          "candidatos": 22,
+          "top": [
+            {
+              "nome": "JOSÉ DE FRANÇA PEREIRA",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 292
+            },
+            {
+              "nome": "VITELMA BATISTA DOS SANTOS",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 241
+            },
+            {
+              "nome": "KARIBELE BATISTA TEIXEIRA",
+              "numero": "12222",
+              "partido": "12",
+              "votos": 218
+            },
+            {
+              "nome": "NILTON CESAR DE MEDEIROS",
+              "numero": "40000",
+              "partido": "40",
+              "votos": 187
+            },
+            {
+              "nome": "LEILA TEIXEIRA DE ARAUJO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 172
+            }
+          ]
+        },
+        "2020": {
+          "nominais": 2248,
+          "brancos": 9,
+          "nulos": 47,
+          "candidatos": 20,
+          "top": [
+            {
+              "nome": "CLESIO SANTOS BEZERRA DE ARAUJO",
+              "numero": "15000",
+              "partido": "15",
+              "votos": 295
+            },
+            {
+              "nome": "LEILA TEIXEIRA DE ARAUJO",
+              "numero": "15222",
+              "partido": "15",
+              "votos": 211
+            },
+            {
+              "nome": "VITELMA BATISTA DOS SANTOS",
+              "numero": "22222",
+              "partido": "22",
+              "votos": 209
+            },
+            {
+              "nome": "TACIANO ARAUJO FERNANDES",
+              "numero": "15333",
+              "partido": "15",
+              "votos": 208
+            },
+            {
+              "nome": "JOSÉ DE FRANÇA PEREIRA",
+              "numero": "15111",
+              "partido": "15",
+              "votos": 203
+            }
+          ]
+        },
+        "2024": {
+          "nominais": 2450,
+          "brancos": 8,
+          "nulos": 42,
+          "candidatos": 16,
+          "top": [
+            {
+              "nome": "YLLANA DE ARAÚJO TORRES CLEMENTE",
+              "numero": "11666",
+              "partido": "11",
+              "votos": 237
+            },
+            {
+              "nome": "OTENOR SATURNINO JÚNIOR",
+              "numero": "11555",
+              "partido": "11",
+              "votos": 211
+            },
+            {
+              "nome": "ADSON GOMES DOS SANTOS",
+              "numero": "11222",
+              "partido": "11",
+              "votos": 208
+            },
+            {
+              "nome": "CÍCERO ÂNGELO DA SILVA JÚNIOR",
+              "numero": "11111",
+              "partido": "11",
+              "votos": 190
+            },
+            {
+              "nome": "PEDRO CLESIO SANTOS",
+              "numero": "10888",
+              "partido": "10",
+              "votos": 187
+            }
+          ]
+        }
+      },
+      "partidos": {
+        "10": {
+          "2016": 161,
+          "2020": 136,
+          "2024": 716
+        },
+        "11": {
+          "2024": 1778
+        },
+        "12": {
+          "2016": 222
+        },
+        "13": {
+          "2012": 113,
+          "2016": 26
+        },
+        "14": {
+          "2012": 2
+        },
+        "15": {
+          "2012": 738,
+          "2016": 953,
+          "2020": 989
+        },
+        "17": {
+          "2020": 39
+        },
+        "20": {
+          "2012": 113
+        },
+        "22": {
+          "2012": 536,
+          "2016": 268,
+          "2020": 1161
+        },
+        "25": {
+          "2012": 80,
+          "2016": 146
+        },
+        "31": {
+          "2012": 11
+        },
+        "40": {
+          "2012": 331,
+          "2016": 346
+        },
+        "45": {
+          "2012": 172
+        },
+        "55": {
+          "2016": 149
+        }
+      }
+    }
+  }
+}
