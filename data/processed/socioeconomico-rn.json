@@ -1,0 +1,1686 @@
+{
+  "meta": {
+    "source": "IBGE — API Agregados (Censo 2022; PIB Municípios 2021)",
+    "uf": "RN",
+    "accessedAt": "2026-06-04",
+    "variaveis": {
+      "populacao_2022": "agregado 4714 / var 93 (Censo 2022)",
+      "area_km2": "agregado 1301 / var 615 (2010)",
+      "pib_2021_mil_reais": "agregado 5938 / var 37 (2021)",
+      "pib_per_capita_2021": "calculado: pib_mil*1000/populacao_2022"
+    },
+    "nota": "Valores ausentes ficam null — nunca estimados. PIB per capita é derivado."
+  },
+  "municipios": [
+    {
+      "codigo_ibge": 2400109,
+      "nome": "Acari",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 10597,
+      "area_km2": 608.6,
+      "densidade_hab_km2": 17.41,
+      "pib_2021_mil_reais": 141992,
+      "pib_per_capita_2021": 13399
+    },
+    {
+      "codigo_ibge": 2400307,
+      "nome": "Afonso Bezerra",
+      "microrregiao": "Angicos",
+      "populacao_2022": 10839,
+      "area_km2": 576.2,
+      "densidade_hab_km2": 18.81,
+      "pib_2021_mil_reais": 138262,
+      "pib_per_capita_2021": 12756
+    },
+    {
+      "codigo_ibge": 2400406,
+      "nome": "Água Nova",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 2946,
+      "area_km2": 50.7,
+      "densidade_hab_km2": 58.11,
+      "pib_2021_mil_reais": 34552,
+      "pib_per_capita_2021": 11728
+    },
+    {
+      "codigo_ibge": 2400505,
+      "nome": "Alexandria",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 13640,
+      "area_km2": 381.2,
+      "densidade_hab_km2": 35.78,
+      "pib_2021_mil_reais": 150789,
+      "pib_per_capita_2021": 11055
+    },
+    {
+      "codigo_ibge": 2400604,
+      "nome": "Almino Afonso",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 4687,
+      "area_km2": 128,
+      "densidade_hab_km2": 36.62,
+      "pib_2021_mil_reais": 50061,
+      "pib_per_capita_2021": 10681
+    },
+    {
+      "codigo_ibge": 2400703,
+      "nome": "Alto do Rodrigues",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 12484,
+      "area_km2": 191.3,
+      "densidade_hab_km2": 65.26,
+      "pib_2021_mil_reais": 616322,
+      "pib_per_capita_2021": 49369
+    },
+    {
+      "codigo_ibge": 2400802,
+      "nome": "Angicos",
+      "microrregiao": "Angicos",
+      "populacao_2022": 11632,
+      "area_km2": 741.6,
+      "densidade_hab_km2": 15.69,
+      "pib_2021_mil_reais": 180163,
+      "pib_per_capita_2021": 15489
+    },
+    {
+      "codigo_ibge": 2400901,
+      "nome": "Antônio Martins",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 6577,
+      "area_km2": 244.6,
+      "densidade_hab_km2": 26.89,
+      "pib_2021_mil_reais": 65525,
+      "pib_per_capita_2021": 9963
+    },
+    {
+      "codigo_ibge": 2401008,
+      "nome": "Apodi",
+      "microrregiao": "Chapada do Apodi",
+      "populacao_2022": 36093,
+      "area_km2": 1602.5,
+      "densidade_hab_km2": 22.52,
+      "pib_2021_mil_reais": 709586,
+      "pib_per_capita_2021": 19660
+    },
+    {
+      "codigo_ibge": 2401107,
+      "nome": "Areia Branca",
+      "microrregiao": "Mossoró",
+      "populacao_2022": 24093,
+      "area_km2": 357.6,
+      "densidade_hab_km2": 67.37,
+      "pib_2021_mil_reais": 935968,
+      "pib_per_capita_2021": 38848
+    },
+    {
+      "codigo_ibge": 2401206,
+      "nome": "Arez",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 13251,
+      "area_km2": 115.5,
+      "densidade_hab_km2": 114.73,
+      "pib_2021_mil_reais": 386631,
+      "pib_per_capita_2021": 29177
+    },
+    {
+      "codigo_ibge": 2400208,
+      "nome": "Assú",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 56496,
+      "area_km2": 1303.4,
+      "densidade_hab_km2": 43.35,
+      "pib_2021_mil_reais": 1467562,
+      "pib_per_capita_2021": 25976
+    },
+    {
+      "codigo_ibge": 2401404,
+      "nome": "Baía Formosa",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 8825,
+      "area_km2": 245.7,
+      "densidade_hab_km2": 35.92,
+      "pib_2021_mil_reais": 325030,
+      "pib_per_capita_2021": 36831
+    },
+    {
+      "codigo_ibge": 2401453,
+      "nome": "Baraúna",
+      "microrregiao": "Mossoró",
+      "populacao_2022": 26913,
+      "area_km2": 825.7,
+      "densidade_hab_km2": 32.59,
+      "pib_2021_mil_reais": 746395,
+      "pib_per_capita_2021": 27734
+    },
+    {
+      "codigo_ibge": 2401503,
+      "nome": "Barcelona",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 3986,
+      "area_km2": 152.6,
+      "densidade_hab_km2": 26.12,
+      "pib_2021_mil_reais": 45864,
+      "pib_per_capita_2021": 11506
+    },
+    {
+      "codigo_ibge": 2401602,
+      "nome": "Bento Fernandes",
+      "microrregiao": "Baixa Verde",
+      "populacao_2022": 4807,
+      "area_km2": 301.1,
+      "densidade_hab_km2": 15.96,
+      "pib_2021_mil_reais": 88429,
+      "pib_per_capita_2021": 18396
+    },
+    {
+      "codigo_ibge": 2401651,
+      "nome": "Bodó",
+      "microrregiao": "Serra de Santana",
+      "populacao_2022": 2306,
+      "area_km2": 253.5,
+      "densidade_hab_km2": 9.1,
+      "pib_2021_mil_reais": 286574,
+      "pib_per_capita_2021": 124273
+    },
+    {
+      "codigo_ibge": 2401701,
+      "nome": "Bom Jesus",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 9952,
+      "area_km2": 122,
+      "densidade_hab_km2": 81.57,
+      "pib_2021_mil_reais": 109336,
+      "pib_per_capita_2021": 10986
+    },
+    {
+      "codigo_ibge": 2401800,
+      "nome": "Brejinho",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 12202,
+      "area_km2": 61.6,
+      "densidade_hab_km2": 198.08,
+      "pib_2021_mil_reais": 139463,
+      "pib_per_capita_2021": 11430
+    },
+    {
+      "codigo_ibge": 2401859,
+      "nome": "Caiçara do Norte",
+      "microrregiao": "Macau",
+      "populacao_2022": 6293,
+      "area_km2": 189.5,
+      "densidade_hab_km2": 33.21,
+      "pib_2021_mil_reais": 112176,
+      "pib_per_capita_2021": 17826
+    },
+    {
+      "codigo_ibge": 2401909,
+      "nome": "Caiçara do Rio do Vento",
+      "microrregiao": "Angicos",
+      "populacao_2022": 3268,
+      "area_km2": 261.2,
+      "densidade_hab_km2": 12.51,
+      "pib_2021_mil_reais": 60456,
+      "pib_per_capita_2021": 18499
+    },
+    {
+      "codigo_ibge": 2402006,
+      "nome": "Caicó",
+      "microrregiao": "Seridó Ocidental",
+      "populacao_2022": 61146,
+      "area_km2": 1228.6,
+      "densidade_hab_km2": 49.77,
+      "pib_2021_mil_reais": 1394838,
+      "pib_per_capita_2021": 22812
+    },
+    {
+      "codigo_ibge": 2401305,
+      "nome": "Campo Grande",
+      "microrregiao": "Médio Oeste",
+      "populacao_2022": 9730,
+      "area_km2": 896.9,
+      "densidade_hab_km2": 10.85,
+      "pib_2021_mil_reais": 105354,
+      "pib_per_capita_2021": 10828
+    },
+    {
+      "codigo_ibge": 2402105,
+      "nome": "Campo Redondo",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 10215,
+      "area_km2": 213.7,
+      "densidade_hab_km2": 47.8,
+      "pib_2021_mil_reais": 106965,
+      "pib_per_capita_2021": 10471
+    },
+    {
+      "codigo_ibge": 2402204,
+      "nome": "Canguaretama",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 29668,
+      "area_km2": 245.4,
+      "densidade_hab_km2": 120.9,
+      "pib_2021_mil_reais": 605673,
+      "pib_per_capita_2021": 20415
+    },
+    {
+      "codigo_ibge": 2402303,
+      "nome": "Caraúbas",
+      "microrregiao": "Chapada do Apodi",
+      "populacao_2022": 19727,
+      "area_km2": 1095,
+      "densidade_hab_km2": 18.02,
+      "pib_2021_mil_reais": 373657,
+      "pib_per_capita_2021": 18941
+    },
+    {
+      "codigo_ibge": 2402402,
+      "nome": "Carnaúba dos Dantas",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 7992,
+      "area_km2": 245.6,
+      "densidade_hab_km2": 32.54,
+      "pib_2021_mil_reais": 118372,
+      "pib_per_capita_2021": 14811
+    },
+    {
+      "codigo_ibge": 2402501,
+      "nome": "Carnaubais",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 9714,
+      "area_km2": 542.5,
+      "densidade_hab_km2": 17.91,
+      "pib_2021_mil_reais": 210948,
+      "pib_per_capita_2021": 21716
+    },
+    {
+      "codigo_ibge": 2402600,
+      "nome": "Ceará-Mirim",
+      "microrregiao": "Macaíba",
+      "populacao_2022": 79115,
+      "area_km2": 724.4,
+      "densidade_hab_km2": 109.21,
+      "pib_2021_mil_reais": 1002193,
+      "pib_per_capita_2021": 12668
+    },
+    {
+      "codigo_ibge": 2402709,
+      "nome": "Cerro Corá",
+      "microrregiao": "Serra de Santana",
+      "populacao_2022": 11000,
+      "area_km2": 393.6,
+      "densidade_hab_km2": 27.95,
+      "pib_2021_mil_reais": 140410,
+      "pib_per_capita_2021": 12765
+    },
+    {
+      "codigo_ibge": 2402808,
+      "nome": "Coronel Ezequiel",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 5117,
+      "area_km2": 185.7,
+      "densidade_hab_km2": 27.56,
+      "pib_2021_mil_reais": 52506,
+      "pib_per_capita_2021": 10261
+    },
+    {
+      "codigo_ibge": 2402907,
+      "nome": "Coronel João Pessoa",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 4237,
+      "area_km2": 117.1,
+      "densidade_hab_km2": 36.18,
+      "pib_2021_mil_reais": 48166,
+      "pib_per_capita_2021": 11368
+    },
+    {
+      "codigo_ibge": 2403004,
+      "nome": "Cruzeta",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 8005,
+      "area_km2": 295.8,
+      "densidade_hab_km2": 27.06,
+      "pib_2021_mil_reais": 123141,
+      "pib_per_capita_2021": 15383
+    },
+    {
+      "codigo_ibge": 2403103,
+      "nome": "Currais Novos",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 41313,
+      "area_km2": 864.3,
+      "densidade_hab_km2": 47.8,
+      "pib_2021_mil_reais": 804224,
+      "pib_per_capita_2021": 19467
+    },
+    {
+      "codigo_ibge": 2403202,
+      "nome": "Doutor Severiano",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 7044,
+      "area_km2": 108.3,
+      "densidade_hab_km2": 65.04,
+      "pib_2021_mil_reais": 78555,
+      "pib_per_capita_2021": 11152
+    },
+    {
+      "codigo_ibge": 2403301,
+      "nome": "Encanto",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 6016,
+      "area_km2": 125.7,
+      "densidade_hab_km2": 47.86,
+      "pib_2021_mil_reais": 62292,
+      "pib_per_capita_2021": 10354
+    },
+    {
+      "codigo_ibge": 2403400,
+      "nome": "Equador",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 5360,
+      "area_km2": 265,
+      "densidade_hab_km2": 20.23,
+      "pib_2021_mil_reais": 81976,
+      "pib_per_capita_2021": 15294
+    },
+    {
+      "codigo_ibge": 2403509,
+      "nome": "Espírito Santo",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 10620,
+      "area_km2": 135.8,
+      "densidade_hab_km2": 78.2,
+      "pib_2021_mil_reais": 97584,
+      "pib_per_capita_2021": 9189
+    },
+    {
+      "codigo_ibge": 2403608,
+      "nome": "Extremoz",
+      "microrregiao": "Natal",
+      "populacao_2022": 61635,
+      "area_km2": 139.6,
+      "densidade_hab_km2": 441.51,
+      "pib_2021_mil_reais": 570418,
+      "pib_per_capita_2021": 9255
+    },
+    {
+      "codigo_ibge": 2403707,
+      "nome": "Felipe Guerra",
+      "microrregiao": "Chapada do Apodi",
+      "populacao_2022": 5944,
+      "area_km2": 268.6,
+      "densidade_hab_km2": 22.13,
+      "pib_2021_mil_reais": 173825,
+      "pib_per_capita_2021": 29244
+    },
+    {
+      "codigo_ibge": 2403756,
+      "nome": "Fernando Pedroza",
+      "microrregiao": "Angicos",
+      "populacao_2022": 2938,
+      "area_km2": 322.6,
+      "densidade_hab_km2": 9.11,
+      "pib_2021_mil_reais": 39069,
+      "pib_per_capita_2021": 13298
+    },
+    {
+      "codigo_ibge": 2403806,
+      "nome": "Florânia",
+      "microrregiao": "Serra de Santana",
+      "populacao_2022": 10196,
+      "area_km2": 504.9,
+      "densidade_hab_km2": 20.19,
+      "pib_2021_mil_reais": 120492,
+      "pib_per_capita_2021": 11818
+    },
+    {
+      "codigo_ibge": 2403905,
+      "nome": "Francisco Dantas",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 2700,
+      "area_km2": 181.6,
+      "densidade_hab_km2": 14.87,
+      "pib_2021_mil_reais": 32758,
+      "pib_per_capita_2021": 12133
+    },
+    {
+      "codigo_ibge": 2404002,
+      "nome": "Frutuoso Gomes",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 4122,
+      "area_km2": 63.3,
+      "densidade_hab_km2": 65.12,
+      "pib_2021_mil_reais": 44911,
+      "pib_per_capita_2021": 10895
+    },
+    {
+      "codigo_ibge": 2404101,
+      "nome": "Galinhos",
+      "microrregiao": "Macau",
+      "populacao_2022": 2104,
+      "area_km2": 342.2,
+      "densidade_hab_km2": 6.15,
+      "pib_2021_mil_reais": 162616,
+      "pib_per_capita_2021": 77289
+    },
+    {
+      "codigo_ibge": 2404200,
+      "nome": "Goianinha",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 26741,
+      "area_km2": 192.3,
+      "densidade_hab_km2": 139.06,
+      "pib_2021_mil_reais": 546570,
+      "pib_per_capita_2021": 20439
+    },
+    {
+      "codigo_ibge": 2404309,
+      "nome": "Governador Dix-Sept Rosado",
+      "microrregiao": "Chapada do Apodi",
+      "populacao_2022": 11938,
+      "area_km2": 1129.3,
+      "densidade_hab_km2": 10.57,
+      "pib_2021_mil_reais": 386259,
+      "pib_per_capita_2021": 32355
+    },
+    {
+      "codigo_ibge": 2404408,
+      "nome": "Grossos",
+      "microrregiao": "Mossoró",
+      "populacao_2022": 9924,
+      "area_km2": 126.5,
+      "densidade_hab_km2": 78.45,
+      "pib_2021_mil_reais": 158308,
+      "pib_per_capita_2021": 15952
+    },
+    {
+      "codigo_ibge": 2404507,
+      "nome": "Guamaré",
+      "microrregiao": "Macau",
+      "populacao_2022": 15295,
+      "area_km2": 259,
+      "densidade_hab_km2": 59.05,
+      "pib_2021_mil_reais": 2042133,
+      "pib_per_capita_2021": 133516
+    },
+    {
+      "codigo_ibge": 2404606,
+      "nome": "Ielmo Marinho",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 11615,
+      "area_km2": 312,
+      "densidade_hab_km2": 37.23,
+      "pib_2021_mil_reais": 140718,
+      "pib_per_capita_2021": 12115
+    },
+    {
+      "codigo_ibge": 2404705,
+      "nome": "Ipanguaçu",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 14131,
+      "area_km2": 374.2,
+      "densidade_hab_km2": 37.76,
+      "pib_2021_mil_reais": 196498,
+      "pib_per_capita_2021": 13905
+    },
+    {
+      "codigo_ibge": 2404804,
+      "nome": "Ipueira",
+      "microrregiao": "Seridó Ocidental",
+      "populacao_2022": 2035,
+      "area_km2": 127.3,
+      "densidade_hab_km2": 15.99,
+      "pib_2021_mil_reais": 34929,
+      "pib_per_capita_2021": 17164
+    },
+    {
+      "codigo_ibge": 2404853,
+      "nome": "Itajá",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 7292,
+      "area_km2": 203.6,
+      "densidade_hab_km2": 35.82,
+      "pib_2021_mil_reais": 99444,
+      "pib_per_capita_2021": 13637
+    },
+    {
+      "codigo_ibge": 2404903,
+      "nome": "Itaú",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 5320,
+      "area_km2": 133,
+      "densidade_hab_km2": 40,
+      "pib_2021_mil_reais": 73781,
+      "pib_per_capita_2021": 13869
+    },
+    {
+      "codigo_ibge": 2405009,
+      "nome": "Jaçanã",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 7834,
+      "area_km2": 54.6,
+      "densidade_hab_km2": 143.48,
+      "pib_2021_mil_reais": 86389,
+      "pib_per_capita_2021": 11027
+    },
+    {
+      "codigo_ibge": 2405108,
+      "nome": "Jandaíra",
+      "microrregiao": "Baixa Verde",
+      "populacao_2022": 6562,
+      "area_km2": 435.9,
+      "densidade_hab_km2": 15.05,
+      "pib_2021_mil_reais": 101429,
+      "pib_per_capita_2021": 15457
+    },
+    {
+      "codigo_ibge": 2405207,
+      "nome": "Janduís",
+      "microrregiao": "Médio Oeste",
+      "populacao_2022": 4746,
+      "area_km2": 304.9,
+      "densidade_hab_km2": 15.57,
+      "pib_2021_mil_reais": 84497,
+      "pib_per_capita_2021": 17804
+    },
+    {
+      "codigo_ibge": 2405306,
+      "nome": "Januário Cicco",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 9051,
+      "area_km2": 187.2,
+      "densidade_hab_km2": 48.35,
+      "pib_2021_mil_reais": 84899,
+      "pib_per_capita_2021": 9380
+    },
+    {
+      "codigo_ibge": 2405405,
+      "nome": "Japi",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 5117,
+      "area_km2": 189,
+      "densidade_hab_km2": 27.07,
+      "pib_2021_mil_reais": 51547,
+      "pib_per_capita_2021": 10074
+    },
+    {
+      "codigo_ibge": 2405504,
+      "nome": "Jardim de Angicos",
+      "microrregiao": "Angicos",
+      "populacao_2022": 2437,
+      "area_km2": 254,
+      "densidade_hab_km2": 9.59,
+      "pib_2021_mil_reais": 64391,
+      "pib_per_capita_2021": 26422
+    },
+    {
+      "codigo_ibge": 2405603,
+      "nome": "Jardim de Piranhas",
+      "microrregiao": "Seridó Ocidental",
+      "populacao_2022": 13977,
+      "area_km2": 330.5,
+      "densidade_hab_km2": 42.29,
+      "pib_2021_mil_reais": 213313,
+      "pib_per_capita_2021": 15262
+    },
+    {
+      "codigo_ibge": 2405702,
+      "nome": "Jardim do Seridó",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 11655,
+      "area_km2": 368.6,
+      "densidade_hab_km2": 31.62,
+      "pib_2021_mil_reais": 207991,
+      "pib_per_capita_2021": 17846
+    },
+    {
+      "codigo_ibge": 2405801,
+      "nome": "João Câmara",
+      "microrregiao": "Baixa Verde",
+      "populacao_2022": 33290,
+      "area_km2": 715,
+      "densidade_hab_km2": 46.56,
+      "pib_2021_mil_reais": 1269833,
+      "pib_per_capita_2021": 38145
+    },
+    {
+      "codigo_ibge": 2405900,
+      "nome": "João Dias",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 2076,
+      "area_km2": 88.2,
+      "densidade_hab_km2": 23.54,
+      "pib_2021_mil_reais": 27991,
+      "pib_per_capita_2021": 13483
+    },
+    {
+      "codigo_ibge": 2406007,
+      "nome": "José da Penha",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 5803,
+      "area_km2": 117.6,
+      "densidade_hab_km2": 49.35,
+      "pib_2021_mil_reais": 67413,
+      "pib_per_capita_2021": 11617
+    },
+    {
+      "codigo_ibge": 2406106,
+      "nome": "Jucurutu",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 17793,
+      "area_km2": 933.7,
+      "densidade_hab_km2": 19.06,
+      "pib_2021_mil_reais": 315838,
+      "pib_per_capita_2021": 17751
+    },
+    {
+      "codigo_ibge": 2406155,
+      "nome": "Jundiá",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 3739,
+      "area_km2": 44.6,
+      "densidade_hab_km2": 83.83,
+      "pib_2021_mil_reais": 42147,
+      "pib_per_capita_2021": 11272
+    },
+    {
+      "codigo_ibge": 2406205,
+      "nome": "Lagoa d'Anta",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 6654,
+      "area_km2": 105.7,
+      "densidade_hab_km2": 62.95,
+      "pib_2021_mil_reais": 70837,
+      "pib_per_capita_2021": 10646
+    },
+    {
+      "codigo_ibge": 2406304,
+      "nome": "Lagoa de Pedras",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 7338,
+      "area_km2": 117.7,
+      "densidade_hab_km2": 62.34,
+      "pib_2021_mil_reais": 81381,
+      "pib_per_capita_2021": 11090
+    },
+    {
+      "codigo_ibge": 2406403,
+      "nome": "Lagoa de Velhos",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 2567,
+      "area_km2": 112.8,
+      "densidade_hab_km2": 22.76,
+      "pib_2021_mil_reais": 38240,
+      "pib_per_capita_2021": 14897
+    },
+    {
+      "codigo_ibge": 2406502,
+      "nome": "Lagoa Nova",
+      "microrregiao": "Serra de Santana",
+      "populacao_2022": 15573,
+      "area_km2": 176.3,
+      "densidade_hab_km2": 88.33,
+      "pib_2021_mil_reais": 269032,
+      "pib_per_capita_2021": 17276
+    },
+    {
+      "codigo_ibge": 2406601,
+      "nome": "Lagoa Salgada",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 8319,
+      "area_km2": 79.3,
+      "densidade_hab_km2": 104.91,
+      "pib_2021_mil_reais": 94311,
+      "pib_per_capita_2021": 11337
+    },
+    {
+      "codigo_ibge": 2406700,
+      "nome": "Lajes",
+      "microrregiao": "Angicos",
+      "populacao_2022": 9866,
+      "area_km2": 676.6,
+      "densidade_hab_km2": 14.58,
+      "pib_2021_mil_reais": 165928,
+      "pib_per_capita_2021": 16818
+    },
+    {
+      "codigo_ibge": 2406809,
+      "nome": "Lajes Pintadas",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 4787,
+      "area_km2": 130.2,
+      "densidade_hab_km2": 36.77,
+      "pib_2021_mil_reais": 51593,
+      "pib_per_capita_2021": 10778
+    },
+    {
+      "codigo_ibge": 2406908,
+      "nome": "Lucrécia",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 3490,
+      "area_km2": 30.9,
+      "densidade_hab_km2": 112.94,
+      "pib_2021_mil_reais": 51509,
+      "pib_per_capita_2021": 14759
+    },
+    {
+      "codigo_ibge": 2407005,
+      "nome": "Luís Gomes",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 9070,
+      "area_km2": 166.6,
+      "densidade_hab_km2": 54.44,
+      "pib_2021_mil_reais": 87825,
+      "pib_per_capita_2021": 9683
+    },
+    {
+      "codigo_ibge": 2407104,
+      "nome": "Macaíba",
+      "microrregiao": "Macaíba",
+      "populacao_2022": 82249,
+      "area_km2": 510.8,
+      "densidade_hab_km2": 161.02,
+      "pib_2021_mil_reais": 1828142,
+      "pib_per_capita_2021": 22227
+    },
+    {
+      "codigo_ibge": 2407203,
+      "nome": "Macau",
+      "microrregiao": "Macau",
+      "populacao_2022": 27369,
+      "area_km2": 788,
+      "densidade_hab_km2": 34.73,
+      "pib_2021_mil_reais": 1111118,
+      "pib_per_capita_2021": 40598
+    },
+    {
+      "codigo_ibge": 2407252,
+      "nome": "Major Sales",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 3924,
+      "area_km2": 32,
+      "densidade_hab_km2": 122.63,
+      "pib_2021_mil_reais": 48003,
+      "pib_per_capita_2021": 12233
+    },
+    {
+      "codigo_ibge": 2407302,
+      "nome": "Marcelino Vieira",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 7896,
+      "area_km2": 345.7,
+      "densidade_hab_km2": 22.84,
+      "pib_2021_mil_reais": 82889,
+      "pib_per_capita_2021": 10498
+    },
+    {
+      "codigo_ibge": 2407401,
+      "nome": "Martins",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 8179,
+      "area_km2": 169.5,
+      "densidade_hab_km2": 48.25,
+      "pib_2021_mil_reais": 108194,
+      "pib_per_capita_2021": 13228
+    },
+    {
+      "codigo_ibge": 2407500,
+      "nome": "Maxaranguape",
+      "microrregiao": "Litoral Nordeste",
+      "populacao_2022": 10255,
+      "area_km2": 131.3,
+      "densidade_hab_km2": 78.1,
+      "pib_2021_mil_reais": 134892,
+      "pib_per_capita_2021": 13154
+    },
+    {
+      "codigo_ibge": 2407609,
+      "nome": "Messias Targino",
+      "microrregiao": "Médio Oeste",
+      "populacao_2022": 4274,
+      "area_km2": 135.1,
+      "densidade_hab_km2": 31.64,
+      "pib_2021_mil_reais": 55529,
+      "pib_per_capita_2021": 12992
+    },
+    {
+      "codigo_ibge": 2407708,
+      "nome": "Montanhas",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 11444,
+      "area_km2": 82.2,
+      "densidade_hab_km2": 139.22,
+      "pib_2021_mil_reais": 130282,
+      "pib_per_capita_2021": 11384
+    },
+    {
+      "codigo_ibge": 2407807,
+      "nome": "Monte Alegre",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 23031,
+      "area_km2": 211.3,
+      "densidade_hab_km2": 109,
+      "pib_2021_mil_reais": 271451,
+      "pib_per_capita_2021": 11786
+    },
+    {
+      "codigo_ibge": 2407906,
+      "nome": "Monte das Gameleiras",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 2276,
+      "area_km2": 71.9,
+      "densidade_hab_km2": 31.66,
+      "pib_2021_mil_reais": 32366,
+      "pib_per_capita_2021": 14221
+    },
+    {
+      "codigo_ibge": 2408003,
+      "nome": "Mossoró",
+      "microrregiao": "Mossoró",
+      "populacao_2022": 264577,
+      "area_km2": 2099.3,
+      "densidade_hab_km2": 126.03,
+      "pib_2021_mil_reais": 8071719,
+      "pib_per_capita_2021": 30508
+    },
+    {
+      "codigo_ibge": 2408102,
+      "nome": "Natal",
+      "microrregiao": "Natal",
+      "populacao_2022": 751300,
+      "area_km2": 167.2,
+      "densidade_hab_km2": 4493.42,
+      "pib_2021_mil_reais": 24186139,
+      "pib_per_capita_2021": 32192
+    },
+    {
+      "codigo_ibge": 2408201,
+      "nome": "Nísia Floresta",
+      "microrregiao": "Macaíba",
+      "populacao_2022": 31942,
+      "area_km2": 307.8,
+      "densidade_hab_km2": 103.78,
+      "pib_2021_mil_reais": 474716,
+      "pib_per_capita_2021": 14862
+    },
+    {
+      "codigo_ibge": 2408300,
+      "nome": "Nova Cruz",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 34269,
+      "area_km2": 277.7,
+      "densidade_hab_km2": 123.4,
+      "pib_2021_mil_reais": 560495,
+      "pib_per_capita_2021": 16356
+    },
+    {
+      "codigo_ibge": 2408409,
+      "nome": "Olho d'Água do Borges",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 3905,
+      "area_km2": 141.2,
+      "densidade_hab_km2": 27.66,
+      "pib_2021_mil_reais": 47532,
+      "pib_per_capita_2021": 12172
+    },
+    {
+      "codigo_ibge": 2408508,
+      "nome": "Ouro Branco",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 4913,
+      "area_km2": 253.3,
+      "densidade_hab_km2": 19.4,
+      "pib_2021_mil_reais": 61703,
+      "pib_per_capita_2021": 12559
+    },
+    {
+      "codigo_ibge": 2408607,
+      "nome": "Paraná",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 3934,
+      "area_km2": 81.4,
+      "densidade_hab_km2": 48.33,
+      "pib_2021_mil_reais": 43930,
+      "pib_per_capita_2021": 11167
+    },
+    {
+      "codigo_ibge": 2408706,
+      "nome": "Paraú",
+      "microrregiao": "Médio Oeste",
+      "populacao_2022": 3579,
+      "area_km2": 383.2,
+      "densidade_hab_km2": 9.34,
+      "pib_2021_mil_reais": 55256,
+      "pib_per_capita_2021": 15439
+    },
+    {
+      "codigo_ibge": 2408805,
+      "nome": "Parazinho",
+      "microrregiao": "Baixa Verde",
+      "populacao_2022": 4801,
+      "area_km2": 274.7,
+      "densidade_hab_km2": 17.48,
+      "pib_2021_mil_reais": 606239,
+      "pib_per_capita_2021": 126273
+    },
+    {
+      "codigo_ibge": 2408904,
+      "nome": "Parelhas",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 21499,
+      "area_km2": 513.1,
+      "densidade_hab_km2": 41.9,
+      "pib_2021_mil_reais": 368924,
+      "pib_per_capita_2021": 17160
+    },
+    {
+      "codigo_ibge": 2403251,
+      "nome": "Parnamirim",
+      "microrregiao": "Natal",
+      "populacao_2022": 252716,
+      "area_km2": 123.6,
+      "densidade_hab_km2": 2044.63,
+      "pib_2021_mil_reais": 6845358,
+      "pib_per_capita_2021": 27087
+    },
+    {
+      "codigo_ibge": 2409100,
+      "nome": "Passa e Fica",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 10896,
+      "area_km2": 42.1,
+      "densidade_hab_km2": 258.81,
+      "pib_2021_mil_reais": 152322,
+      "pib_per_capita_2021": 13980
+    },
+    {
+      "codigo_ibge": 2409209,
+      "nome": "Passagem",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 3115,
+      "area_km2": 41.2,
+      "densidade_hab_km2": 75.61,
+      "pib_2021_mil_reais": 46128,
+      "pib_per_capita_2021": 14808
+    },
+    {
+      "codigo_ibge": 2409308,
+      "nome": "Patu",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 11007,
+      "area_km2": 319.1,
+      "densidade_hab_km2": 34.49,
+      "pib_2021_mil_reais": 160912,
+      "pib_per_capita_2021": 14619
+    },
+    {
+      "codigo_ibge": 2409407,
+      "nome": "Pau dos Ferros",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 30479,
+      "area_km2": 260,
+      "densidade_hab_km2": 117.23,
+      "pib_2021_mil_reais": 709328,
+      "pib_per_capita_2021": 23273
+    },
+    {
+      "codigo_ibge": 2409506,
+      "nome": "Pedra Grande",
+      "microrregiao": "Litoral Nordeste",
+      "populacao_2022": 3618,
+      "area_km2": 221.4,
+      "densidade_hab_km2": 16.34,
+      "pib_2021_mil_reais": 293283,
+      "pib_per_capita_2021": 81062
+    },
+    {
+      "codigo_ibge": 2409605,
+      "nome": "Pedra Preta",
+      "microrregiao": "Angicos",
+      "populacao_2022": 2441,
+      "area_km2": 295,
+      "densidade_hab_km2": 8.27,
+      "pib_2021_mil_reais": 36126,
+      "pib_per_capita_2021": 14800
+    },
+    {
+      "codigo_ibge": 2409704,
+      "nome": "Pedro Avelino",
+      "microrregiao": "Angicos",
+      "populacao_2022": 6242,
+      "area_km2": 952.8,
+      "densidade_hab_km2": 6.55,
+      "pib_2021_mil_reais": 79994,
+      "pib_per_capita_2021": 12815
+    },
+    {
+      "codigo_ibge": 2409803,
+      "nome": "Pedro Velho",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 13824,
+      "area_km2": 192.7,
+      "densidade_hab_km2": 71.74,
+      "pib_2021_mil_reais": 173615,
+      "pib_per_capita_2021": 12559
+    },
+    {
+      "codigo_ibge": 2409902,
+      "nome": "Pendências",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 12278,
+      "area_km2": 419.1,
+      "densidade_hab_km2": 29.3,
+      "pib_2021_mil_reais": 757491,
+      "pib_per_capita_2021": 61695
+    },
+    {
+      "codigo_ibge": 2410009,
+      "nome": "Pilões",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 2965,
+      "area_km2": 82.7,
+      "densidade_hab_km2": 35.85,
+      "pib_2021_mil_reais": 41829,
+      "pib_per_capita_2021": 14108
+    },
+    {
+      "codigo_ibge": 2410108,
+      "nome": "Poço Branco",
+      "microrregiao": "Baixa Verde",
+      "populacao_2022": 12390,
+      "area_km2": 230.4,
+      "densidade_hab_km2": 53.78,
+      "pib_2021_mil_reais": 131859,
+      "pib_per_capita_2021": 10642
+    },
+    {
+      "codigo_ibge": 2410207,
+      "nome": "Portalegre",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 7601,
+      "area_km2": 110.1,
+      "densidade_hab_km2": 69.04,
+      "pib_2021_mil_reais": 78933,
+      "pib_per_capita_2021": 10385
+    },
+    {
+      "codigo_ibge": 2410256,
+      "nome": "Porto do Mangue",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 5228,
+      "area_km2": 319,
+      "densidade_hab_km2": 16.39,
+      "pib_2021_mil_reais": 149471,
+      "pib_per_capita_2021": 28590
+    },
+    {
+      "codigo_ibge": 2410405,
+      "nome": "Pureza",
+      "microrregiao": "Litoral Nordeste",
+      "populacao_2022": 9362,
+      "area_km2": 504.3,
+      "densidade_hab_km2": 18.56,
+      "pib_2021_mil_reais": 169428,
+      "pib_per_capita_2021": 18097
+    },
+    {
+      "codigo_ibge": 2410504,
+      "nome": "Rafael Fernandes",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 5432,
+      "area_km2": 78.2,
+      "densidade_hab_km2": 69.46,
+      "pib_2021_mil_reais": 53271,
+      "pib_per_capita_2021": 9807
+    },
+    {
+      "codigo_ibge": 2410603,
+      "nome": "Rafael Godeiro",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 2934,
+      "area_km2": 100.1,
+      "densidade_hab_km2": 29.31,
+      "pib_2021_mil_reais": 43450,
+      "pib_per_capita_2021": 14809
+    },
+    {
+      "codigo_ibge": 2410702,
+      "nome": "Riacho da Cruz",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 2701,
+      "area_km2": 127.2,
+      "densidade_hab_km2": 21.23,
+      "pib_2021_mil_reais": 37507,
+      "pib_per_capita_2021": 13886
+    },
+    {
+      "codigo_ibge": 2410801,
+      "nome": "Riacho de Santana",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 4127,
+      "area_km2": 128.1,
+      "densidade_hab_km2": 32.22,
+      "pib_2021_mil_reais": 43512,
+      "pib_per_capita_2021": 10543
+    },
+    {
+      "codigo_ibge": 2410900,
+      "nome": "Riachuelo",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 7389,
+      "area_km2": 262.9,
+      "densidade_hab_km2": 28.11,
+      "pib_2021_mil_reais": 192156,
+      "pib_per_capita_2021": 26006
+    },
+    {
+      "codigo_ibge": 2408953,
+      "nome": "Rio do Fogo",
+      "microrregiao": "Litoral Nordeste",
+      "populacao_2022": 10351,
+      "area_km2": 150.3,
+      "densidade_hab_km2": 68.87,
+      "pib_2021_mil_reais": 185590,
+      "pib_per_capita_2021": 17930
+    },
+    {
+      "codigo_ibge": 2411007,
+      "nome": "Rodolfo Fernandes",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 4242,
+      "area_km2": 154.8,
+      "densidade_hab_km2": 27.4,
+      "pib_2021_mil_reais": 59192,
+      "pib_per_capita_2021": 13954
+    },
+    {
+      "codigo_ibge": 2411106,
+      "nome": "Ruy Barbosa",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 3206,
+      "area_km2": 125.8,
+      "densidade_hab_km2": 25.48,
+      "pib_2021_mil_reais": 126772,
+      "pib_per_capita_2021": 39542
+    },
+    {
+      "codigo_ibge": 2411205,
+      "nome": "Santa Cruz",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 37313,
+      "area_km2": 624.4,
+      "densidade_hab_km2": 59.76,
+      "pib_2021_mil_reais": 619036,
+      "pib_per_capita_2021": 16590
+    },
+    {
+      "codigo_ibge": 2409332,
+      "nome": "Santa Maria",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 4847,
+      "area_km2": 219.6,
+      "densidade_hab_km2": 22.07,
+      "pib_2021_mil_reais": 78031,
+      "pib_per_capita_2021": 16099
+    },
+    {
+      "codigo_ibge": 2411403,
+      "nome": "Santana do Matos",
+      "microrregiao": "Serra de Santana",
+      "populacao_2022": 12456,
+      "area_km2": 1419.4,
+      "densidade_hab_km2": 8.78,
+      "pib_2021_mil_reais": 147037,
+      "pib_per_capita_2021": 11805
+    },
+    {
+      "codigo_ibge": 2411429,
+      "nome": "Santana do Seridó",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 2696,
+      "area_km2": 188.4,
+      "densidade_hab_km2": 14.31,
+      "pib_2021_mil_reais": 36353,
+      "pib_per_capita_2021": 13484
+    },
+    {
+      "codigo_ibge": 2411502,
+      "nome": "Santo Antônio",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 22177,
+      "area_km2": 301.1,
+      "densidade_hab_km2": 73.65,
+      "pib_2021_mil_reais": 302533,
+      "pib_per_capita_2021": 13642
+    },
+    {
+      "codigo_ibge": 2411601,
+      "nome": "São Bento do Norte",
+      "microrregiao": "Macau",
+      "populacao_2022": 3304,
+      "area_km2": 288.7,
+      "densidade_hab_km2": 11.44,
+      "pib_2021_mil_reais": 549241,
+      "pib_per_capita_2021": 166235
+    },
+    {
+      "codigo_ibge": 2411700,
+      "nome": "São Bento do Trairí",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 3792,
+      "area_km2": 190.8,
+      "densidade_hab_km2": 19.87,
+      "pib_2021_mil_reais": 45623,
+      "pib_per_capita_2021": 12031
+    },
+    {
+      "codigo_ibge": 2411809,
+      "nome": "São Fernando",
+      "microrregiao": "Seridó Ocidental",
+      "populacao_2022": 3492,
+      "area_km2": 404.4,
+      "densidade_hab_km2": 8.64,
+      "pib_2021_mil_reais": 63596,
+      "pib_per_capita_2021": 18212
+    },
+    {
+      "codigo_ibge": 2411908,
+      "nome": "São Francisco do Oeste",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 4161,
+      "area_km2": 75.6,
+      "densidade_hab_km2": 55.04,
+      "pib_2021_mil_reais": 54447,
+      "pib_per_capita_2021": 13085
+    },
+    {
+      "codigo_ibge": 2412005,
+      "nome": "São Gonçalo do Amarante",
+      "microrregiao": "Macaíba",
+      "populacao_2022": 115838,
+      "area_km2": 249.1,
+      "densidade_hab_km2": 465.03,
+      "pib_2021_mil_reais": 1905641,
+      "pib_per_capita_2021": 16451
+    },
+    {
+      "codigo_ibge": 2412104,
+      "nome": "São João do Sabugi",
+      "microrregiao": "Seridó Ocidental",
+      "populacao_2022": 5956,
+      "area_km2": 277,
+      "densidade_hab_km2": 21.5,
+      "pib_2021_mil_reais": 84585,
+      "pib_per_capita_2021": 14202
+    },
+    {
+      "codigo_ibge": 2412203,
+      "nome": "São José de Mipibu",
+      "microrregiao": "Macaíba",
+      "populacao_2022": 47286,
+      "area_km2": 290.3,
+      "densidade_hab_km2": 162.89,
+      "pib_2021_mil_reais": 1040956,
+      "pib_per_capita_2021": 22014
+    },
+    {
+      "codigo_ibge": 2412302,
+      "nome": "São José do Campestre",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 11121,
+      "area_km2": 341.1,
+      "densidade_hab_km2": 32.6,
+      "pib_2021_mil_reais": 125090,
+      "pib_per_capita_2021": 11248
+    },
+    {
+      "codigo_ibge": 2412401,
+      "nome": "São José do Seridó",
+      "microrregiao": "Seridó Oriental",
+      "populacao_2022": 4558,
+      "area_km2": 174.5,
+      "densidade_hab_km2": 26.12,
+      "pib_2021_mil_reais": 83854,
+      "pib_per_capita_2021": 18397
+    },
+    {
+      "codigo_ibge": 2412500,
+      "nome": "São Miguel",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 23537,
+      "area_km2": 171.7,
+      "densidade_hab_km2": 137.08,
+      "pib_2021_mil_reais": 319740,
+      "pib_per_capita_2021": 13585
+    },
+    {
+      "codigo_ibge": 2412559,
+      "nome": "São Miguel do Gostoso",
+      "microrregiao": "Litoral Nordeste",
+      "populacao_2022": 10221,
+      "area_km2": 342,
+      "densidade_hab_km2": 29.89,
+      "pib_2021_mil_reais": 492637,
+      "pib_per_capita_2021": 48199
+    },
+    {
+      "codigo_ibge": 2412609,
+      "nome": "São Paulo do Potengi",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 16786,
+      "area_km2": 240.4,
+      "densidade_hab_km2": 69.83,
+      "pib_2021_mil_reais": 231552,
+      "pib_per_capita_2021": 13794
+    },
+    {
+      "codigo_ibge": 2412708,
+      "nome": "São Pedro",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 5776,
+      "area_km2": 195.2,
+      "densidade_hab_km2": 29.59,
+      "pib_2021_mil_reais": 55799,
+      "pib_per_capita_2021": 9660
+    },
+    {
+      "codigo_ibge": 2412807,
+      "nome": "São Rafael",
+      "microrregiao": "Vale do Açu",
+      "populacao_2022": 7711,
+      "area_km2": 469.1,
+      "densidade_hab_km2": 16.44,
+      "pib_2021_mil_reais": 88674,
+      "pib_per_capita_2021": 11500
+    },
+    {
+      "codigo_ibge": 2412906,
+      "nome": "São Tomé",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 9972,
+      "area_km2": 862.6,
+      "densidade_hab_km2": 11.56,
+      "pib_2021_mil_reais": 111773,
+      "pib_per_capita_2021": 11209
+    },
+    {
+      "codigo_ibge": 2413003,
+      "nome": "São Vicente",
+      "microrregiao": "Serra de Santana",
+      "populacao_2022": 6310,
+      "area_km2": 197.8,
+      "densidade_hab_km2": 31.9,
+      "pib_2021_mil_reais": 76920,
+      "pib_per_capita_2021": 12190
+    },
+    {
+      "codigo_ibge": 2413102,
+      "nome": "Senador Elói de Souza",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 5965,
+      "area_km2": 167.6,
+      "densidade_hab_km2": 35.59,
+      "pib_2021_mil_reais": 60475,
+      "pib_per_capita_2021": 10138
+    },
+    {
+      "codigo_ibge": 2413201,
+      "nome": "Senador Georgino Avelino",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 4065,
+      "area_km2": 25.9,
+      "densidade_hab_km2": 156.95,
+      "pib_2021_mil_reais": 116486,
+      "pib_per_capita_2021": 28656
+    },
+    {
+      "codigo_ibge": 2410306,
+      "nome": "Serra Caiada",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 10125,
+      "area_km2": 167.3,
+      "densidade_hab_km2": 60.52,
+      "pib_2021_mil_reais": 109306,
+      "pib_per_capita_2021": 10796
+    },
+    {
+      "codigo_ibge": 2413300,
+      "nome": "Serra de São Bento",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 5703,
+      "area_km2": 96.6,
+      "densidade_hab_km2": 59.04,
+      "pib_2021_mil_reais": 57410,
+      "pib_per_capita_2021": 10067
+    },
+    {
+      "codigo_ibge": 2413359,
+      "nome": "Serra do Mel",
+      "microrregiao": "Mossoró",
+      "populacao_2022": 13091,
+      "area_km2": 616.5,
+      "densidade_hab_km2": 21.23,
+      "pib_2021_mil_reais": 858721,
+      "pib_per_capita_2021": 65596
+    },
+    {
+      "codigo_ibge": 2413409,
+      "nome": "Serra Negra do Norte",
+      "microrregiao": "Seridó Ocidental",
+      "populacao_2022": 7597,
+      "area_km2": 562.4,
+      "densidade_hab_km2": 13.51,
+      "pib_2021_mil_reais": 118874,
+      "pib_per_capita_2021": 15647
+    },
+    {
+      "codigo_ibge": 2413508,
+      "nome": "Serrinha",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 6436,
+      "area_km2": 193.4,
+      "densidade_hab_km2": 33.28,
+      "pib_2021_mil_reais": 71897,
+      "pib_per_capita_2021": 11171
+    },
+    {
+      "codigo_ibge": 2413557,
+      "nome": "Serrinha dos Pintos",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 4659,
+      "area_km2": 122.6,
+      "densidade_hab_km2": 38,
+      "pib_2021_mil_reais": 49786,
+      "pib_per_capita_2021": 10686
+    },
+    {
+      "codigo_ibge": 2413607,
+      "nome": "Severiano Melo",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 5487,
+      "area_km2": 157.9,
+      "densidade_hab_km2": 34.75,
+      "pib_2021_mil_reais": 63098,
+      "pib_per_capita_2021": 11500
+    },
+    {
+      "codigo_ibge": 2413706,
+      "nome": "Sítio Novo",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 4654,
+      "area_km2": 213.5,
+      "densidade_hab_km2": 21.8,
+      "pib_2021_mil_reais": 53783,
+      "pib_per_capita_2021": 11556
+    },
+    {
+      "codigo_ibge": 2413805,
+      "nome": "Taboleiro Grande",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 2338,
+      "area_km2": 124.1,
+      "densidade_hab_km2": 18.84,
+      "pib_2021_mil_reais": 32472,
+      "pib_per_capita_2021": 13889
+    },
+    {
+      "codigo_ibge": 2413904,
+      "nome": "Taipu",
+      "microrregiao": "Litoral Nordeste",
+      "populacao_2022": 11422,
+      "area_km2": 352.8,
+      "densidade_hab_km2": 32.38,
+      "pib_2021_mil_reais": 155197,
+      "pib_per_capita_2021": 13588
+    },
+    {
+      "codigo_ibge": 2414001,
+      "nome": "Tangará",
+      "microrregiao": "Borborema Potiguar",
+      "populacao_2022": 13281,
+      "area_km2": 356.8,
+      "densidade_hab_km2": 37.22,
+      "pib_2021_mil_reais": 201782,
+      "pib_per_capita_2021": 15193
+    },
+    {
+      "codigo_ibge": 2414100,
+      "nome": "Tenente Ananias",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 10262,
+      "area_km2": 223.7,
+      "densidade_hab_km2": 45.87,
+      "pib_2021_mil_reais": 113586,
+      "pib_per_capita_2021": 11069
+    },
+    {
+      "codigo_ibge": 2414159,
+      "nome": "Tenente Laurentino Cruz",
+      "microrregiao": "Serra de Santana",
+      "populacao_2022": 5891,
+      "area_km2": 74.4,
+      "densidade_hab_km2": 79.18,
+      "pib_2021_mil_reais": 107284,
+      "pib_per_capita_2021": 18212
+    },
+    {
+      "codigo_ibge": 2411056,
+      "nome": "Tibau",
+      "microrregiao": "Mossoró",
+      "populacao_2022": 5382,
+      "area_km2": 169.2,
+      "densidade_hab_km2": 31.81,
+      "pib_2021_mil_reais": 115022,
+      "pib_per_capita_2021": 21372
+    },
+    {
+      "codigo_ibge": 2414209,
+      "nome": "Tibau do Sul",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 16929,
+      "area_km2": 101.8,
+      "densidade_hab_km2": 166.3,
+      "pib_2021_mil_reais": 415829,
+      "pib_per_capita_2021": 24563
+    },
+    {
+      "codigo_ibge": 2414308,
+      "nome": "Timbaúba dos Batistas",
+      "microrregiao": "Seridó Ocidental",
+      "populacao_2022": 2348,
+      "area_km2": 135.5,
+      "densidade_hab_km2": 17.33,
+      "pib_2021_mil_reais": 43617,
+      "pib_per_capita_2021": 18576
+    },
+    {
+      "codigo_ibge": 2414407,
+      "nome": "Touros",
+      "microrregiao": "Litoral Nordeste",
+      "populacao_2022": 33035,
+      "area_km2": 840.4,
+      "densidade_hab_km2": 39.31,
+      "pib_2021_mil_reais": 814838,
+      "pib_per_capita_2021": 24666
+    },
+    {
+      "codigo_ibge": 2414456,
+      "nome": "Triunfo Potiguar",
+      "microrregiao": "Médio Oeste",
+      "populacao_2022": 3376,
+      "area_km2": 268.7,
+      "densidade_hab_km2": 12.56,
+      "pib_2021_mil_reais": 45829,
+      "pib_per_capita_2021": 13575
+    },
+    {
+      "codigo_ibge": 2414506,
+      "nome": "Umarizal",
+      "microrregiao": "Umarizal",
+      "populacao_2022": 10078,
+      "area_km2": 213.6,
+      "densidade_hab_km2": 47.18,
+      "pib_2021_mil_reais": 151205,
+      "pib_per_capita_2021": 15003
+    },
+    {
+      "codigo_ibge": 2414605,
+      "nome": "Upanema",
+      "microrregiao": "Médio Oeste",
+      "populacao_2022": 13577,
+      "area_km2": 873.9,
+      "densidade_hab_km2": 15.54,
+      "pib_2021_mil_reais": 214152,
+      "pib_per_capita_2021": 15773
+    },
+    {
+      "codigo_ibge": 2414704,
+      "nome": "Várzea",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 5233,
+      "area_km2": 72.7,
+      "densidade_hab_km2": 71.98,
+      "pib_2021_mil_reais": 56555,
+      "pib_per_capita_2021": 10807
+    },
+    {
+      "codigo_ibge": 2414753,
+      "nome": "Venha-Ver",
+      "microrregiao": "Serra de São Miguel",
+      "populacao_2022": 3014,
+      "area_km2": 71.6,
+      "densidade_hab_km2": 42.09,
+      "pib_2021_mil_reais": 43202,
+      "pib_per_capita_2021": 14334
+    },
+    {
+      "codigo_ibge": 2414803,
+      "nome": "Vera Cruz",
+      "microrregiao": "Agreste Potiguar",
+      "populacao_2022": 10735,
+      "area_km2": 83.5,
+      "densidade_hab_km2": 128.56,
+      "pib_2021_mil_reais": 133469,
+      "pib_per_capita_2021": 12433
+    },
+    {
+      "codigo_ibge": 2414902,
+      "nome": "Viçosa",
+      "microrregiao": "Pau dos Ferros",
+      "populacao_2022": 1822,
+      "area_km2": 37.9,
+      "densidade_hab_km2": 48.07,
+      "pib_2021_mil_reais": 23238,
+      "pib_per_capita_2021": 12754
+    },
+    {
+      "codigo_ibge": 2415008,
+      "nome": "Vila Flor",
+      "microrregiao": "Litoral Sul",
+      "populacao_2022": 3174,
+      "area_km2": 47.7,
+      "densidade_hab_km2": 66.54,
+      "pib_2021_mil_reais": 44403,
+      "pib_per_capita_2021": 13990
+    }
+  ]
+}

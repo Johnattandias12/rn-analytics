@@ -1,0 +1,1347 @@
+{
+  "meta": {
+    "source": "IBGE — API Localidades",
+    "uf": "RN",
+    "uf_codigo": 24,
+    "total": 167,
+    "accessedAt": "2026-06-04"
+  },
+  "municipios": [
+    {
+      "codigo_ibge": 2400109,
+      "nome": "Acari",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2400307,
+      "nome": "Afonso Bezerra",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2400406,
+      "nome": "Água Nova",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2400505,
+      "nome": "Alexandria",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2400604,
+      "nome": "Almino Afonso",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2400703,
+      "nome": "Alto do Rodrigues",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2400802,
+      "nome": "Angicos",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2400901,
+      "nome": "Antônio Martins",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2401008,
+      "nome": "Apodi",
+      "microrregiao": "Chapada do Apodi",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2401107,
+      "nome": "Areia Branca",
+      "microrregiao": "Mossoró",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2401206,
+      "nome": "Arez",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2400208,
+      "nome": "Assú",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2401404,
+      "nome": "Baía Formosa",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2401453,
+      "nome": "Baraúna",
+      "microrregiao": "Mossoró",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2401503,
+      "nome": "Barcelona",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2401602,
+      "nome": "Bento Fernandes",
+      "microrregiao": "Baixa Verde",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2401651,
+      "nome": "Bodó",
+      "microrregiao": "Serra de Santana",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2401701,
+      "nome": "Bom Jesus",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2401800,
+      "nome": "Brejinho",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2401859,
+      "nome": "Caiçara do Norte",
+      "microrregiao": "Macau",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2401909,
+      "nome": "Caiçara do Rio do Vento",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2402006,
+      "nome": "Caicó",
+      "microrregiao": "Seridó Ocidental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2401305,
+      "nome": "Campo Grande",
+      "microrregiao": "Médio Oeste",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2402105,
+      "nome": "Campo Redondo",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2402204,
+      "nome": "Canguaretama",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2402303,
+      "nome": "Caraúbas",
+      "microrregiao": "Chapada do Apodi",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2402402,
+      "nome": "Carnaúba dos Dantas",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2402501,
+      "nome": "Carnaubais",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2402600,
+      "nome": "Ceará-Mirim",
+      "microrregiao": "Macaíba",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2402709,
+      "nome": "Cerro Corá",
+      "microrregiao": "Serra de Santana",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2402808,
+      "nome": "Coronel Ezequiel",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2402907,
+      "nome": "Coronel João Pessoa",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2403004,
+      "nome": "Cruzeta",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2403103,
+      "nome": "Currais Novos",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2403202,
+      "nome": "Doutor Severiano",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2403301,
+      "nome": "Encanto",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2403400,
+      "nome": "Equador",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2403509,
+      "nome": "Espírito Santo",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2403608,
+      "nome": "Extremoz",
+      "microrregiao": "Natal",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2403707,
+      "nome": "Felipe Guerra",
+      "microrregiao": "Chapada do Apodi",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2403756,
+      "nome": "Fernando Pedroza",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2403806,
+      "nome": "Florânia",
+      "microrregiao": "Serra de Santana",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2403905,
+      "nome": "Francisco Dantas",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2404002,
+      "nome": "Frutuoso Gomes",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2404101,
+      "nome": "Galinhos",
+      "microrregiao": "Macau",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2404200,
+      "nome": "Goianinha",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2404309,
+      "nome": "Governador Dix-Sept Rosado",
+      "microrregiao": "Chapada do Apodi",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2404408,
+      "nome": "Grossos",
+      "microrregiao": "Mossoró",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2404507,
+      "nome": "Guamaré",
+      "microrregiao": "Macau",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2404606,
+      "nome": "Ielmo Marinho",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2404705,
+      "nome": "Ipanguaçu",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2404804,
+      "nome": "Ipueira",
+      "microrregiao": "Seridó Ocidental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2404853,
+      "nome": "Itajá",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2404903,
+      "nome": "Itaú",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2405009,
+      "nome": "Jaçanã",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2405108,
+      "nome": "Jandaíra",
+      "microrregiao": "Baixa Verde",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2405207,
+      "nome": "Janduís",
+      "microrregiao": "Médio Oeste",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2405306,
+      "nome": "Januário Cicco",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2405405,
+      "nome": "Japi",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2405504,
+      "nome": "Jardim de Angicos",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2405603,
+      "nome": "Jardim de Piranhas",
+      "microrregiao": "Seridó Ocidental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2405702,
+      "nome": "Jardim do Seridó",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2405801,
+      "nome": "João Câmara",
+      "microrregiao": "Baixa Verde",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2405900,
+      "nome": "João Dias",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2406007,
+      "nome": "José da Penha",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2406106,
+      "nome": "Jucurutu",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2406155,
+      "nome": "Jundiá",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2406205,
+      "nome": "Lagoa d'Anta",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2406304,
+      "nome": "Lagoa de Pedras",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2406403,
+      "nome": "Lagoa de Velhos",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2406502,
+      "nome": "Lagoa Nova",
+      "microrregiao": "Serra de Santana",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2406601,
+      "nome": "Lagoa Salgada",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2406700,
+      "nome": "Lajes",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2406809,
+      "nome": "Lajes Pintadas",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2406908,
+      "nome": "Lucrécia",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2407005,
+      "nome": "Luís Gomes",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2407104,
+      "nome": "Macaíba",
+      "microrregiao": "Macaíba",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2407203,
+      "nome": "Macau",
+      "microrregiao": "Macau",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2407252,
+      "nome": "Major Sales",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2407302,
+      "nome": "Marcelino Vieira",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2407401,
+      "nome": "Martins",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2407500,
+      "nome": "Maxaranguape",
+      "microrregiao": "Litoral Nordeste",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2407609,
+      "nome": "Messias Targino",
+      "microrregiao": "Médio Oeste",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2407708,
+      "nome": "Montanhas",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2407807,
+      "nome": "Monte Alegre",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2407906,
+      "nome": "Monte das Gameleiras",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2408003,
+      "nome": "Mossoró",
+      "microrregiao": "Mossoró",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2408102,
+      "nome": "Natal",
+      "microrregiao": "Natal",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2408201,
+      "nome": "Nísia Floresta",
+      "microrregiao": "Macaíba",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2408300,
+      "nome": "Nova Cruz",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2408409,
+      "nome": "Olho d'Água do Borges",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2408508,
+      "nome": "Ouro Branco",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2408607,
+      "nome": "Paraná",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2408706,
+      "nome": "Paraú",
+      "microrregiao": "Médio Oeste",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2408805,
+      "nome": "Parazinho",
+      "microrregiao": "Baixa Verde",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2408904,
+      "nome": "Parelhas",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2403251,
+      "nome": "Parnamirim",
+      "microrregiao": "Natal",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409100,
+      "nome": "Passa e Fica",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409209,
+      "nome": "Passagem",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409308,
+      "nome": "Patu",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2409407,
+      "nome": "Pau dos Ferros",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2409506,
+      "nome": "Pedra Grande",
+      "microrregiao": "Litoral Nordeste",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409605,
+      "nome": "Pedra Preta",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409704,
+      "nome": "Pedro Avelino",
+      "microrregiao": "Angicos",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409803,
+      "nome": "Pedro Velho",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409902,
+      "nome": "Pendências",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410009,
+      "nome": "Pilões",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410108,
+      "nome": "Poço Branco",
+      "microrregiao": "Baixa Verde",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2410207,
+      "nome": "Portalegre",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410256,
+      "nome": "Porto do Mangue",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410405,
+      "nome": "Pureza",
+      "microrregiao": "Litoral Nordeste",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2410504,
+      "nome": "Rafael Fernandes",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410603,
+      "nome": "Rafael Godeiro",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410702,
+      "nome": "Riacho da Cruz",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410801,
+      "nome": "Riacho de Santana",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2410900,
+      "nome": "Riachuelo",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2408953,
+      "nome": "Rio do Fogo",
+      "microrregiao": "Litoral Nordeste",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2411007,
+      "nome": "Rodolfo Fernandes",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2411106,
+      "nome": "Ruy Barbosa",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2411205,
+      "nome": "Santa Cruz",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2409332,
+      "nome": "Santa Maria",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2411403,
+      "nome": "Santana do Matos",
+      "microrregiao": "Serra de Santana",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2411429,
+      "nome": "Santana do Seridó",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2411502,
+      "nome": "Santo Antônio",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2411601,
+      "nome": "São Bento do Norte",
+      "microrregiao": "Macau",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "João Câmara",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2411700,
+      "nome": "São Bento do Trairí",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2411809,
+      "nome": "São Fernando",
+      "microrregiao": "Seridó Ocidental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2411908,
+      "nome": "São Francisco do Oeste",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2412005,
+      "nome": "São Gonçalo do Amarante",
+      "microrregiao": "Macaíba",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2412104,
+      "nome": "São João do Sabugi",
+      "microrregiao": "Seridó Ocidental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2412203,
+      "nome": "São José de Mipibu",
+      "microrregiao": "Macaíba",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2412302,
+      "nome": "São José do Campestre",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2412401,
+      "nome": "São José do Seridó",
+      "microrregiao": "Seridó Oriental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2412500,
+      "nome": "São Miguel",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2412559,
+      "nome": "São Miguel do Gostoso",
+      "microrregiao": "Litoral Nordeste",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2412609,
+      "nome": "São Paulo do Potengi",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2412708,
+      "nome": "São Pedro",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2412807,
+      "nome": "São Rafael",
+      "microrregiao": "Vale do Açu",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2412906,
+      "nome": "São Tomé",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2413003,
+      "nome": "São Vicente",
+      "microrregiao": "Serra de Santana",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2413102,
+      "nome": "Senador Elói de Souza",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "São Paulo do Potengi",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2413201,
+      "nome": "Senador Georgino Avelino",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2410306,
+      "nome": "Serra Caiada",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2413300,
+      "nome": "Serra de São Bento",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2413359,
+      "nome": "Serra do Mel",
+      "microrregiao": "Mossoró",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2413409,
+      "nome": "Serra Negra do Norte",
+      "microrregiao": "Seridó Ocidental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2413508,
+      "nome": "Serrinha",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2413557,
+      "nome": "Serrinha dos Pintos",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2413607,
+      "nome": "Severiano Melo",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2413706,
+      "nome": "Sítio Novo",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2413805,
+      "nome": "Taboleiro Grande",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2413904,
+      "nome": "Taipu",
+      "microrregiao": "Litoral Nordeste",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2414001,
+      "nome": "Tangará",
+      "microrregiao": "Borborema Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santa Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2414100,
+      "nome": "Tenente Ananias",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2414159,
+      "nome": "Tenente Laurentino Cruz",
+      "microrregiao": "Serra de Santana",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Currais Novos",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2411056,
+      "nome": "Tibau",
+      "microrregiao": "Mossoró",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2414209,
+      "nome": "Tibau do Sul",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2414308,
+      "nome": "Timbaúba dos Batistas",
+      "microrregiao": "Seridó Ocidental",
+      "mesorregiao": "Central Potiguar",
+      "regiao_imediata": "Caicó",
+      "regiao_intermediaria": "Caicó"
+    },
+    {
+      "codigo_ibge": 2414407,
+      "nome": "Touros",
+      "microrregiao": "Litoral Nordeste",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2414456,
+      "nome": "Triunfo Potiguar",
+      "microrregiao": "Médio Oeste",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Açu",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2414506,
+      "nome": "Umarizal",
+      "microrregiao": "Umarizal",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2414605,
+      "nome": "Upanema",
+      "microrregiao": "Médio Oeste",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Mossoró",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2414704,
+      "nome": "Várzea",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Santo Antônio - Passa e Fica - Nova Cruz",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2414753,
+      "nome": "Venha-Ver",
+      "microrregiao": "Serra de São Miguel",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2414803,
+      "nome": "Vera Cruz",
+      "microrregiao": "Agreste Potiguar",
+      "mesorregiao": "Agreste Potiguar",
+      "regiao_imediata": "Natal",
+      "regiao_intermediaria": "Natal"
+    },
+    {
+      "codigo_ibge": 2414902,
+      "nome": "Viçosa",
+      "microrregiao": "Pau dos Ferros",
+      "mesorregiao": "Oeste Potiguar",
+      "regiao_imediata": "Pau dos Ferros",
+      "regiao_intermediaria": "Mossoró"
+    },
+    {
+      "codigo_ibge": 2415008,
+      "nome": "Vila Flor",
+      "microrregiao": "Litoral Sul",
+      "mesorregiao": "Leste Potiguar",
+      "regiao_imediata": "Canguaretama",
+      "regiao_intermediaria": "Natal"
+    }
+  ]
+}

@@ -1,0 +1,1179 @@
+{
+  "meta": {
+    "source": "TSE votacao_secao 2024 × IBGE Localidades",
+    "accessedAt": "2026-06-05",
+    "total": 167,
+    "sem_match": 0
+  },
+  "municipios": [
+    {
+      "cd_tse": 16012,
+      "nm_tse": "ACARI",
+      "codigo_ibge": 2400109,
+      "nome_ibge": "Acari",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 16055,
+      "nm_tse": "AFONSO BEZERRA",
+      "codigo_ibge": 2400307,
+      "nome_ibge": "Afonso Bezerra",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 16071,
+      "nm_tse": "ÁGUA NOVA",
+      "codigo_ibge": 2400406,
+      "nome_ibge": "Água Nova",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 16098,
+      "nm_tse": "ALEXANDRIA",
+      "codigo_ibge": 2400505,
+      "nome_ibge": "Alexandria",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 16110,
+      "nm_tse": "ALMINO AFONSO",
+      "codigo_ibge": 2400604,
+      "nome_ibge": "Almino Afonso",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 16136,
+      "nm_tse": "ALTO DO RODRIGUES",
+      "codigo_ibge": 2400703,
+      "nome_ibge": "Alto do Rodrigues",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 16152,
+      "nm_tse": "ANGICOS",
+      "codigo_ibge": 2400802,
+      "nome_ibge": "Angicos",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 16179,
+      "nm_tse": "ANTÔNIO MARTINS",
+      "codigo_ibge": 2400901,
+      "nome_ibge": "Antônio Martins",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 16195,
+      "nm_tse": "APODI",
+      "codigo_ibge": 2401008,
+      "nome_ibge": "Apodi",
+      "microrregiao": "Chapada do Apodi"
+    },
+    {
+      "cd_tse": 16217,
+      "nm_tse": "AREIA BRANCA",
+      "codigo_ibge": 2401107,
+      "nome_ibge": "Areia Branca",
+      "microrregiao": "Mossoró"
+    },
+    {
+      "cd_tse": 16233,
+      "nm_tse": "AREZ",
+      "codigo_ibge": 2401206,
+      "nome_ibge": "Arez",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 16039,
+      "nm_tse": "ASSÚ",
+      "codigo_ibge": 2400208,
+      "nome_ibge": "Assú",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 16276,
+      "nm_tse": "BAÍA FORMOSA",
+      "codigo_ibge": 2401404,
+      "nome_ibge": "Baía Formosa",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 30031,
+      "nm_tse": "BARAÚNA",
+      "codigo_ibge": 2401453,
+      "nome_ibge": "Baraúna",
+      "microrregiao": "Mossoró"
+    },
+    {
+      "cd_tse": 16292,
+      "nm_tse": "BARCELONA",
+      "codigo_ibge": 2401503,
+      "nome_ibge": "Barcelona",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 16314,
+      "nm_tse": "BENTO FERNANDES",
+      "codigo_ibge": 2401602,
+      "nome_ibge": "Bento Fernandes",
+      "microrregiao": "Baixa Verde"
+    },
+    {
+      "cd_tse": 17035,
+      "nm_tse": "BOA SAÚDE",
+      "codigo_ibge": 2405306,
+      "nome_ibge": "Januário Cicco",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 16101,
+      "nm_tse": "BODÓ",
+      "codigo_ibge": 2401651,
+      "nome_ibge": "Bodó",
+      "microrregiao": "Serra de Santana"
+    },
+    {
+      "cd_tse": 16330,
+      "nm_tse": "BOM JESUS",
+      "codigo_ibge": 2401701,
+      "nome_ibge": "Bom Jesus",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 16357,
+      "nm_tse": "BREJINHO",
+      "codigo_ibge": 2401800,
+      "nome_ibge": "Brejinho",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 16047,
+      "nm_tse": "CAIÇARA DO NORTE",
+      "codigo_ibge": 2401859,
+      "nome_ibge": "Caiçara do Norte",
+      "microrregiao": "Macau"
+    },
+    {
+      "cd_tse": 16373,
+      "nm_tse": "CAIÇARA DO RIO DO VENTO",
+      "codigo_ibge": 2401909,
+      "nome_ibge": "Caiçara do Rio do Vento",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 16390,
+      "nm_tse": "CAICÓ",
+      "codigo_ibge": 2402006,
+      "nome_ibge": "Caicó",
+      "microrregiao": "Seridó Ocidental"
+    },
+    {
+      "cd_tse": 16250,
+      "nm_tse": "CAMPO GRANDE",
+      "codigo_ibge": 2401305,
+      "nome_ibge": "Campo Grande",
+      "microrregiao": "Médio Oeste"
+    },
+    {
+      "cd_tse": 16411,
+      "nm_tse": "CAMPO REDONDO",
+      "codigo_ibge": 2402105,
+      "nome_ibge": "Campo Redondo",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 16438,
+      "nm_tse": "CANGUARETAMA",
+      "codigo_ibge": 2402204,
+      "nome_ibge": "Canguaretama",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 16454,
+      "nm_tse": "CARAÚBAS",
+      "codigo_ibge": 2402303,
+      "nome_ibge": "Caraúbas",
+      "microrregiao": "Chapada do Apodi"
+    },
+    {
+      "cd_tse": 16470,
+      "nm_tse": "CARNAÚBA DOS DANTAS",
+      "codigo_ibge": 2402402,
+      "nome_ibge": "Carnaúba dos Dantas",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 16497,
+      "nm_tse": "CARNAUBAIS",
+      "codigo_ibge": 2402501,
+      "nome_ibge": "Carnaubais",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 16519,
+      "nm_tse": "CEARÁ-MIRIM",
+      "codigo_ibge": 2402600,
+      "nome_ibge": "Ceará-Mirim",
+      "microrregiao": "Macaíba"
+    },
+    {
+      "cd_tse": 16535,
+      "nm_tse": "CERRO CORÁ",
+      "codigo_ibge": 2402709,
+      "nome_ibge": "Cerro Corá",
+      "microrregiao": "Serra de Santana"
+    },
+    {
+      "cd_tse": 16551,
+      "nm_tse": "CORONEL EZEQUIEL",
+      "codigo_ibge": 2402808,
+      "nome_ibge": "Coronel Ezequiel",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 16578,
+      "nm_tse": "CORONEL JOÃO PESSOA",
+      "codigo_ibge": 2402907,
+      "nome_ibge": "Coronel João Pessoa",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 16594,
+      "nm_tse": "CRUZETA",
+      "codigo_ibge": 2403004,
+      "nome_ibge": "Cruzeta",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 16616,
+      "nm_tse": "CURRAIS NOVOS",
+      "codigo_ibge": 2403103,
+      "nome_ibge": "Currais Novos",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 16632,
+      "nm_tse": "DOUTOR SEVERIANO",
+      "codigo_ibge": 2403202,
+      "nome_ibge": "Doutor Severiano",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 16659,
+      "nm_tse": "ENCANTO",
+      "codigo_ibge": 2403301,
+      "nome_ibge": "Encanto",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 16675,
+      "nm_tse": "EQUADOR",
+      "codigo_ibge": 2403400,
+      "nome_ibge": "Equador",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 16691,
+      "nm_tse": "ESPÍRITO SANTO",
+      "codigo_ibge": 2403509,
+      "nome_ibge": "Espírito Santo",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 16713,
+      "nm_tse": "EXTREMOZ",
+      "codigo_ibge": 2403608,
+      "nome_ibge": "Extremoz",
+      "microrregiao": "Natal"
+    },
+    {
+      "cd_tse": 16730,
+      "nm_tse": "FELIPE GUERRA",
+      "codigo_ibge": 2403707,
+      "nome_ibge": "Felipe Guerra",
+      "microrregiao": "Chapada do Apodi"
+    },
+    {
+      "cd_tse": 16144,
+      "nm_tse": "FERNANDO PEDROZA",
+      "codigo_ibge": 2403756,
+      "nome_ibge": "Fernando Pedroza",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 16756,
+      "nm_tse": "FLORÂNIA",
+      "codigo_ibge": 2403806,
+      "nome_ibge": "Florânia",
+      "microrregiao": "Serra de Santana"
+    },
+    {
+      "cd_tse": 16772,
+      "nm_tse": "FRANCISCO DANTAS",
+      "codigo_ibge": 2403905,
+      "nome_ibge": "Francisco Dantas",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 17515,
+      "nm_tse": "FRUTUOSO GOMES",
+      "codigo_ibge": 2404002,
+      "nome_ibge": "Frutuoso Gomes",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 16799,
+      "nm_tse": "GALINHOS",
+      "codigo_ibge": 2404101,
+      "nome_ibge": "Galinhos",
+      "microrregiao": "Macau"
+    },
+    {
+      "cd_tse": 16810,
+      "nm_tse": "GOIANINHA",
+      "codigo_ibge": 2404200,
+      "nome_ibge": "Goianinha",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 16837,
+      "nm_tse": "GOVERNADOR DIX-SEPT ROSADO",
+      "codigo_ibge": 2404309,
+      "nome_ibge": "Governador Dix-Sept Rosado",
+      "microrregiao": "Chapada do Apodi"
+    },
+    {
+      "cd_tse": 16853,
+      "nm_tse": "GROSSOS",
+      "codigo_ibge": 2404408,
+      "nome_ibge": "Grossos",
+      "microrregiao": "Mossoró"
+    },
+    {
+      "cd_tse": 16870,
+      "nm_tse": "GUAMARÉ",
+      "codigo_ibge": 2404507,
+      "nome_ibge": "Guamaré",
+      "microrregiao": "Macau"
+    },
+    {
+      "cd_tse": 16896,
+      "nm_tse": "IELMO MARINHO",
+      "codigo_ibge": 2404606,
+      "nome_ibge": "Ielmo Marinho",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 16918,
+      "nm_tse": "IPANGUAÇU",
+      "codigo_ibge": 2404705,
+      "nome_ibge": "Ipanguaçu",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 16934,
+      "nm_tse": "IPUEIRA",
+      "codigo_ibge": 2404804,
+      "nome_ibge": "Ipueira",
+      "microrregiao": "Seridó Ocidental"
+    },
+    {
+      "cd_tse": 16080,
+      "nm_tse": "ITAJÁ",
+      "codigo_ibge": 2404853,
+      "nome_ibge": "Itajá",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 16950,
+      "nm_tse": "ITAÚ",
+      "codigo_ibge": 2404903,
+      "nome_ibge": "Itaú",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 16977,
+      "nm_tse": "JAÇANÃ",
+      "codigo_ibge": 2405009,
+      "nome_ibge": "Jaçanã",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 16993,
+      "nm_tse": "JANDAÍRA",
+      "codigo_ibge": 2405108,
+      "nome_ibge": "Jandaíra",
+      "microrregiao": "Baixa Verde"
+    },
+    {
+      "cd_tse": 17019,
+      "nm_tse": "JANDUÍS",
+      "codigo_ibge": 2405207,
+      "nome_ibge": "Janduís",
+      "microrregiao": "Médio Oeste"
+    },
+    {
+      "cd_tse": 17051,
+      "nm_tse": "JAPI",
+      "codigo_ibge": 2405405,
+      "nome_ibge": "Japi",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 17078,
+      "nm_tse": "JARDIM DE ANGICOS",
+      "codigo_ibge": 2405504,
+      "nome_ibge": "Jardim de Angicos",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 17094,
+      "nm_tse": "JARDIM DE PIRANHAS",
+      "codigo_ibge": 2405603,
+      "nome_ibge": "Jardim de Piranhas",
+      "microrregiao": "Seridó Ocidental"
+    },
+    {
+      "cd_tse": 17116,
+      "nm_tse": "JARDIM DO SERIDÓ",
+      "codigo_ibge": 2405702,
+      "nome_ibge": "Jardim do Seridó",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 17132,
+      "nm_tse": "JOÃO CÂMARA",
+      "codigo_ibge": 2405801,
+      "nome_ibge": "João Câmara",
+      "microrregiao": "Baixa Verde"
+    },
+    {
+      "cd_tse": 17159,
+      "nm_tse": "JOÃO DIAS",
+      "codigo_ibge": 2405900,
+      "nome_ibge": "João Dias",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 17175,
+      "nm_tse": "JOSÉ DA PENHA",
+      "codigo_ibge": 2406007,
+      "nome_ibge": "José da Penha",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 17191,
+      "nm_tse": "JUCURUTU",
+      "codigo_ibge": 2406106,
+      "nome_ibge": "Jucurutu",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 16306,
+      "nm_tse": "JUNDIÁ",
+      "codigo_ibge": 2406155,
+      "nome_ibge": "Jundiá",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17230,
+      "nm_tse": "LAGOA D ANTA",
+      "codigo_ibge": 2406205,
+      "nome_ibge": "Lagoa d'Anta",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17256,
+      "nm_tse": "LAGOA DE PEDRAS",
+      "codigo_ibge": 2406304,
+      "nome_ibge": "Lagoa de Pedras",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17272,
+      "nm_tse": "LAGOA DE VELHOS",
+      "codigo_ibge": 2406403,
+      "nome_ibge": "Lagoa de Velhos",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 17299,
+      "nm_tse": "LAGOA NOVA",
+      "codigo_ibge": 2406502,
+      "nome_ibge": "Lagoa Nova",
+      "microrregiao": "Serra de Santana"
+    },
+    {
+      "cd_tse": 17310,
+      "nm_tse": "LAGOA SALGADA",
+      "codigo_ibge": 2406601,
+      "nome_ibge": "Lagoa Salgada",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17337,
+      "nm_tse": "LAJES",
+      "codigo_ibge": 2406700,
+      "nome_ibge": "Lajes",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 17353,
+      "nm_tse": "LAJES PINTADAS",
+      "codigo_ibge": 2406809,
+      "nome_ibge": "Lajes Pintadas",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 17370,
+      "nm_tse": "LUCRÉCIA",
+      "codigo_ibge": 2406908,
+      "nome_ibge": "Lucrécia",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 17396,
+      "nm_tse": "LUÍS GOMES",
+      "codigo_ibge": 2407005,
+      "nome_ibge": "Luís Gomes",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 17418,
+      "nm_tse": "MACAÍBA",
+      "codigo_ibge": 2407104,
+      "nome_ibge": "Macaíba",
+      "microrregiao": "Macaíba"
+    },
+    {
+      "cd_tse": 17434,
+      "nm_tse": "MACAU",
+      "codigo_ibge": 2407203,
+      "nome_ibge": "Macau",
+      "microrregiao": "Macau"
+    },
+    {
+      "cd_tse": 16160,
+      "nm_tse": "MAJOR SALES",
+      "codigo_ibge": 2407252,
+      "nome_ibge": "Major Sales",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 17450,
+      "nm_tse": "MARCELINO VIEIRA",
+      "codigo_ibge": 2407302,
+      "nome_ibge": "Marcelino Vieira",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 17477,
+      "nm_tse": "MARTINS",
+      "codigo_ibge": 2407401,
+      "nome_ibge": "Martins",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 17493,
+      "nm_tse": "MAXARANGUAPE",
+      "codigo_ibge": 2407500,
+      "nome_ibge": "Maxaranguape",
+      "microrregiao": "Litoral Nordeste"
+    },
+    {
+      "cd_tse": 17213,
+      "nm_tse": "MESSIAS TARGINO",
+      "codigo_ibge": 2407609,
+      "nome_ibge": "Messias Targino",
+      "microrregiao": "Médio Oeste"
+    },
+    {
+      "cd_tse": 17531,
+      "nm_tse": "MONTANHAS",
+      "codigo_ibge": 2407708,
+      "nome_ibge": "Montanhas",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 17558,
+      "nm_tse": "MONTE ALEGRE",
+      "codigo_ibge": 2407807,
+      "nome_ibge": "Monte Alegre",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17574,
+      "nm_tse": "MONTE DAS GAMELEIRAS",
+      "codigo_ibge": 2407906,
+      "nome_ibge": "Monte das Gameleiras",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 17590,
+      "nm_tse": "MOSSORÓ",
+      "codigo_ibge": 2408003,
+      "nome_ibge": "Mossoró",
+      "microrregiao": "Mossoró"
+    },
+    {
+      "cd_tse": 17612,
+      "nm_tse": "NATAL",
+      "codigo_ibge": 2408102,
+      "nome_ibge": "Natal",
+      "microrregiao": "Natal"
+    },
+    {
+      "cd_tse": 17639,
+      "nm_tse": "NÍSIA FLORESTA",
+      "codigo_ibge": 2408201,
+      "nome_ibge": "Nísia Floresta",
+      "microrregiao": "Macaíba"
+    },
+    {
+      "cd_tse": 17655,
+      "nm_tse": "NOVA CRUZ",
+      "codigo_ibge": 2408300,
+      "nome_ibge": "Nova Cruz",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17671,
+      "nm_tse": "OLHO D ÁGUA DO BORGES",
+      "codigo_ibge": 2408409,
+      "nome_ibge": "Olho d'Água do Borges",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 17698,
+      "nm_tse": "OURO BRANCO",
+      "codigo_ibge": 2408508,
+      "nome_ibge": "Ouro Branco",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 17710,
+      "nm_tse": "PARANÁ",
+      "codigo_ibge": 2408607,
+      "nome_ibge": "Paraná",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 17736,
+      "nm_tse": "PARAÚ",
+      "codigo_ibge": 2408706,
+      "nome_ibge": "Paraú",
+      "microrregiao": "Médio Oeste"
+    },
+    {
+      "cd_tse": 17752,
+      "nm_tse": "PARAZINHO",
+      "codigo_ibge": 2408805,
+      "nome_ibge": "Parazinho",
+      "microrregiao": "Baixa Verde"
+    },
+    {
+      "cd_tse": 17779,
+      "nm_tse": "PARELHAS",
+      "codigo_ibge": 2408904,
+      "nome_ibge": "Parelhas",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 17795,
+      "nm_tse": "PARNAMIRIM",
+      "codigo_ibge": 2403251,
+      "nome_ibge": "Parnamirim",
+      "microrregiao": "Natal"
+    },
+    {
+      "cd_tse": 17817,
+      "nm_tse": "PASSA E FICA",
+      "codigo_ibge": 2409100,
+      "nome_ibge": "Passa e Fica",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17833,
+      "nm_tse": "PASSAGEM",
+      "codigo_ibge": 2409209,
+      "nome_ibge": "Passagem",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 17850,
+      "nm_tse": "PATU",
+      "codigo_ibge": 2409308,
+      "nome_ibge": "Patu",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 17876,
+      "nm_tse": "PAU DOS FERROS",
+      "codigo_ibge": 2409407,
+      "nome_ibge": "Pau dos Ferros",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 17892,
+      "nm_tse": "PEDRA GRANDE",
+      "codigo_ibge": 2409506,
+      "nome_ibge": "Pedra Grande",
+      "microrregiao": "Litoral Nordeste"
+    },
+    {
+      "cd_tse": 17914,
+      "nm_tse": "PEDRA PRETA",
+      "codigo_ibge": 2409605,
+      "nome_ibge": "Pedra Preta",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 17930,
+      "nm_tse": "PEDRO AVELINO",
+      "codigo_ibge": 2409704,
+      "nome_ibge": "Pedro Avelino",
+      "microrregiao": "Angicos"
+    },
+    {
+      "cd_tse": 17957,
+      "nm_tse": "PEDRO VELHO",
+      "codigo_ibge": 2409803,
+      "nome_ibge": "Pedro Velho",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 17973,
+      "nm_tse": "PENDÊNCIAS",
+      "codigo_ibge": 2409902,
+      "nome_ibge": "Pendências",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 17990,
+      "nm_tse": "PILÕES",
+      "codigo_ibge": 2410009,
+      "nome_ibge": "Pilões",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18015,
+      "nm_tse": "POÇO BRANCO",
+      "codigo_ibge": 2410108,
+      "nome_ibge": "Poço Branco",
+      "microrregiao": "Baixa Verde"
+    },
+    {
+      "cd_tse": 18031,
+      "nm_tse": "PORTALEGRE",
+      "codigo_ibge": 2410207,
+      "nome_ibge": "Portalegre",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 16284,
+      "nm_tse": "PORTO DO MANGUE",
+      "codigo_ibge": 2410256,
+      "nome_ibge": "Porto do Mangue",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 18074,
+      "nm_tse": "PUREZA",
+      "codigo_ibge": 2410405,
+      "nome_ibge": "Pureza",
+      "microrregiao": "Litoral Nordeste"
+    },
+    {
+      "cd_tse": 18090,
+      "nm_tse": "RAFAEL FERNANDES",
+      "codigo_ibge": 2410504,
+      "nome_ibge": "Rafael Fernandes",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18937,
+      "nm_tse": "RAFAEL GODEIRO",
+      "codigo_ibge": 2410603,
+      "nome_ibge": "Rafael Godeiro",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 18112,
+      "nm_tse": "RIACHO DA CRUZ",
+      "codigo_ibge": 2410702,
+      "nome_ibge": "Riacho da Cruz",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18139,
+      "nm_tse": "RIACHO DE SANTANA",
+      "codigo_ibge": 2410801,
+      "nome_ibge": "Riacho de Santana",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 18155,
+      "nm_tse": "RIACHUELO",
+      "codigo_ibge": 2410900,
+      "nome_ibge": "Riachuelo",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 16268,
+      "nm_tse": "RIO DO FOGO",
+      "codigo_ibge": 2408953,
+      "nome_ibge": "Rio do Fogo",
+      "microrregiao": "Litoral Nordeste"
+    },
+    {
+      "cd_tse": 18171,
+      "nm_tse": "RODOLFO FERNANDES",
+      "codigo_ibge": 2411007,
+      "nome_ibge": "Rodolfo Fernandes",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18198,
+      "nm_tse": "RUY BARBOSA",
+      "codigo_ibge": 2411106,
+      "nome_ibge": "Ruy Barbosa",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 18236,
+      "nm_tse": "SANTA CRUZ",
+      "codigo_ibge": 2411205,
+      "nome_ibge": "Santa Cruz",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 16241,
+      "nm_tse": "SANTA MARIA",
+      "codigo_ibge": 2409332,
+      "nome_ibge": "Santa Maria",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 18279,
+      "nm_tse": "SANTANA DO MATOS",
+      "codigo_ibge": 2411403,
+      "nome_ibge": "Santana do Matos",
+      "microrregiao": "Serra de Santana"
+    },
+    {
+      "cd_tse": 18252,
+      "nm_tse": "SANTANA DO SERIDÓ",
+      "codigo_ibge": 2411429,
+      "nome_ibge": "Santana do Seridó",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 18295,
+      "nm_tse": "SANTO ANTÔNIO",
+      "codigo_ibge": 2411502,
+      "nome_ibge": "Santo Antônio",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 18317,
+      "nm_tse": "SÃO BENTO DO NORTE",
+      "codigo_ibge": 2411601,
+      "nome_ibge": "São Bento do Norte",
+      "microrregiao": "Macau"
+    },
+    {
+      "cd_tse": 18333,
+      "nm_tse": "SÃO BENTO DO TRAIRÍ",
+      "codigo_ibge": 2411700,
+      "nome_ibge": "São Bento do Trairí",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 18350,
+      "nm_tse": "SÃO FERNANDO",
+      "codigo_ibge": 2411809,
+      "nome_ibge": "São Fernando",
+      "microrregiao": "Seridó Ocidental"
+    },
+    {
+      "cd_tse": 18210,
+      "nm_tse": "SÃO FRANCISCO DO OESTE",
+      "codigo_ibge": 2411908,
+      "nome_ibge": "São Francisco do Oeste",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18376,
+      "nm_tse": "SÃO GONÇALO DO AMARANTE",
+      "codigo_ibge": 2412005,
+      "nome_ibge": "São Gonçalo do Amarante",
+      "microrregiao": "Macaíba"
+    },
+    {
+      "cd_tse": 18392,
+      "nm_tse": "SÃO JOÃO DO SABUGI",
+      "codigo_ibge": 2412104,
+      "nome_ibge": "São João do Sabugi",
+      "microrregiao": "Seridó Ocidental"
+    },
+    {
+      "cd_tse": 18414,
+      "nm_tse": "SÃO JOSÉ DE MIPIBU",
+      "codigo_ibge": 2412203,
+      "nome_ibge": "São José de Mipibu",
+      "microrregiao": "Macaíba"
+    },
+    {
+      "cd_tse": 18430,
+      "nm_tse": "SÃO JOSÉ DO CAMPESTRE",
+      "codigo_ibge": 2412302,
+      "nome_ibge": "São José do Campestre",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 18457,
+      "nm_tse": "SÃO JOSÉ DO SERIDÓ",
+      "codigo_ibge": 2412401,
+      "nome_ibge": "São José do Seridó",
+      "microrregiao": "Seridó Oriental"
+    },
+    {
+      "cd_tse": 18473,
+      "nm_tse": "SÃO MIGUEL",
+      "codigo_ibge": 2412500,
+      "nome_ibge": "São Miguel",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 16063,
+      "nm_tse": "SÃO MIGUEL DO GOSTOSO",
+      "codigo_ibge": 2412559,
+      "nome_ibge": "São Miguel do Gostoso",
+      "microrregiao": "Litoral Nordeste"
+    },
+    {
+      "cd_tse": 18490,
+      "nm_tse": "SÃO PAULO DO POTENGI",
+      "codigo_ibge": 2412609,
+      "nome_ibge": "São Paulo do Potengi",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 18511,
+      "nm_tse": "SÃO PEDRO",
+      "codigo_ibge": 2412708,
+      "nome_ibge": "São Pedro",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 18538,
+      "nm_tse": "SÃO RAFAEL",
+      "codigo_ibge": 2412807,
+      "nome_ibge": "São Rafael",
+      "microrregiao": "Vale do Açu"
+    },
+    {
+      "cd_tse": 18554,
+      "nm_tse": "SÃO TOMÉ",
+      "codigo_ibge": 2412906,
+      "nome_ibge": "São Tomé",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 18570,
+      "nm_tse": "SÃO VICENTE",
+      "codigo_ibge": 2413003,
+      "nome_ibge": "São Vicente",
+      "microrregiao": "Serra de Santana"
+    },
+    {
+      "cd_tse": 18597,
+      "nm_tse": "SENADOR ELÓI DE SOUZA",
+      "codigo_ibge": 2413102,
+      "nome_ibge": "Senador Elói de Souza",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 18619,
+      "nm_tse": "SENADOR GEORGINO AVELINO",
+      "codigo_ibge": 2413201,
+      "nome_ibge": "Senador Georgino Avelino",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 18058,
+      "nm_tse": "SERRA CAIADA",
+      "codigo_ibge": 2410306,
+      "nome_ibge": "Serra Caiada",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 18635,
+      "nm_tse": "SERRA DE SÃO BENTO",
+      "codigo_ibge": 2413300,
+      "nome_ibge": "Serra de São Bento",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 16020,
+      "nm_tse": "SERRA DO MEL",
+      "codigo_ibge": 2413359,
+      "nome_ibge": "Serra do Mel",
+      "microrregiao": "Mossoró"
+    },
+    {
+      "cd_tse": 18651,
+      "nm_tse": "SERRA NEGRA DO NORTE",
+      "codigo_ibge": 2413409,
+      "nome_ibge": "Serra Negra do Norte",
+      "microrregiao": "Seridó Ocidental"
+    },
+    {
+      "cd_tse": 18678,
+      "nm_tse": "SERRINHA",
+      "codigo_ibge": 2413508,
+      "nome_ibge": "Serrinha",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 16209,
+      "nm_tse": "SERRINHA DOS PINTOS",
+      "codigo_ibge": 2413557,
+      "nome_ibge": "Serrinha dos Pintos",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 18694,
+      "nm_tse": "SEVERIANO MELO",
+      "codigo_ibge": 2413607,
+      "nome_ibge": "Severiano Melo",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18716,
+      "nm_tse": "SÍTIO NOVO",
+      "codigo_ibge": 2413706,
+      "nome_ibge": "Sítio Novo",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 18732,
+      "nm_tse": "TABOLEIRO GRANDE",
+      "codigo_ibge": 2413805,
+      "nome_ibge": "Taboleiro Grande",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18759,
+      "nm_tse": "TAIPU",
+      "codigo_ibge": 2413904,
+      "nome_ibge": "Taipu",
+      "microrregiao": "Litoral Nordeste"
+    },
+    {
+      "cd_tse": 18775,
+      "nm_tse": "TANGARÁ",
+      "codigo_ibge": 2414001,
+      "nome_ibge": "Tangará",
+      "microrregiao": "Borborema Potiguar"
+    },
+    {
+      "cd_tse": 18791,
+      "nm_tse": "TENENTE ANANIAS",
+      "codigo_ibge": 2414100,
+      "nome_ibge": "Tenente Ananias",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 16004,
+      "nm_tse": "TENENTE LAURENTINO CRUZ",
+      "codigo_ibge": 2414159,
+      "nome_ibge": "Tenente Laurentino Cruz",
+      "microrregiao": "Serra de Santana"
+    },
+    {
+      "cd_tse": 16225,
+      "nm_tse": "TIBAU",
+      "codigo_ibge": 2411056,
+      "nome_ibge": "Tibau",
+      "microrregiao": "Mossoró"
+    },
+    {
+      "cd_tse": 18813,
+      "nm_tse": "TIBAU DO SUL",
+      "codigo_ibge": 2414209,
+      "nome_ibge": "Tibau do Sul",
+      "microrregiao": "Litoral Sul"
+    },
+    {
+      "cd_tse": 18830,
+      "nm_tse": "TIMBAÚBA DOS BATISTAS",
+      "codigo_ibge": 2414308,
+      "nome_ibge": "Timbaúba dos Batistas",
+      "microrregiao": "Seridó Ocidental"
+    },
+    {
+      "cd_tse": 18856,
+      "nm_tse": "TOUROS",
+      "codigo_ibge": 2414407,
+      "nome_ibge": "Touros",
+      "microrregiao": "Litoral Nordeste"
+    },
+    {
+      "cd_tse": 16128,
+      "nm_tse": "TRIUNFO POTIGUAR",
+      "codigo_ibge": 2414456,
+      "nome_ibge": "Triunfo Potiguar",
+      "microrregiao": "Médio Oeste"
+    },
+    {
+      "cd_tse": 18872,
+      "nm_tse": "UMARIZAL",
+      "codigo_ibge": 2414506,
+      "nome_ibge": "Umarizal",
+      "microrregiao": "Umarizal"
+    },
+    {
+      "cd_tse": 18899,
+      "nm_tse": "UPANEMA",
+      "codigo_ibge": 2414605,
+      "nome_ibge": "Upanema",
+      "microrregiao": "Médio Oeste"
+    },
+    {
+      "cd_tse": 18910,
+      "nm_tse": "VÁRZEA",
+      "codigo_ibge": 2414704,
+      "nome_ibge": "Várzea",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 16187,
+      "nm_tse": "VENHA-VER",
+      "codigo_ibge": 2414753,
+      "nome_ibge": "Venha-Ver",
+      "microrregiao": "Serra de São Miguel"
+    },
+    {
+      "cd_tse": 18953,
+      "nm_tse": "VERA CRUZ",
+      "codigo_ibge": 2414803,
+      "nome_ibge": "Vera Cruz",
+      "microrregiao": "Agreste Potiguar"
+    },
+    {
+      "cd_tse": 18970,
+      "nm_tse": "VIÇOSA",
+      "codigo_ibge": 2414902,
+      "nome_ibge": "Viçosa",
+      "microrregiao": "Pau dos Ferros"
+    },
+    {
+      "cd_tse": 18996,
+      "nm_tse": "VILA FLOR",
+      "codigo_ibge": 2415008,
+      "nome_ibge": "Vila Flor",
+      "microrregiao": "Litoral Sul"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* === Identidade FEMURN / RN Analytics === */
+:root {
+  --navy: #182551;
+  --navy-700: #1f3168;
+  --royal: #0c529a;
+  --royal-400: #2f7dc4;
+  --green: #009b3a;
+  --gold: #f4c20d;
+  --ink: #0e1428;
+  --muted: #5b6577;
+  --line: #e4e8f0;
+  --bg: #f6f8fc;
+  --card: #ffffff;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-royal: var(--royal);
+  --color-green: var(--green);
+  --color-gold: var(--gold);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 6px 20px rgba(16, 24, 40, 0.04);
+}
+
+.wordmark { font-weight: 800; letter-spacing: -0.02em; }
+.tnum { font-variant-numeric: tabular-nums; }
+
+.muni { transition: fill 120ms ease; cursor: pointer; outline: none; }
+.muni:hover { stroke: var(--gold); stroke-width: 1.6; }
+.muni.selected { stroke: var(--navy); stroke-width: 2.2; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #cfd6e4; border-radius: 8px; border: 2px solid var(--bg); }
