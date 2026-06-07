@@ -110,3 +110,28 @@ input:focus, select:focus { border-color: var(--royal-2); box-shadow: 0 0 0 3px 
 /* reveal on mount */
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 .rise { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+
+/* ===== Polimento de interação global (hover / foco / clique) ===== */
+/* segmented control: hover nos itens inativos */
+.segment button:not([data-active="true"]):hover { color: var(--navy); background: rgba(255, 255, 255, .6); }
+/* feedback de clique nos botões */
+.btn:active { transform: translateY(0) scale(.97); }
+
+/* utilitário de elevação no hover (para itens/cartões clicáveis) */
+.lift { transition: transform .22s cubic-bezier(.2,.7,.2,1), box-shadow .22s cubic-bezier(.2,.7,.2,1); cursor: pointer; }
+.lift:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.lift:active { transform: translateY(-1px) scale(.995); }
+
+/* chips/pills interativos */
+.chip-i { transition: transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s cubic-bezier(.2,.7,.2,1); }
+.chip-i:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(13, 22, 51, .12); }
+
+/* foco acessível por teclado (melhoria de usabilidade) */
+:where(button, a, [role="button"]):focus-visible { outline: 2px solid var(--royal-2); outline-offset: 2px; border-radius: 10px; }
+
+/* linhas de tabela clicáveis */
+tr.row-click { cursor: pointer; transition: background-color .18s ease; }
+tr.row-click:hover { background: #f1f6fd; }
+
+/* realce dos pontos do mapa de votação ao passar o mouse */
+.muni { transition: fill .25s ease, opacity .2s ease, stroke-width .15s ease; }

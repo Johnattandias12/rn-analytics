@@ -154,8 +154,7 @@ function Sidebar({ section, go, open, setOpen, collapsed, setCollapsed }: { sect
                   const active = section === m.id;
                   return (
                     <button key={m.id} onClick={() => go(m.id)} title={m.label}
-                      className={`w-full flex items-center gap-3 py-2.5 rounded-xl transition relative ${collapsed ? "justify-center px-2" : "px-3"}`}
-                      style={{ background: active ? "rgba(12,82,154,0.09)" : "transparent" }}>
+                      className={`group w-full flex items-center gap-3 py-2.5 rounded-xl transition-all duration-200 relative ${collapsed ? "justify-center px-2" : "px-3"} ${active ? "bg-[rgba(12,82,154,0.09)]" : "hover:bg-[rgba(12,82,154,0.05)] hover:translate-x-0.5"}`}>
                       {active && <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full" style={{ background: "var(--royal)" }} />}
                       <span className="shrink-0">{m.icon(active)}</span>
                       {!collapsed && (

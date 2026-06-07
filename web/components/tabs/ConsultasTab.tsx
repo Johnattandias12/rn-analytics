@@ -45,7 +45,7 @@ function Comparador({ cn }: { cn: CNData }) {
         {top.map((c) => {
           const on = sel.includes(c.sq);
           return (
-            <button key={c.sq} onClick={() => toggle(c.sq)} className="text-xs font-semibold px-2.5 py-1.5 rounded-full border transition"
+            <button key={c.sq} onClick={() => toggle(c.sq)} className="chip-i text-xs font-semibold px-2.5 py-1.5 rounded-full border"
               style={{ background: on ? "var(--navy)" : "#fff", color: on ? "#fff" : "var(--ink-2)", borderColor: on ? "var(--navy)" : "var(--line)" }}>
               {c.nome.split(" ").slice(0, 2).join(" ")} · {partidoLabel(c.partido_num)}
             </button>

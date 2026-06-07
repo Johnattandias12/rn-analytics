@@ -174,7 +174,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
                     <button
                       key={p.num}
                       onClick={() => togglePartido(p.num)}
-                      className="text-xs font-semibold px-2.5 py-1.5 rounded-full border transition"
+                      className="chip-i text-xs font-semibold px-2.5 py-1.5 rounded-full border"
                       style={{
                         background: on ? "var(--navy)" : "#fff",
                         color: on ? "#fff" : "var(--ink-2)",
