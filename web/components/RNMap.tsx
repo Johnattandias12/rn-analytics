@@ -50,11 +50,12 @@ export default function RNMap({ geo, values, colorFor, nameFor, valueLabel, seri
             <feDropShadow dx="0" dy="6" stdDeviation="10" floodColor="#0b1020" floodOpacity="0.12" />
           </filter>
         </defs>
-        <g filter="url(#mapShadow)">
+        <g filter="url(#mapShadow)" className="map-enter">
           {paths.map(({ cod, d }) => {
             const isSer = seridoSet.has(cod);
             const isSel = selected === cod;
             const isHover = hover === cod;
+            const lifted = isHover || isSel;
             return (
               <path
                 key={cod}
@@ -63,7 +64,11 @@ export default function RNMap({ geo, values, colorFor, nameFor, valueLabel, seri
                 fill={colorFor(values.get(cod))}
                 stroke={isSel ? "#0b1020" : isHover ? "var(--gold)" : isSer ? "var(--gold)" : "#ffffff"}
                 strokeWidth={isSel ? 2.4 : isHover ? 2 : isSer ? 1.2 : 0.55}
-                style={{ opacity: active && !isSel && !isHover && !(isSer && !active) ? 0.92 : 1 }}
+                style={{
+                  opacity: active && !isSel && !isHover && !(isSer && !active) ? 0.9 : 1,
+                  transform: lifted ? "scale(1.045)" : "none",
+                  filter: lifted ? "drop-shadow(0 3px 6px rgba(11,16,32,.28))" : "none",
+                }}
                 onClick={() => onSelect(cod)}
                 onMouseEnter={() => setHover(cod)}
                 onMouseLeave={() => setHover(null)}

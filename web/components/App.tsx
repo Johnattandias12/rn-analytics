@@ -90,7 +90,10 @@ export default function App() {
   const go = (id: SectionId) => {
     setSection(id);
     setMenuOpen(false);
-    if (typeof window !== "undefined") window.history.replaceState(null, "", `#${id}`);
+    // usa o hash (cria entrada no histórico → botão voltar alterna entre abas)
+    if (typeof window !== "undefined" && window.location.hash.slice(1) !== id) {
+      window.location.hash = id;
+    }
   };
   const current = ALL_ITEMS.find((m) => m.id === section)!;
 
