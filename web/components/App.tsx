@@ -1,15 +1,14 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import type { FeatureCollection, Geometry } from "geojson";
 import type { Socio, SeridoVereador } from "../lib/data";
 import OverviewTab from "./tabs/OverviewTab";
 import MapTab from "./tabs/MapTab";
+import PesquisasTab from "./tabs/PesquisasTab";
 import VereadoresTab from "./tabs/VereadoresTab";
-import MapaVotacaoTab from "./tabs/MapaVotacaoTab";
-import EvolucaoTab from "./tabs/EvolucaoTab";
-import ConsultasTab from "./tabs/ConsultasTab";
+import AnaliseTab from "./tabs/AnaliseTab";
+import TendenciasTab from "./tabs/TendenciasTab";
 import SobreTab from "./tabs/SobreTab";
 
 export type Bundle = {
@@ -21,19 +20,19 @@ export type Bundle = {
   nameByCode: Map<number, string>;
 };
 
-export type SectionId = "visao" | "mapa" | "vereadores" | "mapavotacao" | "evolucao" | "consultas" | "sobre";
+export type SectionId = "visao" | "mapa" | "pesquisas" | "vereadores" | "analise" | "tendencias" | "sobre";
 
 type Item = { id: SectionId; label: string; desc: string; icon: (a: boolean) => React.ReactNode };
 const GROUPS: { grupo: string; itens: Item[] }[] = [
-  { grupo: "Estado", itens: [
-    { id: "visao", label: "Visão Geral", desc: "Panorama do RN", icon: (a) => <IGrid a={a} /> },
+  { grupo: "Panorama do RN", itens: [
+    { id: "visao", label: "Visão Geral", desc: "Resumo e mapa do estado", icon: (a) => <IGrid a={a} /> },
     { id: "mapa", label: "Mapa do RN", desc: "167 municípios", icon: (a) => <IMap a={a} /> },
+    { id: "pesquisas", label: "Pesquisas 2026", desc: "Governo, Senado e mais", icon: (a) => <IPoll a={a} /> },
   ]},
-  { grupo: "Currais Novos", itens: [
-    { id: "mapavotacao", label: "Mapa de Votação", desc: "Redutos por seção", icon: (a) => <IPin a={a} /> },
-    { id: "vereadores", label: "Vereadores", desc: "Filtros e exportação", icon: (a) => <IUsers a={a} /> },
-    { id: "evolucao", label: "Evolução", desc: "Tendência 2012–2024", icon: (a) => <ITrend a={a} /> },
-    { id: "consultas", label: "Consultas", desc: "Cruzar dados e insights", icon: (a) => <ISearch a={a} /> },
+  { grupo: "Currais Novos & Seridó", itens: [
+    { id: "vereadores", label: "Vereadores", desc: "Lista, filtros e relatórios", icon: (a) => <IUsers a={a} /> },
+    { id: "analise", label: "Análise", desc: "Redutos por seção + insights", icon: (a) => <IPin a={a} /> },
+    { id: "tendencias", label: "Tendências", desc: "Evolução + projeção 2028", icon: (a) => <ITrend a={a} /> },
   ]},
   { grupo: "Info", itens: [
     { id: "sobre", label: "Sobre", desc: "Metodologia e fontes", icon: (a) => <IInfo a={a} /> },
@@ -43,60 +42,86 @@ const ALL_ITEMS = GROUPS.flatMap((g) => g.itens);
 
 export default function App() {
   const [bundle, setBundle] = useState<Bundle | null>(null);
+  const [erro, setErro] = useState<string | null>(null);
   const [section, setSection] = useState<SectionId>("visao");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {
+    let alive = true;
     (async () => {
-      const [geo, s, v] = await Promise.all([
-        fetch("/data/rn-municipios.geojson").then((r) => r.json()),
-        fetch("/data/socioeconomico-rn.json").then((r) => r.json()),
-        fetch("/data/eleicao/serido-vereador-2024.json").then((r) => r.json()),
-      ]);
-      const socio: Socio[] = s.municipios;
-      const serido: SeridoVereador = v;
-      setBundle({
-        geo, socio, serido,
-        socioByCode: new Map(socio.map((m) => [m.codigo_ibge, m])),
-        nameByCode: new Map(socio.map((m) => [m.codigo_ibge, m.nome])),
-        seridoSet: new Set(serido.municipios.map((m) => m.codigo_ibge).filter(Boolean) as number[]),
-      });
+      try {
+        const [gr, sr, vr] = await Promise.all([
+          fetch("/data/rn-municipios.geojson"),
+          fetch("/data/socioeconomico-rn.json"),
+          fetch("/data/eleicao/serido-vereador-2024.json"),
+        ]);
+        if (!gr.ok || !sr.ok || !vr.ok) throw new Error("falha ao buscar dados");
+        const geo = await gr.json();
+        const s = await sr.json();
+        const v = await vr.json();
+        if (!alive) return;
+        const socio: Socio[] = s.municipios;
+        const serido: SeridoVereador = v;
+        setBundle({
+          geo, socio, serido,
+          socioByCode: new Map(socio.map((m) => [m.codigo_ibge, m])),
+          nameByCode: new Map(socio.map((m) => [m.codigo_ibge, m.nome])),
+          seridoSet: new Set(serido.municipios.map((m) => m.codigo_ibge).filter(Boolean) as number[]),
+        });
+      } catch (e) {
+        if (alive) setErro(e instanceof Error ? e.message : "erro");
+      }
     })();
+    return () => { alive = false; };
   }, []);
 
-  const go = (id: SectionId) => { setSection(id); setMenuOpen(false); };
+  // roteamento por hash (URL por aba + botão voltar do navegador)
+  useEffect(() => {
+    const apply = () => {
+      const h = window.location.hash.replace("#", "") as SectionId;
+      if (ALL_ITEMS.some((m) => m.id === h)) setSection(h);
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, []);
+
+  const go = (id: SectionId) => {
+    setSection(id);
+    setMenuOpen(false);
+    if (typeof window !== "undefined") window.history.replaceState(null, "", `#${id}`);
+  };
   const current = ALL_ITEMS.find((m) => m.id === section)!;
 
   return (
-    <div className="min-h-screen lg:grid lg:grid-cols-[260px_1fr]">
-      {/* Sidebar */}
-      <Sidebar section={section} go={go} open={menuOpen} setOpen={setMenuOpen} />
+    <div className="min-h-screen lg:grid" style={{ gridTemplateColumns: collapsed ? "76px 1fr" : "260px 1fr" }}>
+      <Sidebar section={section} go={go} open={menuOpen} setOpen={setMenuOpen} collapsed={collapsed} setCollapsed={setCollapsed} />
 
-      {/* Conteúdo */}
       <div className="flex flex-col min-h-screen min-w-0">
         <Topbar title={current.label} desc={current.desc} onMenu={() => setMenuOpen(true)} />
 
         <main className="flex-1 w-full max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          {!bundle ? (
+          {erro ? (
+            <Erro msg={erro} />
+          ) : !bundle ? (
             <Loading />
           ) : (
-            <AnimatePresence mode="wait">
-              <motion.div key={section} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.38, ease: [0.2, 0.7, 0.2, 1] }}>
-                {section === "visao" && <OverviewTab b={bundle} goTo={go} />}
-                {section === "mapa" && <MapTab b={bundle} />}
-                {section === "mapavotacao" && <MapaVotacaoTab b={bundle} />}
-                {section === "vereadores" && <VereadoresTab b={bundle} />}
-                {section === "evolucao" && <EvolucaoTab b={bundle} />}
-                {section === "consultas" && <ConsultasTab b={bundle} />}
-                {section === "sobre" && <SobreTab />}
-              </motion.div>
-            </AnimatePresence>
+            <div key={section} className="rise">
+              {section === "visao" && <OverviewTab b={bundle} goTo={go} />}
+              {section === "mapa" && <MapTab b={bundle} />}
+              {section === "pesquisas" && <PesquisasTab />}
+              {section === "vereadores" && <VereadoresTab b={bundle} />}
+              {section === "analise" && <AnaliseTab b={bundle} />}
+              {section === "tendencias" && <TendenciasTab b={bundle} />}
+              {section === "sobre" && <SobreTab />}
+            </div>
           )}
         </main>
 
         <footer className="border-t border-[color:var(--line)] py-5 text-center">
           <p className="text-xs text-[color:var(--muted)]">
-            Fontes: TSE (Dados Abertos) e IBGE · dados públicos agregados · nenhum dado individual de eleitor é utilizado.
+            Desenvolvido pela <b className="text-[color:var(--navy)]">Beyonder IA</b> — 2026 · Johnattan Dias · Fontes: TSE e IBGE
           </p>
         </footer>
       </div>
@@ -104,32 +129,41 @@ export default function App() {
   );
 }
 
-function Sidebar({ section, go, open, setOpen }: { section: SectionId; go: (i: SectionId) => void; open: boolean; setOpen: (b: boolean) => void }) {
+function Sidebar({ section, go, open, setOpen, collapsed, setCollapsed }: { section: SectionId; go: (i: SectionId) => void; open: boolean; setOpen: (b: boolean) => void; collapsed: boolean; setCollapsed: (b: boolean) => void }) {
   return (
     <>
       {open && <div className="lg:hidden fixed inset-0 bg-black/30 z-40" onClick={() => setOpen(false)} />}
-      <aside className={`fixed lg:sticky top-0 z-50 lg:z-auto h-screen w-[260px] shrink-0 bg-white border-r border-[color:var(--line)] flex flex-col transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}>
-        <button onClick={() => go("visao")} className="flex items-center gap-2.5 px-5 h-16 border-b border-[color:var(--line)]">
-          <Logo />
-          <div className="wordmark text-[19px] leading-none"><span style={{ color: "var(--navy)" }}>RN</span><span style={{ color: "var(--royal)" }}> Analytics</span></div>
-        </button>
+      <aside className={`fixed lg:sticky top-0 z-50 lg:z-auto h-screen ${collapsed ? "w-[76px]" : "w-[260px]"} shrink-0 bg-white border-r border-[color:var(--line)] flex flex-col transition-all duration-300 ${open ? "translate-x-0 w-[260px]" : "-translate-x-full lg:translate-x-0"}`}>
+        <div className={`flex items-center h-16 border-b border-[color:var(--line)] ${collapsed ? "justify-center px-2" : "justify-between px-4"}`}>
+          <button onClick={() => go("visao")} className="flex items-center gap-2.5 min-w-0">
+            <Logo />
+            {!collapsed && <div className="wordmark text-[18px] leading-none truncate"><span style={{ color: "var(--navy)" }}>RN</span><span style={{ color: "var(--royal)" }}> Analytics</span></div>}
+          </button>
+          <button onClick={() => setCollapsed(!collapsed)} className="hidden lg:flex p-1.5 rounded-lg hover:bg-black/5 text-[color:var(--muted)]" aria-label="Retrair menu" title={collapsed ? "Expandir" : "Retrair"}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{ transform: collapsed ? "rotate(180deg)" : "none" }}><path d="M15 6l-6 6 6 6" /></svg>
+          </button>
+        </div>
 
-        <nav className="flex-1 p-3 overflow-y-auto">
+        <nav className="flex-1 p-2.5 overflow-y-auto overflow-x-hidden">
           {GROUPS.map((g) => (
             <div key={g.grupo} className="mb-2">
-              <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--muted)] px-3 py-2">{g.grupo}</div>
+              {!collapsed && <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--muted)] px-3 py-2">{g.grupo}</div>}
+              {collapsed && <div className="h-px bg-[color:var(--line)] mx-2 my-2" />}
               <div className="space-y-1">
                 {g.itens.map((m) => {
                   const active = section === m.id;
                   return (
-                    <button key={m.id} onClick={() => go(m.id)} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition relative"
-                      style={{ background: active ? "rgba(12,82,154,0.08)" : "transparent" }}>
+                    <button key={m.id} onClick={() => go(m.id)} title={m.label}
+                      className={`w-full flex items-center gap-3 py-2.5 rounded-xl transition relative ${collapsed ? "justify-center px-2" : "px-3"}`}
+                      style={{ background: active ? "rgba(12,82,154,0.09)" : "transparent" }}>
                       {active && <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 rounded-r-full" style={{ background: "var(--royal)" }} />}
                       <span className="shrink-0">{m.icon(active)}</span>
-                      <span className="text-left min-w-0">
-                        <span className="block text-sm font-semibold leading-tight" style={{ color: active ? "var(--royal)" : "var(--ink)" }}>{m.label}</span>
-                        <span className="block text-[11px] text-[color:var(--muted)] truncate">{m.desc}</span>
-                      </span>
+                      {!collapsed && (
+                        <span className="text-left min-w-0">
+                          <span className="block text-sm font-semibold leading-tight" style={{ color: active ? "var(--royal)" : "var(--ink)" }}>{m.label}</span>
+                          <span className="block text-[11px] text-[color:var(--muted)] truncate">{m.desc}</span>
+                        </span>
+                      )}
                     </button>
                   );
                 })}
@@ -138,13 +172,15 @@ function Sidebar({ section, go, open, setOpen }: { section: SectionId; go: (i: S
           ))}
         </nav>
 
-        <div className="p-4 border-t border-[color:var(--line)]">
-          <div className="rounded-xl p-3 text-center text-white text-xs relative overflow-hidden" style={{ background: "linear-gradient(120deg, var(--navy), var(--royal))" }}>
-            <p className="opacity-80">Desenvolvido pela</p>
-            <p className="wordmark text-sm mt-0.5">Beyonder IA · 2026</p>
-            <p className="opacity-80 mt-0.5">Johnattan Dias</p>
+        {!collapsed && (
+          <div className="p-3 border-t border-[color:var(--line)]">
+            <div className="rounded-xl p-3 text-center text-white text-xs relative overflow-hidden" style={{ background: "linear-gradient(120deg, var(--navy), var(--royal))" }}>
+              <p className="opacity-80">Desenvolvido pela</p>
+              <p className="wordmark text-sm mt-0.5">Beyonder IA · 2026</p>
+              <p className="opacity-80 mt-0.5">Johnattan Dias</p>
+            </div>
           </div>
-        </div>
+        )}
       </aside>
     </>
   );
@@ -166,7 +202,7 @@ function Topbar({ title, desc, onMenu }: { title: string; desc: string; onMenu: 
 
 function Logo() {
   return (
-    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden>
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden className="shrink-0">
       <rect width="32" height="32" rx="9" fill="var(--navy)" />
       <path d="M8 22V10l8 8V10" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
       <circle cx="23.5" cy="11" r="2.2" fill="var(--gold)" />
@@ -184,7 +220,16 @@ function Loading() {
   );
 }
 
-// ---- ícones do menu ----
+function Erro({ msg }: { msg: string }) {
+  return (
+    <div className="card p-12 text-center mt-10">
+      <p className="text-[color:var(--navy)] font-bold">Não consegui carregar os dados</p>
+      <p className="text-[color:var(--muted)] text-sm mt-1">{msg}</p>
+      <button onClick={() => location.reload()} className="btn btn-primary text-sm mt-4">Tentar de novo</button>
+    </div>
+  );
+}
+
 const ic = (a: boolean) => ({ stroke: a ? "var(--royal)" : "var(--muted)", width: 20, height: 20, fill: "none", strokeWidth: 2, viewBox: "0 0 24 24" } as const);
 const IGrid = ({ a }: { a: boolean }) => (<svg {...ic(a)}><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></svg>);
 const IMap = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" /><path d="M9 4v14M15 6v14" /></svg>);
@@ -192,4 +237,4 @@ const IUsers = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="9" cy="8"
 const ITrend = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M3 17l6-6 4 4 7-7" /><path d="M14 7h6v6" /></svg>);
 const IInfo = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></svg>);
 const IPin = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>);
-const ISearch = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>);
+const IPoll = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>);

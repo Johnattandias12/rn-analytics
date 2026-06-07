@@ -5,8 +5,9 @@ import type { Feature, Geometry } from "geojson";
 import type { Bundle } from "../App";
 import CNVotingMap, { type Local } from "../CNVotingMap";
 import { Card, Mini, SectionTitle } from "../ui";
-import { fmtInt, partidoLabel } from "../../lib/data";
+import { fmtInt, partidoLabel, type Candidato } from "../../lib/data";
 import { exportCSV } from "../../lib/export";
+import CandidateModal from "../CandidateModal";
 
 type Cand = { sq: string; numero: string; nome: string; partido_num: string; votos: number; rank: number; por_local: Record<string, number> };
 type Cargo = { total_nominais: number; brancos: number; nulos: number; legenda: number; candidatos: Cand[] };
@@ -22,6 +23,7 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
   const [busca, setBusca] = useState("");
   const cache = useRef<Map<number, CNData>>(new Map());
   const [data, setData] = useState<CNData | null>(null);
+  const [selReport, setSelReport] = useState<Candidato | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -117,10 +119,15 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
               <h4 className="text-xs font-bold text-[color:var(--navy)] mt-4 mb-2">Mais votados neste local</h4>
               <div className="space-y-1.5">
                 {rankNoLocal.map(({ c, v }) => (
-                  <button key={c.sq} onClick={() => setSq(c.sq)} className="w-full flex justify-between text-xs hover:bg-[#f7f9fd] rounded px-1 py-0.5">
+                  <div key={c.sq} onClick={() => setSq(c.sq)} className="group w-full flex items-center justify-between text-xs hover:bg-[#f1f6fd] rounded px-1 py-0.5 cursor-pointer transition-colors">
                     <span className="truncate font-medium">{c.nome} · {partidoLabel(c.partido_num)}</span>
-                    <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(v)}</span>
-                  </button>
+                    <span className="flex items-center gap-1.5 shrink-0">
+                      <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(v)}</span>
+                      <button onClick={(e) => { e.stopPropagation(); setSelReport(c); }} title="Relatório PDF" className="p-0.5 rounded text-[color:var(--muted)] opacity-0 group-hover:opacity-100 hover:text-[color:var(--royal)] transition">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg>
+                      </button>
+                    </span>
+                  </div>
                 ))}
               </div>
             </Card>
@@ -136,18 +143,29 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
               {candFiltrados.slice(0, 60).map((c) => {
                 const on = sq === c.sq;
                 return (
-                  <button key={c.sq} onClick={() => setSq(on ? null : c.sq)} className="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-left transition" style={{ background: on ? "rgba(12,82,154,0.1)" : "transparent" }}>
+                  <div key={c.sq} onClick={() => setSq(on ? null : c.sq)} title="Clique para ver o reduto no mapa" className="group w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-left cursor-pointer transition-all duration-200 hover:bg-[#f1f6fd]" style={{ background: on ? "rgba(12,82,154,0.1)" : undefined }}>
                     <span className="w-5 text-xs font-bold tnum text-[color:var(--muted)] text-right">{c.rank}</span>
                     <span className="flex-1 min-w-0 text-sm font-medium truncate" style={{ color: on ? "var(--royal)" : "var(--ink)" }}>{c.nome}</span>
                     <span className="text-[11px] font-semibold text-[color:var(--royal)] bg-[#eef4fb] px-1.5 py-0.5 rounded">{partidoLabel(c.partido_num)}</span>
                     <span className="tnum text-xs font-bold text-[color:var(--navy)] w-12 text-right">{fmtInt(c.votos)}</span>
-                  </button>
+                    <button onClick={(e) => { e.stopPropagation(); setSelReport(c); }} title="Relatório PDF do candidato" className="shrink-0 p-1 rounded-md text-[color:var(--muted)] opacity-0 group-hover:opacity-100 hover:bg-white hover:text-[color:var(--royal)] transition">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg>
+                    </button>
+                  </div>
                 );
               })}
             </div>
           </Card>
         </div>
       </div>
+
+      {selReport && (
+        <CandidateModal
+          cand={selReport}
+          ctx={{ munNome: "Currais Novos", ano, codigoIbge: 2403103, totalNominais: C.total_nominais }}
+          onClose={() => setSelReport(null)}
+        />
+      )}
     </div>
   );
 }

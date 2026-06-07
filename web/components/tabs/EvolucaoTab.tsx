@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Bundle } from "../App";
 import { Card, Mini, SectionTitle } from "../ui";
-import { fmtInt, partidoLabel } from "../../lib/data";
+import { fmtInt, partidoLabel, type Candidato } from "../../lib/data";
+import CandidateModal from "../CandidateModal";
 
 type Evol = {
   meta: { anos: number[] };
@@ -19,6 +20,7 @@ const PALETTE = ["#0c529a", "#009b3a", "#e0a400", "#c0392b", "#7b3fa0", "#2f7dc4
 export default function EvolucaoTab({ b }: { b: Bundle }) {
   const [data, setData] = useState<Evol | null>(null);
   const [munCod, setMunCod] = useState("2403103");
+  const [selCand, setSelCand] = useState<{ cand: Candidato; ano: number; nominais: number } | null>(null);
 
   useEffect(() => {
     fetch("/data/eleicao/evolucao-vereador-serido.json").then((r) => r.json()).then(setData);
@@ -91,19 +93,37 @@ export default function EvolucaoTab({ b }: { b: Bundle }) {
           <div className="space-y-3">
             {anos.map((a) => {
               const top = mun.por_ano[String(a)]?.top?.[0];
+              const nominais = mun.por_ano[String(a)]?.nominais ?? 0;
               return (
-                <div key={a} className="flex items-center gap-3">
+                <button
+                  key={a}
+                  disabled={!top}
+                  onClick={() => top && setSelCand({ cand: { sq: "", numero: top.numero, nome: top.nome, partido_num: top.partido, votos: top.votos, rank: 1 }, ano: a, nominais })}
+                  title={top ? "Ver resumo e relatório PDF" : undefined}
+                  className="group w-full flex items-center gap-3 text-left rounded-lg px-1.5 py-1 -mx-1.5 transition-all duration-200 enabled:hover:bg-[#f1f6fd] enabled:hover:translate-x-0.5 disabled:cursor-default"
+                >
                   <span className="text-xs font-bold tnum text-white rounded-lg px-2 py-1" style={{ background: "var(--navy)" }}>{a}</span>
                   <div className="min-w-0 flex-1">
-                    <div className="text-sm font-semibold text-[color:var(--ink)] truncate">{top?.nome ?? "—"}</div>
+                    <div className="text-sm font-semibold text-[color:var(--ink)] truncate flex items-center gap-1">
+                      {top?.nome ?? "—"}
+                      {top && <svg className="opacity-0 group-hover:opacity-100 transition text-[color:var(--royal)]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>}
+                    </div>
                     <div className="text-xs text-[color:var(--muted)]">{top ? `${partidoLabel(top.partido)} · ${fmtInt(top.votos)} votos` : ""}</div>
                   </div>
-                </div>
+                </button>
               );
             })}
           </div>
         </Card>
       </div>
+
+      {selCand && (
+        <CandidateModal
+          cand={selCand.cand}
+          ctx={{ munNome: mun.nome, ano: selCand.ano, codigoIbge: null, totalNominais: selCand.nominais }}
+          onClose={() => setSelCand(null)}
+        />
+      )}
     </div>
   );
 }

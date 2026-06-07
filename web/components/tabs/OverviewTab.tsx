@@ -1,48 +1,82 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
+import { scaleQuantile } from "d3-scale";
 import type { Bundle } from "../App";
+import type { SectionId } from "../App";
+import RNMap from "../RNMap";
 import { Card, Reveal, useCountUp } from "../ui";
 import { fmtInt, fmtReais } from "../../lib/data";
 
-export default function OverviewTab({ b, goTo }: { b: Bundle; goTo: (t: any) => void }) {
+const RAMP = ["#e8f0fb", "#c2d8ef", "#8fb4dd", "#4f86c2", "#1f5da3", "#0c3f7e"];
+
+export default function OverviewTab({ b, goTo }: { b: Bundle; goTo: (t: SectionId) => void }) {
   const totalPop = b.socio.reduce((a, s) => a + (s.populacao_2022 ?? 0), 0);
   const totalPib = b.socio.reduce((a, s) => a + (s.pib_2021_mil_reais ?? 0), 0);
   const popSerido = b.socio.filter((s) => b.seridoSet.has(s.codigo_ibge)).reduce((a, s) => a + (s.populacao_2022 ?? 0), 0);
   const cn = b.serido.municipios.find((m) => m.nome.toUpperCase() === "CURRAIS NOVOS");
   const totalCandSerido = b.serido.municipios.reduce((a, m) => a + m.qtd_candidatos, 0);
 
+  const [selMapa, setSelMapa] = useState<number | null>(2403103);
+  const popValues = useMemo(() => {
+    const m = new Map<number, number | null>();
+    for (const s of b.socio) m.set(s.codigo_ibge, s.populacao_2022);
+    return m;
+  }, [b.socio]);
+  const colorFor = useMemo(() => {
+    const vals = [...popValues.values()].filter((v): v is number => v != null);
+    const scale = scaleQuantile<string>().domain(vals).range(RAMP);
+    return (v: number | null | undefined) => (v == null ? "#eef1f6" : scale(v));
+  }, [popValues]);
+
   return (
     <div>
-      {/* HERO */}
-      <section className="pt-6 pb-10 text-center">
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.2, 0.7, 0.2, 1] }}>
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[color:var(--royal)] bg-white/70 border border-[color:var(--line)] rounded-full px-3.5 py-1.5 mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--green)] animate-pulse" /> Eleições 2012–2024 · 167 municípios
-          </div>
-          <h1 className="h-display text-4xl sm:text-6xl max-w-4xl mx-auto">
-            <span className="text-gradient">Os números que decidem</span><br />o Rio Grande do Norte
-          </h1>
-          <p className="text-[17px] sm:text-lg text-[color:var(--muted)] max-w-2xl mx-auto mt-5">
-            Inteligência eleitoral e socioeconômica em um só lugar — do panorama estadual ao reduto de cada
-            vereador no Seridó e em Currais Novos.
-          </p>
-          <div className="flex items-center justify-center gap-3 mt-7 flex-wrap">
-            <button onClick={() => goTo("mapa")} className="btn btn-primary">Explorar o mapa</button>
-            <button onClick={() => goTo("vereadores")} className="btn btn-ghost">Vereadores de Currais Novos →</button>
-          </div>
-        </motion.div>
+      <section className="pt-4 pb-10 text-center rise">
+        <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[color:var(--royal)] bg-white/70 border border-[color:var(--line)] rounded-full px-3.5 py-1.5 mb-5">
+          <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--green)] animate-pulse" /> Eleições 2012–2024 · 167 municípios
+        </div>
+        <h1 className="h-display text-4xl sm:text-6xl max-w-4xl mx-auto">
+          <span className="text-gradient">Os números que decidem</span><br />o Rio Grande do Norte
+        </h1>
+        <p className="text-[17px] sm:text-lg text-[color:var(--muted)] max-w-2xl mx-auto mt-5">
+          Inteligência eleitoral e socioeconômica em um só lugar — do panorama estadual ao reduto de cada
+          vereador no Seridó e em Currais Novos.
+        </p>
+        <div className="flex items-center justify-center gap-3 mt-7 flex-wrap">
+          <button onClick={() => goTo("analise")} className="btn btn-primary">Mapa de redutos de Currais Novos</button>
+          <button onClick={() => goTo("mapa")} className="btn btn-ghost">Explorar o mapa do RN →</button>
+        </div>
       </section>
 
-      {/* KPIs */}
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
-        <CountKpi label="Municípios" target={167} delay={0} accent="navy" />
-        <CountKpi label="População (Censo 2022)" target={totalPop} delay={0.05} accent="royal" sub="habitantes no RN" />
-        <CountKpi label="PIB municipal 2021" target={totalPib} delay={0.1} accent="green" reais sub="soma dos municípios" />
-        <CountKpi label="Eleitorado do Seridó" target={popSerido} delay={0.15} accent="gold" sub="23 municípios" />
+        <CountKpi label="Municípios" target={167} accent="navy" />
+        <CountKpi label="População (Censo 2022)" target={totalPop} accent="royal" sub="habitantes no RN" />
+        <CountKpi label="PIB municipal 2021" target={totalPib} accent="green" reais sub="soma dos municípios" />
+        <CountKpi label="Eleitorado do Seridó" target={popSerido} accent="gold" sub="23 municípios" />
       </section>
 
-      {/* DESTAQUES */}
+      <section className="mt-4">
+        <Card className="p-4 sm:p-5">
+          <div className="flex items-center justify-between gap-3 flex-wrap mb-1">
+            <div>
+              <h3 className="text-sm font-bold text-[color:var(--navy)]">Mapa do Rio Grande do Norte</h3>
+              <p className="text-xs text-[color:var(--muted)]">População por município (Censo 2022). O contorno dourado marca a Região do Seridó.</p>
+            </div>
+            <button onClick={() => goTo("mapa")} className="btn btn-ghost text-sm">Abrir mapa completo →</button>
+          </div>
+          <RNMap
+            geo={b.geo}
+            values={popValues}
+            colorFor={colorFor}
+            nameFor={(c) => b.nameByCode.get(c) ?? "—"}
+            valueLabel={(v) => `População: ${fmtInt(v as number)}`}
+            seridoSet={b.seridoSet}
+            selected={selMapa}
+            onSelect={(c) => setSelMapa(c)}
+          />
+        </Card>
+      </section>
+
       <section className="grid md:grid-cols-2 gap-4 mt-4">
         <Reveal delay={0.05}>
           <Card hover className="p-6 h-full overflow-hidden relative">
@@ -71,17 +105,15 @@ export default function OverviewTab({ b, goTo }: { b: Bundle; goTo: (t: any) => 
   );
 }
 
-function CountKpi({ label, target, delay, accent, sub, reais }: { label: string; target: number; delay: number; accent: "navy" | "green" | "gold" | "royal"; sub?: string; reais?: boolean }) {
+function CountKpi({ label, target, accent, sub, reais }: { label: string; target: number; accent: "navy" | "green" | "gold" | "royal"; sub?: string; reais?: boolean }) {
   const v = useCountUp(target, 1200);
   const color = accent === "green" ? "var(--green)" : accent === "gold" ? "#caa106" : accent === "royal" ? "var(--royal)" : "var(--navy)";
   const display = reais ? fmtReais(v) : fmtInt(Math.round(v));
   return (
-    <Reveal delay={delay}>
-      <Card hover className="p-5 h-full">
-        <div className="text-[11px] font-bold uppercase tracking-wide text-[color:var(--muted)]">{label}</div>
-        <div className="text-[30px] leading-none font-extrabold tnum mt-2" style={{ color }}>{display}</div>
-        {sub && <div className="text-xs text-[color:var(--muted)] mt-1.5">{sub}</div>}
-      </Card>
-    </Reveal>
+    <div className="card card-hover p-5 h-full rise">
+      <div className="text-[11px] font-bold uppercase tracking-wide text-[color:var(--muted)]">{label}</div>
+      <div className="text-[30px] leading-none font-extrabold tnum mt-2" style={{ color }}>{display}</div>
+      {sub && <div className="text-xs text-[color:var(--muted)] mt-1.5">{sub}</div>}
+    </div>
   );
 }

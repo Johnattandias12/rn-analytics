@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import type { Bundle } from "../App";
 import { Card, Mini, SectionTitle } from "../ui";
-import { fmtInt, partidoLabel, type MunicipioVereador, type SeridoVereador } from "../../lib/data";
+import { fmtInt, partidoLabel, type Candidato, type MunicipioVereador, type SeridoVereador } from "../../lib/data";
 import { exportCSV, exportXLSX, exportPDF } from "../../lib/export";
+import CandidateModal from "../CandidateModal";
 
 type SortKey = "votos_desc" | "votos_asc" | "nome" | "numero";
 const ANOS = [2012, 2016, 2020, 2024];
@@ -37,6 +37,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
   const [partidos, setPartidos] = useState<Set<string>>(new Set());
   const [minVotos, setMinVotos] = useState(0);
   const [sort, setSort] = useState<SortKey>("votos_desc");
+  const [sel, setSel] = useState<Candidato | null>(null);
 
   const maxVotos = mun.candidatos[0]?.votos ?? 0;
   const totalNominais = mun.total_votos_nominais;
@@ -226,13 +227,19 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
                 {filtrados.map((c, i) => {
                   const pct = totalNominais ? (c.votos / totalNominais) * 100 : 0;
                   return (
-                    <motion.tr
+                    <tr
                       key={c.sq}
-                      initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25, delay: Math.min(i * 0.012, 0.3) }}
-                      className="border-b border-[color:var(--line-2)] hover:bg-[#f8fafd]"
+                      onClick={() => setSel(c)}
+                      title="Ver resumo, seções e relatório"
+                      className="group border-b border-[color:var(--line-2)] hover:bg-[#f1f6fd] cursor-pointer transition-colors"
                     >
                       <td className="py-2.5 px-4 tnum font-bold text-[color:var(--muted)]">{i + 1}</td>
-                      <td className="py-2.5 px-2 font-semibold text-[color:var(--ink)]">{c.nome}</td>
+                      <td className="py-2.5 px-2 font-semibold text-[color:var(--ink)]">
+                        <span className="inline-flex items-center gap-1.5">
+                          {c.nome}
+                          <svg className="text-[color:var(--muted)] opacity-0 group-hover:opacity-100" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M9 6l6 6-6 6" /></svg>
+                        </span>
+                      </td>
                       <td className="py-2.5 px-2"><span className="text-xs font-semibold text-[color:var(--royal)] bg-[#eef4fb] px-2 py-0.5 rounded">{partidoLabel(c.partido_num)}</span></td>
                       <td className="py-2.5 px-2 text-right tnum font-bold text-[color:var(--navy)]">{fmtInt(c.votos)}</td>
                       <td className="py-2.5 px-4">
@@ -243,7 +250,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
                           <span className="tnum text-xs text-[color:var(--muted)] w-12 text-right">{pct.toFixed(2)}%</span>
                         </div>
                       </td>
-                    </motion.tr>
+                    </tr>
                   );
                 })}
                 {!filtrados.length && (
@@ -274,6 +281,14 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
           </div>
         </Card>
       </div>
+
+      {sel && (
+        <CandidateModal
+          cand={sel}
+          ctx={{ munNome: mun.nome, ano, codigoIbge: mun.codigo_ibge, totalNominais: totalNominais }}
+          onClose={() => setSel(null)}
+        />
+      )}
     </div>
   );
 }

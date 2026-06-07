@@ -1,0 +1,413 @@
+{
+  "meta": {
+    "uf": "RN",
+    "ano": 2026,
+    "fonte": "TSE PesqEle + imprensa",
+    "accessedAt": "2026-06-07",
+    "nota": "Cobertura concentrada em Governador e Senado (2 vagas), que sao os unicos cargos pesquisados pelos institutos nesta fase. Deputado Federal e Deputado Estadual nao possuem pesquisas de intencao de voto registradas (institutos nao medem esses cargos a esta altura do calendario), por isso entram como sem_pesquisas. A agregacao primaria foi a pagina da Wikipedia 'Pesquisas eleitorais para a eleicao estadual de 2026 no Rio Grande do Norte' (revisada em 2026-06-06), com checagem cruzada na imprensa (CartaCapital, AgoraRN, Tribuna do Norte, Exame, Poder360, blogs potiguares). REGISTRO TSE: os numeros de registro nao puderam ser confirmados de forma confiavel para a maioria das pesquisas a partir das fontes consultadas; quando nao confirmado, registro_tse foi mantido como null para nao inventar dados. A unica excecao com registro verificado e a pesquisa Affare/Interjato de janeiro/2026 (RN-04989/2026). Todos os cenarios listados sao estimulados (lista de nomes apresentada ao entrevistado), conforme a fonte. Percentuais 'Branco/Nulo/Indeciso' foram agregados quando o instituto divulgou; quando o instituto so divulgou os candidatos (soma podendo passar de 100% no Senado por serem 2 votos), o agregado pode estar ausente."
+  },
+  "cargos": [
+    {
+      "cargo": "Governador",
+      "status": "com_dados",
+      "pesquisas": [
+        {
+          "instituto": "Agorasei/96FM",
+          "contratante": "96FM",
+          "registro_tse": null,
+          "data": "2026-05-31",
+          "amostra": 1500,
+          "margem_erro_pp": 2.2,
+          "fonte_url": "https://www.96fm.com.br/post/agorasei96fm-allyson-lidera-corrida-pelo-governo-do-rn-em-todos-os-cenarios-e-tem-menor-rejeicao",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 39.8 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 22.1 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 11.4 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 24.3 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Exatus",
+          "contratante": "AgoraRN",
+          "registro_tse": null,
+          "data": "2026-05-29",
+          "amostra": 1500,
+          "margem_erro_pp": 2.53,
+          "fonte_url": "https://agorarn.com.br/ultimas/governo-do-rn-estimulada-allyson-cresce-e-chega-a-41-alvaro-tem-22-e-cadu-soma-12-aponta-exatus",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 41.01 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 22.75 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 12.61 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 21.88 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Seta",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-05-28",
+          "amostra": 1500,
+          "margem_erro_pp": 2.5,
+          "fonte_url": "https://blogcarlossantos.com.br/allyson-soma-380-alvaro-tem-228-e-cadu-registra-109/",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 38.0 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 22.8 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 10.9 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 25.9 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "AtlasIntel",
+          "contratante": "94FM",
+          "registro_tse": null,
+          "data": "2026-05-27",
+          "amostra": 962,
+          "margem_erro_pp": 3.0,
+          "fonte_url": "https://www.cartacapital.com.br/politica/atlasintel-candidato-do-pt-lidera-mas-eleicao-para-o-governo-do-rn-pode-ser-acirrada/",
+          "cenarios": [
+            {
+              "nome": "Estimulada (1o turno)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 37.7 },
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 27.6 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 27.3 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 7.5 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Data Census",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-05-23",
+          "amostra": 2000,
+          "margem_erro_pp": 2.1,
+          "fonte_url": "https://blogdobarreto.com.br/allyson-bezerra-lidera-com-folga-corrida-para-o-governo-do-rn-aponta-data-census/",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 38.5 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 19.8 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 12.1 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 25.2 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Item Consultoria e Pesquisa",
+          "contratante": "SBT/TV Ponta Negra",
+          "registro_tse": null,
+          "data": "2026-05-22",
+          "amostra": 1250,
+          "margem_erro_pp": 2.77,
+          "fonte_url": "https://pontanegranews.com.br/2026/05/29/pesquisa-item-tv-ponta-negra-divulga-levantamento-para-governo-e-senado/",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 37.0 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 25.2 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 16.4 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 19.2 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Affare",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-05-21",
+          "amostra": 1500,
+          "margem_erro_pp": 2.58,
+          "fonte_url": "https://www.tribunadenoticias.com.br/2026/05/pesquisa-affare-alvaro-dias-na.html",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 34.5 },
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 28.6 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 24.4 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 12.5 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Veritá",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-05-08",
+          "amostra": 1200,
+          "margem_erro_pp": 3.0,
+          "fonte_url": "https://tribunadonorte.com.br/politica/verita-confirma-alvaro-dias-na-lideranca-da-disputa-pelo-governo-do-rn/",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 29.9 },
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 26.2 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 22.9 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 19.1 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Data Census",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-04-20",
+          "amostra": 2000,
+          "margem_erro_pp": 2.1,
+          "fonte_url": "https://blogdobarreto.com.br/styvenson-valentim-e-zenaide-maia-lideram-corrida-para-o-senado-na-pesquisa-data-census/",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 40.4 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 18.6 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 1.8 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 25.6 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Exatus",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-04-14",
+          "amostra": 1518,
+          "margem_erro_pp": 2.51,
+          "fonte_url": "https://blogdobarreto.com.br/styvenson-valentim-e-zenaide-maia-lideram-corrida-para-o-senado-na-pesquisa-data-census/",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 37.29 },
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 24.91 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 10.74 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 24.35 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Veritá",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-04-04",
+          "amostra": 1220,
+          "margem_erro_pp": 3.0,
+          "fonte_url": "https://eleicoes26.institutoverita.com.br/",
+          "cenarios": [
+            {
+              "nome": "Estimulada",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Alvaro Dias", "partido": "PL", "pct": 27.5 },
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 29.6 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 26.6 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 15.4 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Affare/Interjato",
+          "contratante": null,
+          "registro_tse": "RN-04989/2026",
+          "data": "2026-01-12",
+          "amostra": 1697,
+          "margem_erro_pp": 2.49,
+          "fonte_url": "https://www.blogdobg.com.br/pesquisa-affare-interjato-governo-rn-cenario-1-rogerio-marinho-lidera-com-268-allyson-tem-195-e-cadu-xavier-42/",
+          "cenarios": [
+            {
+              "nome": "Cenario 1 (estimulada, pre-definicao de candidaturas)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Rogerio Marinho", "partido": "PL", "pct": 26.8 },
+                { "nome": "Allyson Bezerra", "partido": "UNIAO", "pct": 19.5 },
+                { "nome": "Cadu Xavier", "partido": "PT", "pct": 4.2 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cargo": "Senador",
+      "status": "com_dados",
+      "pesquisas": [
+        {
+          "instituto": "Agorasei/96FM",
+          "contratante": "96FM",
+          "registro_tse": null,
+          "data": "2026-05-31",
+          "amostra": 1500,
+          "margem_erro_pp": 2.2,
+          "fonte_url": "https://www.96fm.com.br/post/styvenson-lidera-disputa-ao-senado-no-rn-zenaide-aparece-em-segundo-aponta-pesquisa-agorasei96fm",
+          "cenarios": [
+            {
+              "nome": "Estimulada (2 vagas)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Styvenson Valentim", "partido": "PODE", "pct": 43.2 },
+                { "nome": "Zenaide Maia", "partido": "PSD", "pct": 25.3 },
+                { "nome": "Rafael Motta", "partido": "PDT", "pct": 17.2 },
+                { "nome": "Coronel Helio Oliveira", "partido": "PL", "pct": 9.8 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 2.5 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Exatus",
+          "contratante": "AgoraRN",
+          "registro_tse": null,
+          "data": "2026-05-29",
+          "amostra": 1500,
+          "margem_erro_pp": 2.53,
+          "fonte_url": "https://agorarn.com.br/politica/senado-estimulada-styvenson-tem-45-zenaide-34-rafael-20-e-helio-17-diz-exatus/",
+          "cenarios": [
+            {
+              "nome": "Estimulada (2 vagas)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Styvenson Valentim", "partido": "PODE", "pct": 45.72 },
+                { "nome": "Zenaide Maia", "partido": "PSD", "pct": 34.15 },
+                { "nome": "Rafael Motta", "partido": "PDT", "pct": 20.25 },
+                { "nome": "Coronel Helio Oliveira", "partido": "PL", "pct": 17.58 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Seta",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-05-28",
+          "amostra": 1500,
+          "margem_erro_pp": 2.5,
+          "fonte_url": "https://blogdobarreto.com.br/styvenson-e-zenaide-lideram-corrida-pelas-duas-vagas-ao-senado-aponta-pesquisa-seta/",
+          "cenarios": [
+            {
+              "nome": "Estimulada (2 vagas)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Styvenson Valentim", "partido": "PODE", "pct": 47.2 },
+                { "nome": "Zenaide Maia", "partido": "PSD", "pct": 42.6 },
+                { "nome": "Rafael Motta", "partido": "PDT", "pct": 16.9 },
+                { "nome": "Coronel Helio Oliveira", "partido": "PL", "pct": 12.3 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "AtlasIntel",
+          "contratante": "94FM",
+          "registro_tse": null,
+          "data": "2026-05-27",
+          "amostra": 962,
+          "margem_erro_pp": 3.0,
+          "fonte_url": "https://www.cartacapital.com.br/politica/a-disputa-pelas-duas-vagas-do-rn-no-senado-segundo-atlasintel/",
+          "cenarios": [
+            {
+              "nome": "Estimulada (2 vagas)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Styvenson Valentim", "partido": "PODE", "pct": 19.7 },
+                { "nome": "Rafael Motta", "partido": "PDT", "pct": 13.7 },
+                { "nome": "Coronel Helio Oliveira", "partido": "PL", "pct": 13.3 },
+                { "nome": "Zenaide Maia", "partido": "PSD", "pct": 13.1 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Data Census",
+          "contratante": null,
+          "registro_tse": null,
+          "data": "2026-05-23",
+          "amostra": 2000,
+          "margem_erro_pp": 2.1,
+          "fonte_url": "https://blogdobarreto.com.br/styvenson-e-zenaide-lideram-corrida-pelas-duas-vagas-ao-senado-aponta-pesquisa-data-census/",
+          "cenarios": [
+            {
+              "nome": "Estimulada (2 vagas)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Styvenson Valentim", "partido": "PODE", "pct": 33.1 },
+                { "nome": "Zenaide Maia", "partido": "PSD", "pct": 26.2 },
+                { "nome": "Rafael Motta", "partido": "PDT", "pct": 18.4 },
+                { "nome": "Coronel Helio Oliveira", "partido": "PL", "pct": 10.4 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 11.6 }
+              ]
+            }
+          ]
+        },
+        {
+          "instituto": "Item Consultoria e Pesquisa",
+          "contratante": "SBT/TV Ponta Negra",
+          "registro_tse": null,
+          "data": "2026-05-22",
+          "amostra": 1250,
+          "margem_erro_pp": 2.77,
+          "fonte_url": "https://pontanegranews.com.br/2026/05/29/pesquisa-item-tv-ponta-negra-divulga-levantamento-para-governo-e-senado/",
+          "cenarios": [
+            {
+              "nome": "Estimulada (2 vagas)",
+              "tipo": "estimulada",
+              "candidatos": [
+                { "nome": "Styvenson Valentim", "partido": "PODE", "pct": 19.0 },
+                { "nome": "Zenaide Maia", "partido": "PSD", "pct": 19.0 },
+                { "nome": "Rafael Motta", "partido": "PDT", "pct": 18.4 },
+                { "nome": "Coronel Helio Oliveira", "partido": "PL", "pct": 5.6 },
+                { "nome": "Branco/Nulo/Indeciso", "partido": null, "pct": 21.8 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cargo": "Deputado Federal",
+      "status": "sem_pesquisas",
+      "pesquisas": []
+    },
+    {
+      "cargo": "Deputado Estadual",
+      "status": "sem_pesquisas",
+      "pesquisas": []
+    }
+  ]
+}

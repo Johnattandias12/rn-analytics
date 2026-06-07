@@ -4,12 +4,38 @@ import "./globals.css";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
+const SITE_URL = "https://rnanalytics.vercel.app";
+const TITLE = "RN Analytics — Inteligência eleitoral do Rio Grande do Norte";
+const DESC =
+  "Painel interativo de dados eleitorais (2012–2024), socioeconômicos e pesquisas 2026 dos 167 municípios do RN. Mapa do estado, redutos por seção em Currais Novos, projeções e relatórios em PDF.";
+
 export const metadata: Metadata = {
-  title: "RN Analytics — Inteligência eleitoral e socioeconômica do Rio Grande do Norte",
-  description:
-    "Painel interativo de dados eleitorais (2012–2024) e socioeconômicos dos 167 municípios do RN, com recorte no Seridó e em Currais Novos. Desenvolvido pela Beyonder IA.",
-  authors: [{ name: "Johnattan Dias" }],
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s · RN Analytics",
+  },
+  description: DESC,
   applicationName: "RN Analytics",
+  authors: [{ name: "Johnattan Dias" }],
+  creator: "Beyonder IA",
+  keywords: [
+    "Rio Grande do Norte", "RN", "eleições", "TSE", "IBGE", "Seridó", "Currais Novos",
+    "vereadores", "pesquisas eleitorais 2026", "dados eleitorais", "FEMURN", "Beyonder IA",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: SITE_URL,
+    siteName: "RN Analytics",
+    title: TITLE,
+    description: DESC,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESC,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

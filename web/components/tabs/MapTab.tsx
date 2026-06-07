@@ -5,7 +5,8 @@ import { scaleQuantile } from "d3-scale";
 import type { Bundle } from "../App";
 import RNMap from "../RNMap";
 import { Card, Mini, SectionTitle } from "../ui";
-import { fmtInt, fmtReaisCheio, partidoLabel, type Socio } from "../../lib/data";
+import { fmtInt, fmtReaisCheio, partidoLabel, type Candidato, type Socio } from "../../lib/data";
+import CandidateModal from "../CandidateModal";
 
 type Ind = "populacao" | "pib_pc" | "densidade";
 const INDS: { key: Ind; label: string; pick: (s: Socio) => number | null; fmt: (n: number | null | undefined) => string }[] = [
@@ -18,6 +19,7 @@ const RAMP = ["#e8f0fb", "#c2d8ef", "#8fb4dd", "#4f86c2", "#1f5da3", "#0c3f7e"];
 export default function MapTab({ b }: { b: Bundle }) {
   const [ind, setInd] = useState<Ind>("populacao");
   const [selected, setSelected] = useState<number | null>(2403103);
+  const [selCand, setSelCand] = useState<Candidato | null>(null);
 
   const cfg = INDS.find((i) => i.key === ind)!;
   const values = useMemo(() => {
@@ -86,23 +88,31 @@ export default function MapTab({ b }: { b: Bundle }) {
 
               {selVer && (
                 <div className="mt-5">
-                  <h4 className="text-sm font-bold text-[color:var(--navy)] mb-2">Vereadores mais votados · 2024</h4>
-                  <div className="space-y-1.5">
+                  <h4 className="text-sm font-bold text-[color:var(--navy)] mb-2">Vereadores mais votados · 2024 <span className="font-medium text-[color:var(--muted)]">· clique para o relatório</span></h4>
+                  <div className="space-y-1">
                     {selVer.candidatos.slice(0, 6).map((c) => {
                       const max = selVer.candidatos[0].votos || 1;
                       return (
-                        <div key={c.sq} className="flex items-center gap-2">
-                          <span className="w-4 text-xs font-bold text-[color:var(--muted)] tnum text-right">{c.rank}</span>
+                        <button
+                          key={c.sq}
+                          onClick={() => setSelCand(c)}
+                          title="Ver resumo, seções e relatório PDF"
+                          className="group w-full flex items-center gap-2 text-left rounded-lg px-2 py-1.5 -mx-1 transition-all duration-200 hover:bg-[#f1f6fd] hover:translate-x-0.5"
+                        >
+                          <span className="w-4 text-xs font-bold text-[color:var(--muted)] tnum text-right group-hover:text-[color:var(--royal)]">{c.rank}</span>
                           <div className="flex-1 min-w-0">
                             <div className="flex justify-between text-xs mb-0.5">
-                              <span className="truncate font-medium">{c.nome} · {partidoLabel(c.partido_num)}</span>
+                              <span className="truncate font-medium flex items-center gap-1">
+                                {c.nome} · {partidoLabel(c.partido_num)}
+                                <svg className="opacity-0 group-hover:opacity-100 transition text-[color:var(--royal)]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
+                              </span>
                               <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(c.votos)}</span>
                             </div>
                             <div className="h-1.5 rounded-full bg-[#eef2f8] overflow-hidden">
-                              <div className="h-full rounded-full" style={{ width: `${Math.max(3, (c.votos / max) * 100)}%`, background: "linear-gradient(90deg, var(--royal-2), var(--navy))" }} />
+                              <div className="h-full rounded-full transition-all group-hover:opacity-80" style={{ width: `${Math.max(3, (c.votos / max) * 100)}%`, background: "linear-gradient(90deg, var(--royal-2), var(--navy))" }} />
                             </div>
                           </div>
-                        </div>
+                        </button>
                       );
                     })}
                   </div>
@@ -114,6 +124,14 @@ export default function MapTab({ b }: { b: Bundle }) {
           )}
         </Card>
       </div>
+
+      {selCand && (
+        <CandidateModal
+          cand={selCand}
+          ctx={{ munNome: sel?.nome ?? "—", ano: 2024, codigoIbge: selected, totalNominais: selVer?.total_votos_nominais ?? 0 }}
+          onClose={() => setSelCand(null)}
+        />
+      )}
     </div>
   );
 }
