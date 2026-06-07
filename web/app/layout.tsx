@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
 const SITE_URL = "https://rn-analytics.vercel.app";
-const TITLE = "RN Analytics — Inteligência eleitoral do Rio Grande do Norte";
+const TITLE = "RN Analytics: inteligência eleitoral do Rio Grande do Norte";
 const DESC =
   "Painel interativo de dados eleitorais (2012–2024), socioeconômicos e pesquisas 2026 dos 167 municípios do RN. Mapa do estado, redutos por seção em Currais Novos, projeções e relatórios em PDF.";
 

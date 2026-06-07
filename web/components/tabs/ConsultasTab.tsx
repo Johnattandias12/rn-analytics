@@ -15,7 +15,7 @@ export default function ConsultasTab({ b }: { b: Bundle }) {
 
   return (
     <div className="space-y-6">
-      <SectionTitle kicker="Consultas & insights" title="Cruzamento de dados" desc="Combine eleição e socioeconomia para encontrar padrões — redutos disputados, correlações e abstenção." />
+      <SectionTitle kicker="Consultas e insights" title="Cruzamento de dados" desc="Combine eleição e socioeconomia para encontrar padrões: redutos disputados, correlações e abstenção." />
       {cn ? <Comparador cn={cn} /> : <Card className="p-10 text-center text-[color:var(--muted)]">Carregando dados de Currais Novos…</Card>}
       <Correlacao b={b} />
       {cn && <Abstencao cn={cn} />}
@@ -100,7 +100,7 @@ function Correlacao({ b }: { b: Bundle }) {
     <Card className="p-5">
       <h3 className="font-bold text-[color:var(--navy)]">Riqueza × competição política (Seridó)</h3>
       <p className="text-sm text-[color:var(--muted)] mb-1">Cada ponto é um município: PIB per capita vs. candidatos a vereador por 10 mil habitantes.</p>
-      <p className="text-sm mb-3"><b style={{ color: "var(--royal)" }}>Correlação: {corr.toFixed(2)}</b> — {corrTexto(corr)}</p>
+      <p className="text-sm mb-3"><b style={{ color: "var(--royal)" }}>Correlação: {corr.toFixed(2)}</b> · {corrTexto(corr)}</p>
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto">
         {[0, 0.5, 1].map((g) => <line key={g} x1={pad.l} x2={W - pad.r} y1={pad.t + (H - pad.t - pad.b) * g} y2={pad.t + (H - pad.t - pad.b) * g} stroke="#eef1f7" />)}
         <text x={pad.l} y={H - 12} fontSize="10" fill="#9aa3b5">PIB/capita →</text>

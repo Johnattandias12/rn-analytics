@@ -124,7 +124,7 @@ export default function App() {
 
         <footer className="border-t border-[color:var(--line)] py-5 text-center">
           <p className="text-xs text-[color:var(--muted)]">
-            Desenvolvido pela <b className="text-[color:var(--navy)]">Beyonder IA</b> — 2026 · Johnattan Dias · Fontes: TSE e IBGE
+            Desenvolvido pela <b className="text-[color:var(--navy)]">Beyonder IA</b> · 2026 · Johnattan Dias · Fontes: TSE e IBGE
           </p>
         </footer>
       </div>

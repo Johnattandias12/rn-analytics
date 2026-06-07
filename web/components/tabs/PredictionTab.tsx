@@ -147,7 +147,7 @@ export default function PredictionTab({ b }: { b: Bundle }) {
       <div className="flex items-start justify-between gap-4 flex-wrap mb-5">
         <SectionTitle
           kicker="Inteligência preditiva"
-          title={`Projeções & cenários — ${munNome}`}
+          title={`Projeções e cenários de ${munNome}`}
           desc="Projeção das próximas eleições de vereador (2028) a partir da tendência 2012–2024, com simulador de cenários. É uma estimativa estatística, não uma previsão garantida."
         />
         <select
@@ -267,7 +267,7 @@ export default function PredictionTab({ b }: { b: Bundle }) {
           {/* tabela histórica + projeção */}
           <Card className="p-0 overflow-hidden mt-4">
             <div className="px-5 py-4 border-b border-[color:var(--line)]">
-              <h4 className="text-sm font-bold text-[color:var(--navy)]">Participação por partido (%) — histórico e projeção</h4>
+              <h4 className="text-sm font-bold text-[color:var(--navy)]">Participação por partido (%): histórico e projeção</h4>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -303,7 +303,7 @@ export default function PredictionTab({ b }: { b: Bundle }) {
           {govPesquisa && govPesquisa.cenarios[0] && (
             <Card className="p-5 mt-4">
               <div className="flex items-center justify-between gap-3 flex-wrap mb-1">
-                <h4 className="text-sm font-bold text-[color:var(--navy)]">Cenário 2026 — Governador do RN (pesquisa)</h4>
+                <h4 className="text-sm font-bold text-[color:var(--navy)]">Cenário 2026 para o Governo do RN (pesquisa)</h4>
                 <a href={govPesquisa.fonte_url} target="_blank" rel="noreferrer" className="text-xs font-semibold text-[color:var(--royal)]">
                   {govPesquisa.instituto} · {govPesquisa.data}
                 </a>

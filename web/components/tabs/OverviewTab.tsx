@@ -39,7 +39,7 @@ export default function OverviewTab({ b, goTo }: { b: Bundle; goTo: (t: SectionI
           <span className="text-gradient">Os números que decidem</span><br />o Rio Grande do Norte
         </h1>
         <p className="text-[17px] sm:text-lg text-[color:var(--muted)] max-w-2xl mx-auto mt-5">
-          Inteligência eleitoral e socioeconômica em um só lugar — do panorama estadual ao reduto de cada
+          Inteligência eleitoral e socioeconômica em um só lugar, do panorama estadual ao reduto de cada
           vereador no Seridó e em Currais Novos.
         </p>
         <div className="flex items-center justify-center gap-3 mt-7 flex-wrap">

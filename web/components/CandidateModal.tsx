@@ -86,7 +86,7 @@ export default function CandidateModal({
     ]);
     exportPDF({
       filename: `relatorio_${cand.nome.replace(/\s+/g, "_").toLowerCase()}_${ctx.ano}.pdf`,
-      title: `${cand.nome} — Vereador · ${ctx.munNome} ${ctx.ano}`,
+      title: `${cand.nome} · Vereador · ${ctx.munNome} ${ctx.ano}`,
       subtitle: `${partidoLabel(cand.partido_num)} · nº ${cand.numero} · ${fmtInt(cand.votos)} votos · ${pct.toFixed(2)}% dos válidos`,
       kpis: [
         { label: "Votos totais", value: fmtInt(cand.votos) },

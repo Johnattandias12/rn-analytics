@@ -61,7 +61,7 @@ export default function PesquisasTab() {
     if (!pesquisa || !cenario || !cargo) return;
     exportPDF({
       filename: `pesquisa_${cargo.cargo.toLowerCase().replace(/\s+/g, "_")}_${pesquisa.instituto.replace(/[^\w]+/g, "_").toLowerCase()}_${pesquisa.data}.pdf`,
-      title: `Pesquisa — ${cargo.cargo} RN 2026`,
+      title: `Pesquisa para ${cargo.cargo} · RN 2026`,
       subtitle: `${pesquisa.instituto}${pesquisa.contratante ? ` · ${pesquisa.contratante}` : ""} · ${fmtData(pesquisa.data)} · ${cenario.nome}`,
       kpis: [
         { label: "Amostra", value: pesquisa.amostra ? fmtInt(pesquisa.amostra) : "—" },

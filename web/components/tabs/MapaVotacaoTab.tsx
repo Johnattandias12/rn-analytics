@@ -8,6 +8,13 @@ import { Card, Mini, SectionTitle } from "../ui";
 import { fmtInt, partidoLabel, type Candidato } from "../../lib/data";
 import { exportCSV } from "../../lib/export";
 import CandidateModal from "../CandidateModal";
+import dynamic from "next/dynamic";
+import type { MapPoint } from "../CNStreetMap";
+
+const CNStreetMap = dynamic(() => import("../CNStreetMap"), {
+  ssr: false,
+  loading: () => <div className="h-[460px] grid place-items-center text-sm text-[color:var(--muted)]">Carregando mapa...</div>,
+});
 
 type Cand = { sq: string; numero: string; nome: string; partido_num: string; votos: number; rank: number; por_local: Record<string, number> };
 type Cargo = { total_nominais: number; brancos: number; nulos: number; legenda: number; candidatos: Cand[] };
@@ -24,6 +31,7 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
   const cache = useRef<Map<number, CNData>>(new Map());
   const [data, setData] = useState<CNData | null>(null);
   const [selReport, setSelReport] = useState<Candidato | null>(null);
+  const [mapMode, setMapMode] = useState<"ruas" | "esquema">("ruas");
 
   useEffect(() => {
     let alive = true;
@@ -45,6 +53,9 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
     selCand ? selCand.por_local[nr] ?? 0 : cargo === "vereador" ? data.locais.find((l) => l.nr === nr)?.vereador_total ?? 0 : data.locais.find((l) => l.nr === nr)?.prefeito_total ?? 0;
   const max = Math.max(1, ...data.locais.map((l) => valueFor(l.nr)));
   const metricLabel = selCand ? selCand.nome.split(" ").slice(0, 2).join(" ") : "Comparecimento";
+  const points: MapPoint[] = data.locais
+    .filter((l) => l.lat != null && l.long != null)
+    .map((l) => ({ nr: l.nr, nome: l.nome, bairro: l.bairro, lat: l.lat as number, long: l.long as number, eleitores: l.eleitores, n_secoes: l.n_secoes, value: valueFor(l.nr) }));
 
   const candFiltrados = C.candidatos.filter((c) => !busca || c.nome.toLowerCase().includes(busca.toLowerCase()) || c.numero.includes(busca));
   const localObj = localSel ? data.locais.find((l) => l.nr === localSel) : null;
@@ -70,7 +81,7 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
   return (
     <div>
       <div className="flex items-start justify-between gap-4 flex-wrap mb-5">
-        <SectionTitle kicker={`Mapa de votação · ${ano}`} title="Redutos de Currais Novos" desc="Cada círculo é um local de votação (geolocalizado). O tamanho e a cor mostram a votação — escolha um candidato para ver onde está a base dele." />
+        <SectionTitle kicker={`Mapa de votação · ${ano}`} title="Redutos de Currais Novos" desc="Cada círculo é um local de votação geolocalizado. O tamanho e a cor mostram a votação. Escolha um candidato para ver onde está a base dele." />
         <div className="flex flex-col items-end gap-2">
           <div className="segment">{ANOS.map((y) => <button key={y} data-active={ano === y} onClick={() => { setAno(y); setSq(null); }}>{y}</button>)}</div>
           <div className="segment">
@@ -86,12 +97,20 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
             <div className="text-sm font-bold text-[color:var(--navy)]">
               {selCand ? <>Reduto de <span className="text-[color:var(--royal)]">{selCand.nome}</span> ({partidoLabel(selCand.partido_num)})</> : "Comparecimento por local"}
             </div>
-            <div className="flex gap-2">
-              {selCand && <button onClick={() => setSq(null)} className="text-xs font-semibold text-[color:var(--royal)]">← comparecimento</button>}
+            <div className="flex gap-2 items-center flex-wrap">
+              <div className="segment">
+                <button data-active={mapMode === "ruas"} onClick={() => setMapMode("ruas")}>Ruas</button>
+                <button data-active={mapMode === "esquema"} onClick={() => setMapMode("esquema")}>Esquema</button>
+              </div>
+              {selCand && <button onClick={() => setSq(null)} className="text-xs font-semibold text-[color:var(--royal)]">voltar ao comparecimento</button>}
               <button onClick={exportRedutos} className="btn btn-ghost text-xs py-1.5 px-3">Exportar CSV</button>
             </div>
           </div>
-          <CNVotingMap boundary={boundary} locais={data.locais} valueFor={valueFor} max={max} selected={localSel} onSelect={setLocalSel} metricLabel={metricLabel} />
+          {mapMode === "ruas" ? (
+            <CNStreetMap points={points} selected={localSel} onSelect={setLocalSel} max={max} metricLabel={metricLabel} />
+          ) : (
+            <CNVotingMap boundary={boundary} locais={data.locais} valueFor={valueFor} max={max} selected={localSel} onSelect={setLocalSel} metricLabel={metricLabel} />
+          )}
           <div className="flex items-center gap-2 text-xs text-[color:var(--muted)] mt-1">
             <span>menos votos</span>
             <div className="flex rounded overflow-hidden">

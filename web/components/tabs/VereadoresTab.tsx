@@ -101,7 +101,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
   const doPDF = () =>
     exportPDF({
       filename: `${baseName}.pdf`,
-      title: `Vereadores de ${mun.nome} — Eleição ${ano}`,
+      title: `Vereadores de ${mun.nome} · Eleição ${ano}`,
       subtitle: `${filtrados.length} de ${mun.candidatos.length} candidatos${partidos.size ? ` · partidos: ${[...partidos].map(partidoLabel).join(", ")}` : ""}${busca ? ` · busca: "${busca}"` : ""}`,
       kpis: [
         { label: "Candidatos", value: fmtInt(filtrados.length) },
