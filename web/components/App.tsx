@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { FeatureCollection, Geometry } from "geojson";
 import type { Socio, SeridoVereador } from "../lib/data";
+import type { SituacaoFile } from "../lib/eleicao";
 import OverviewTab from "./tabs/OverviewTab";
 import DashboardTab from "./tabs/DashboardTab";
 import MapTab from "./tabs/MapTab";
@@ -19,6 +20,7 @@ export type Bundle = {
   socioByCode: Map<number, Socio>;
   seridoSet: Set<number>;
   nameByCode: Map<number, string>;
+  sit: SituacaoFile | null;
 };
 
 export type SectionId = "visao" | "dashboard" | "mapa" | "pesquisas" | "vereadores" | "analise" | "tendencias" | "sobre";
@@ -53,20 +55,22 @@ export default function App() {
     let alive = true;
     (async () => {
       try {
-        const [gr, sr, vr] = await Promise.all([
+        const [gr, sr, vr, st] = await Promise.all([
           fetch("/data/rn-municipios.geojson"),
           fetch("/data/socioeconomico-rn.json"),
           fetch("/data/eleicao/serido-vereador-2024.json"),
+          fetch("/data/eleicao/situacao-eleitoral.json"),
         ]);
         if (!gr.ok || !sr.ok || !vr.ok) throw new Error("falha ao buscar dados");
         const geo = await gr.json();
         const s = await sr.json();
         const v = await vr.json();
+        const sit: SituacaoFile | null = st.ok ? await st.json() : null;
         if (!alive) return;
         const socio: Socio[] = s.municipios;
         const serido: SeridoVereador = v;
         setBundle({
-          geo, socio, serido,
+          geo, socio, serido, sit,
           socioByCode: new Map(socio.map((m) => [m.codigo_ibge, m])),
           nameByCode: new Map(socio.map((m) => [m.codigo_ibge, m.nome])),
           seridoSet: new Set(serido.municipios.map((m) => m.codigo_ibge).filter(Boolean) as number[]),

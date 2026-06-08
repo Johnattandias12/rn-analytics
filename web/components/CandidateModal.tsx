@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { fmtInt, partidoLabel, type Candidato } from "../lib/data";
 import { exportPDF } from "../lib/export";
-import type { Situacao } from "../lib/eleicao";
+import type { SituacaoView } from "../lib/eleicao";
 
 // Contexto do candidato clicado (de qual município/ano ele veio).
 export type CandCtx = {
@@ -34,7 +34,7 @@ export default function CandidateModal({
 }: {
   cand: Candidato;
   ctx: CandCtx;
-  situacao?: Situacao | null;
+  situacao?: SituacaoView | null;
   onClose: () => void;
 }) {
   const temColegios = ctx.codigoIbge === CN_IBGE && CN_ANOS.includes(ctx.ano);
@@ -116,7 +116,7 @@ export default function CandidateModal({
     exportPDF({
       filename: `relatorio_${cand.nome.replace(/\s+/g, "_").toLowerCase()}_${ctx.ano}.pdf`,
       title: `${cand.nome} · ${ctx.munNome} ${ctx.ano}`,
-      subtitle: `${partidoLabel(cand.partido_num)} · nº ${cand.numero} · ${fmtInt(cand.votos)} votos · ${pct.toFixed(2)}% dos válidos${top ? ` · reduto: ${top.nome}` : ""}`,
+      subtitle: `${situacao ? situacao.rotulo + " · " : ""}${partidoLabel(cand.partido_num)} · nº ${cand.numero} · ${fmtInt(cand.votos)} votos · ${pct.toFixed(2)}% dos válidos${top ? ` · reduto: ${top.nome}` : ""}`,
       kpis: [
         { label: "Votos totais", value: fmtInt(cand.votos) },
         { label: "% válidos", value: `${pct.toFixed(2)}%` },
@@ -176,7 +176,6 @@ export default function CandidateModal({
               <div>
                 <div className="text-sm font-bold text-[color:var(--navy)]">{situacao.rotulo}</div>
                 <div className="text-[12px] text-[color:var(--ink-2)] leading-snug">{situacao.motivo}</div>
-                {!situacao.oficial && <div className="text-[11px] text-[color:var(--muted)] mt-1">Projeção pelo método do quociente eleitoral a partir dos votos oficiais do TSE. A diplomação oficial é do TSE.</div>}
               </div>
             </div>
           )}

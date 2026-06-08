@@ -5,6 +5,7 @@ import type { Bundle } from "../App";
 import { Card, Mini, SectionTitle } from "../ui";
 import { fmtInt, fmtReais, fmtReaisCheio, partidoLabel, type Candidato } from "../../lib/data";
 import CandidateModal from "../CandidateModal";
+import { getSit, sitTag } from "../../lib/eleicao";
 
 type CandCtxItem = { cand: Candidato; munNome: string; codigoIbge: number | null; totalNominais: number };
 
@@ -95,6 +96,7 @@ export default function DashboardTab({ b }: { b: Bundle }) {
                       <span className="truncate font-medium flex items-center gap-1">
                         {it.cand.nome}
                         <span className="text-[color:var(--muted)]">· {partidoLabel(it.cand.partido_num)} · {it.munNome}</span>
+                        {(() => { const t = sitTag(getSit(b.sit, 2024, it.cand.sq)); return t ? <span className="text-[8px] font-bold px-1 py-0.5 rounded-full shrink-0" style={{ color: t.cor, background: t.bg }}>{t.texto}</span> : null; })()}
                         <svg className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-[color:var(--royal)] shrink-0" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
                       </span>
                       <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(it.cand.votos)}</span>
@@ -111,7 +113,7 @@ export default function DashboardTab({ b }: { b: Bundle }) {
       </div>
 
       {sel && (
-        <CandidateModal cand={sel.cand} ctx={{ munNome: sel.munNome, ano: 2024, codigoIbge: sel.codigoIbge, totalNominais: sel.totalNominais }} onClose={() => setSel(null)} />
+        <CandidateModal cand={sel.cand} ctx={{ munNome: sel.munNome, ano: 2024, codigoIbge: sel.codigoIbge, totalNominais: sel.totalNominais }} situacao={getSit(b.sit, 2024, sel.cand.sq)} onClose={() => setSel(null)} />
       )}
     </div>
   );

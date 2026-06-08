@@ -6,6 +6,7 @@ import { Card, Mini, SectionTitle } from "../ui";
 import { fmtInt, partidoLabel, type Candidato, type MunicipioVereador, type SeridoVereador } from "../../lib/data";
 import { exportCSV, exportXLSX, exportPDF } from "../../lib/export";
 import CandidateModal from "../CandidateModal";
+import { getSit, sitTag } from "../../lib/eleicao";
 
 type SortKey = "votos_desc" | "votos_asc" | "nome" | "numero";
 const ANOS = [2012, 2016, 2020, 2024];
@@ -84,6 +85,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
     Número: c.numero,
     Votos: c.votos,
     "% válidos": totalNominais ? ((c.votos / totalNominais) * 100).toFixed(2).replace(".", ",") + "%" : "—",
+    "Situação (TSE)": getSit(b.sit, ano, c.sq)?.rotulo ?? "—",
   }));
   const resumoPartidos = partidosPresentes.map((p) => ({
     Partido: partidoLabel(p.num),
@@ -110,8 +112,8 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
         { label: "Mais votado", value: filtrados[0]?.nome.split(" ").slice(0, 2).join(" ") ?? "—" },
       ],
       table: {
-        columns: ["#", "Candidato", "Partido", "Nº", "Votos", "% válidos"],
-        rows: rowsExport.map((r) => [r["Posição"], r.Candidato, r.Partido, r["Número"], fmtInt(r.Votos as number), r["% válidos"]]),
+        columns: ["#", "Candidato", "Partido", "Nº", "Votos", "% válidos", "Situação"],
+        rows: rowsExport.map((r) => [r["Posição"], r.Candidato, r.Partido, r["Número"], fmtInt(r.Votos as number), r["% válidos"], r["Situação (TSE)"]]),
       },
     });
 
@@ -239,8 +241,9 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
                     >
                       <td className="py-2.5 px-4 tnum font-bold text-[color:var(--muted)] group-hover:text-[color:var(--royal)]">{i + 1}</td>
                       <td className="py-2.5 px-2 font-semibold text-[color:var(--ink)] group-hover:text-[color:var(--royal)]">
-                        <span className="inline-flex items-center gap-1.5">
+                        <span className="inline-flex items-center gap-1.5 flex-wrap">
                           {c.nome}
+                          {(() => { const t = sitTag(getSit(b.sit, ano, c.sq)); return t ? <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full" style={{ color: t.cor, background: t.bg }}>{t.texto}</span> : null; })()}
                           <svg className="text-[color:var(--royal)] opacity-35 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
                         </span>
                       </td>
@@ -290,6 +293,7 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
         <CandidateModal
           cand={sel}
           ctx={{ munNome: mun.nome, ano, codigoIbge: mun.codigo_ibge, totalNominais: totalNominais }}
+          situacao={getSit(b.sit, ano, sel.sq)}
           onClose={() => setSel(null)}
         />
       )}

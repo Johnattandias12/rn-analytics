@@ -8,6 +8,7 @@ import { Card, Mini, SectionTitle } from "../ui";
 import { fmtInt, partidoLabel, type Candidato } from "../../lib/data";
 import { exportCSV } from "../../lib/export";
 import CandidateModal from "../CandidateModal";
+import { getSit, sitTag } from "../../lib/eleicao";
 import dynamic from "next/dynamic";
 import type { MapPoint } from "../CNStreetMap";
 
@@ -165,6 +166,7 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
                   <div key={c.sq} onClick={() => setSq(on ? null : c.sq)} title="Clique para ver o reduto no mapa" className="group w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-left cursor-pointer transition-all duration-200 hover:bg-[#f1f6fd]" style={{ background: on ? "rgba(12,82,154,0.1)" : undefined }}>
                     <span className="w-5 text-xs font-bold tnum text-[color:var(--muted)] text-right">{c.rank}</span>
                     <span className="flex-1 min-w-0 text-sm font-medium truncate" style={{ color: on ? "var(--royal)" : "var(--ink)" }}>{c.nome}</span>
+                    {(() => { const t = sitTag(getSit(b.sit, ano, c.sq)); return t ? <span className="text-[8px] font-bold px-1 py-0.5 rounded-full shrink-0" style={{ color: t.cor, background: t.bg }}>{t.texto}</span> : null; })()}
                     <span className="text-[11px] font-semibold text-[color:var(--royal)] bg-[#eef4fb] px-1.5 py-0.5 rounded">{partidoLabel(c.partido_num)}</span>
                     <span className="tnum text-xs font-bold text-[color:var(--navy)] w-12 text-right">{fmtInt(c.votos)}</span>
                     <button onClick={(e) => { e.stopPropagation(); setSelReport(c); }} title="Relatório PDF do candidato" className="shrink-0 p-1 rounded-md text-[color:var(--royal)] opacity-50 group-hover:opacity-100 hover:bg-white transition">
@@ -182,6 +184,7 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
         <CandidateModal
           cand={selReport}
           ctx={{ munNome: "Currais Novos", ano, codigoIbge: 2403103, totalNominais: C.total_nominais }}
+          situacao={getSit(b.sit, ano, selReport.sq)}
           onClose={() => setSelReport(null)}
         />
       )}

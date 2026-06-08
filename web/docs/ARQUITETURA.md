@@ -47,6 +47,7 @@ Abas em `components/tabs/`: `OverviewTab`, `DashboardTab`, `MapTab`, `PesquisasT
 - `eleicao/currais-novos-vereador-2024-secao.json` — voto por zona/seção (sem nome de colégio). Legado: o produto hoje mostra por COLÉGIO (que tem nome e coordenada), não por seção crua.
 - `eleicao/evolucao-vereador-serido.json` — séries para a aba Evolução.
 - `eleicao/pesquisas-rn-2026.json` — pesquisas de governo/senado (registro TSE fica `null` quando não confirmado; nunca inventar).
+- `eleicao/situacao-eleitoral.json` — **situação OFICIAL** de cada candidato (eleito/suplente/não eleito), do TSE `consulta_cand` campo `DS_SIT_TOT_TURNO`, chaveado por `sq` e ano (2012/2016/2020/2024). Enum: `ELEITO_QP`, `ELEITO_MEDIA`, `ELEITO`, `SUPLENTE`, `NAO_ELEITO`, `SEGUNDO_TURNO`. Lido por `lib/eleicao.ts` (`getSit`, `sitTag`). NÃO é cálculo — é o resultado oficial. Não reflete cassações posteriores. Reconstruir: baixar `consulta_cand_{ano}.zip` do TSE, extrair `_RN.csv`, filtrar pelos `sq` do painel.
 
 Código IBGE de Currais Novos: **2403103** (cd_tse 16616).
 

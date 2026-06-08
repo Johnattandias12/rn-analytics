@@ -8,6 +8,7 @@ import { Card, Mini, SectionTitle } from "../ui";
 import { fmtInt, fmtReais, fmtReaisCheio, partidoLabel, type Candidato, type Socio } from "../../lib/data";
 import CandidateModal from "../CandidateModal";
 import { exportPDF } from "../../lib/export";
+import { getSit, sitTag } from "../../lib/eleicao";
 
 type Ind = "populacao" | "pib_pc" | "densidade";
 const INDS: { key: Ind; label: string; pick: (s: Socio) => number | null; fmt: (n: number | null | undefined) => string }[] = [
@@ -70,13 +71,14 @@ export default function MapTab({ b }: { b: Bundle }) {
               heading: "Vereadores mais votados · 2024",
               note: `${fmtInt(selVer.qtd_candidatos)} candidatos · ${fmtInt(tot)} votos nominais · ${fmtInt(selVer.brancos)} brancos · ${fmtInt(selVer.nulos)} nulos.`,
               table: {
-                columns: ["#", "Candidato", "Partido", "Votos", "% válidos"],
+                columns: ["#", "Candidato", "Partido", "Votos", "% válidos", "Situação"],
                 rows: selVer.candidatos.slice(0, 15).map((c, i) => [
                   i + 1,
                   c.nome,
                   partidoLabel(c.partido_num),
                   fmtInt(c.votos),
                   tot ? ((c.votos / tot) * 100).toFixed(2).replace(".", ",") + "%" : "—",
+                  getSit(b.sit, 2024, c.sq)?.rotulo ?? "—",
                 ]),
               },
             },
@@ -157,6 +159,7 @@ export default function MapTab({ b }: { b: Bundle }) {
                             <div className="flex justify-between text-xs mb-0.5">
                               <span className="truncate font-medium flex items-center gap-1">
                                 {c.nome} · {partidoLabel(c.partido_num)}
+                                {(() => { const t = sitTag(getSit(b.sit, 2024, c.sq)); return t ? <span className="text-[8px] font-bold px-1 py-0.5 rounded-full shrink-0" style={{ color: t.cor, background: t.bg }}>{t.texto}</span> : null; })()}
                                 <svg className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-[color:var(--royal)] shrink-0" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
                               </span>
                               <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(c.votos)}</span>
@@ -182,6 +185,7 @@ export default function MapTab({ b }: { b: Bundle }) {
         <CandidateModal
           cand={selCand}
           ctx={{ munNome: sel?.nome ?? "—", ano: 2024, codigoIbge: selected, totalNominais: selVer?.total_votos_nominais ?? 0 }}
+          situacao={getSit(b.sit, 2024, selCand.sq)}
           onClose={() => setSelCand(null)}
         />
       )}

@@ -13,6 +13,7 @@ export default function SobreTab() {
             <h3 className="font-bold text-[color:var(--navy)] mb-2">Fontes de dados</h3>
             <ul className="text-sm text-[color:var(--ink-2)] space-y-1.5">
               <li>• <b>TSE</b> (Dados Abertos): votação por seção, candidatos e eleitorado, de 2012 a 2024.</li>
+              <li>• <b>TSE / consulta_cand</b>: situação oficial de cada candidato (eleito, suplente, não eleito) pelo campo DS_SIT_TOT_TURNO.</li>
               <li>• <b>IBGE</b>: Censo 2022, PIB dos municípios e malhas territoriais.</li>
             </ul>
           </Card>
