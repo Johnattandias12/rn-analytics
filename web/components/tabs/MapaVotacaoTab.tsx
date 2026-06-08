@@ -142,7 +142,7 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
                     <span className="truncate font-medium">{c.nome} · {partidoLabel(c.partido_num)}</span>
                     <span className="flex items-center gap-1.5 shrink-0">
                       <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(v)}</span>
-                      <button onClick={(e) => { e.stopPropagation(); setSelReport(c); }} title="Relatório PDF" className="p-0.5 rounded text-[color:var(--muted)] opacity-0 group-hover:opacity-100 hover:text-[color:var(--royal)] transition">
+                      <button onClick={(e) => { e.stopPropagation(); setSelReport(c); }} title="Relatório PDF" className="p-0.5 rounded text-[color:var(--royal)] opacity-50 group-hover:opacity-100 transition">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg>
                       </button>
                     </span>
@@ -167,8 +167,8 @@ export default function MapaVotacaoTab({ b }: { b: Bundle }) {
                     <span className="flex-1 min-w-0 text-sm font-medium truncate" style={{ color: on ? "var(--royal)" : "var(--ink)" }}>{c.nome}</span>
                     <span className="text-[11px] font-semibold text-[color:var(--royal)] bg-[#eef4fb] px-1.5 py-0.5 rounded">{partidoLabel(c.partido_num)}</span>
                     <span className="tnum text-xs font-bold text-[color:var(--navy)] w-12 text-right">{fmtInt(c.votos)}</span>
-                    <button onClick={(e) => { e.stopPropagation(); setSelReport(c); }} title="Relatório PDF do candidato" className="shrink-0 p-1 rounded-md text-[color:var(--muted)] opacity-0 group-hover:opacity-100 hover:bg-white hover:text-[color:var(--royal)] transition">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg>
+                    <button onClick={(e) => { e.stopPropagation(); setSelReport(c); }} title="Relatório PDF do candidato" className="shrink-0 p-1 rounded-md text-[color:var(--royal)] opacity-50 group-hover:opacity-100 hover:bg-white transition">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg>
                     </button>
                   </div>
                 );

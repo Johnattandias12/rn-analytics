@@ -39,6 +39,7 @@ export default function CNStreetMap({
   const mapRef = useRef<any>(null);
   const layerRef = useRef<any>(null);
   const LRef = useRef<any>(null);
+  const roRef = useRef<ResizeObserver | null>(null);
   // mantém os valores atuais acessíveis dentro de handlers/closures
   const dataRef = useRef({ points, selected, onSelect, max, metricLabel });
   dataRef.current = { points, selected, onSelect, max, metricLabel };
@@ -63,11 +64,17 @@ export default function CNStreetMap({
       layerRef.current = L.layerGroup().addTo(map);
       mapRef.current = map;
       draw();
-      // recalcula tamanho após render
-      setTimeout(() => map.invalidateSize(), 200);
+      // recalcula tamanho após o layout estabilizar (evita tiles cinzas / mapa "quebrado")
+      [80, 250, 600, 1200].forEach((t) => setTimeout(() => mapRef.current && mapRef.current.invalidateSize(), t));
+      // reage a mudanças de tamanho do container (troca de aba, resize, mobile)
+      if (typeof ResizeObserver !== "undefined" && elRef.current) {
+        roRef.current = new ResizeObserver(() => mapRef.current && mapRef.current.invalidateSize());
+        roRef.current.observe(elRef.current);
+      }
     })();
     return () => {
       cancelled = true;
+      if (roRef.current) { roRef.current.disconnect(); roRef.current = null; }
       if (mapRef.current) {
         mapRef.current.remove();
         mapRef.current = null;
@@ -116,5 +123,5 @@ export default function CNStreetMap({
     if (bounds.length) map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
   }
 
-  return <div ref={elRef} className="w-full rounded-xl overflow-hidden border border-[color:var(--line)]" style={{ height: 460, zIndex: 0 }} />;
+  return <div ref={elRef} className="w-full rounded-xl overflow-hidden border border-[color:var(--line)] h-[360px] sm:h-[460px]" style={{ zIndex: 0 }} />;
 }

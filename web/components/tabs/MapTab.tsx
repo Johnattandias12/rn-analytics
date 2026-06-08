@@ -5,8 +5,9 @@ import { scaleQuantile } from "d3-scale";
 import type { Bundle } from "../App";
 import RNMap from "../RNMap";
 import { Card, Mini, SectionTitle } from "../ui";
-import { fmtInt, fmtReaisCheio, partidoLabel, type Candidato, type Socio } from "../../lib/data";
+import { fmtInt, fmtReais, fmtReaisCheio, partidoLabel, type Candidato, type Socio } from "../../lib/data";
 import CandidateModal from "../CandidateModal";
+import { exportPDF } from "../../lib/export";
 
 type Ind = "populacao" | "pib_pc" | "densidade";
 const INDS: { key: Ind; label: string; pick: (s: Socio) => number | null; fmt: (n: number | null | undefined) => string }[] = [
@@ -36,6 +37,53 @@ export default function MapTab({ b }: { b: Bundle }) {
 
   const sel = selected ? b.socioByCode.get(selected) : null;
   const selVer = selected ? b.serido.municipios.find((m) => m.codigo_ibge === selected) : null;
+
+  const doMunReport = () => {
+    if (!sel) return;
+    const ehSerido = b.seridoSet.has(sel.codigo_ibge);
+    const tot = selVer?.total_votos_nominais ?? 0;
+    exportPDF({
+      filename: `relatorio_${sel.nome.replace(/\s+/g, "_").toLowerCase()}.pdf`,
+      title: `${sel.nome} · Panorama do município`,
+      subtitle: `${sel.microrregiao ?? "Rio Grande do Norte"}${ehSerido ? " · Região do Seridó" : ""}`,
+      intro: "Relatório consolidado cruzando indicadores socioeconômicos (IBGE, Censo 2022 e PIB 2021) com os resultados eleitorais mais recentes (TSE).",
+      kpis: [
+        { label: "População 2022", value: fmtInt(sel.populacao_2022) },
+        { label: "PIB per capita", value: fmtReaisCheio(sel.pib_per_capita_2021) },
+        { label: "Densidade", value: sel.densidade_hab_km2 == null ? "—" : `${sel.densidade_hab_km2.toLocaleString("pt-BR")} hab/km²` },
+        { label: "Área", value: sel.area_km2 == null ? "—" : `${sel.area_km2.toLocaleString("pt-BR")} km²` },
+      ],
+      table: {
+        columns: ["Indicador socioeconômico", "Valor", "Fonte"],
+        rows: [
+          ["População (Censo)", fmtInt(sel.populacao_2022), "IBGE 2022"],
+          ["Área territorial", sel.area_km2 == null ? "—" : `${sel.area_km2.toLocaleString("pt-BR")} km²`, "IBGE"],
+          ["Densidade demográfica", sel.densidade_hab_km2 == null ? "—" : `${sel.densidade_hab_km2.toLocaleString("pt-BR")} hab/km²`, "IBGE"],
+          ["PIB municipal", fmtReais(sel.pib_2021_mil_reais), "IBGE 2021"],
+          ["PIB per capita", fmtReaisCheio(sel.pib_per_capita_2021), "IBGE 2021"],
+          ["Microrregião", sel.microrregiao ?? "—", "IBGE"],
+        ],
+      },
+      sections: selVer
+        ? [
+            {
+              heading: "Vereadores mais votados · 2024",
+              note: `${fmtInt(selVer.qtd_candidatos)} candidatos · ${fmtInt(tot)} votos nominais · ${fmtInt(selVer.brancos)} brancos · ${fmtInt(selVer.nulos)} nulos.`,
+              table: {
+                columns: ["#", "Candidato", "Partido", "Votos", "% válidos"],
+                rows: selVer.candidatos.slice(0, 15).map((c, i) => [
+                  i + 1,
+                  c.nome,
+                  partidoLabel(c.partido_num),
+                  fmtInt(c.votos),
+                  tot ? ((c.votos / tot) * 100).toFixed(2).replace(".", ",") + "%" : "—",
+                ]),
+              },
+            },
+          ]
+        : [],
+    });
+  };
 
   return (
     <div>
@@ -86,6 +134,11 @@ export default function MapTab({ b }: { b: Bundle }) {
                 <Mini label="Área" value={sel.area_km2 == null ? "—" : `${sel.area_km2.toLocaleString("pt-BR")} km²`} />
               </div>
 
+              <button onClick={doMunReport} className="btn btn-primary text-sm w-full justify-center mt-3">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg>
+                Relatório completo do município (PDF)
+              </button>
+
               {selVer && (
                 <div className="mt-5">
                   <h4 className="text-sm font-bold text-[color:var(--navy)] mb-2">Vereadores mais votados · 2024 <span className="font-medium text-[color:var(--muted)]">· clique para o relatório</span></h4>
@@ -104,7 +157,7 @@ export default function MapTab({ b }: { b: Bundle }) {
                             <div className="flex justify-between text-xs mb-0.5">
                               <span className="truncate font-medium flex items-center gap-1">
                                 {c.nome} · {partidoLabel(c.partido_num)}
-                                <svg className="opacity-0 group-hover:opacity-100 transition text-[color:var(--royal)]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
+                                <svg className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-[color:var(--royal)] shrink-0" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
                               </span>
                               <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(c.votos)}</span>
                             </div>

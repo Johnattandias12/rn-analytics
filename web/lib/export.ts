@@ -59,8 +59,11 @@ export async function exportPDF(opts: {
   filename: string;
   title: string;
   subtitle?: string;
+  intro?: string;
   kpis?: { label: string; value: string }[];
   table: PdfTable;
+  // seções extras (cada uma com título e tabela própria) para relatórios completos
+  sections?: { heading: string; note?: string; table: PdfTable }[];
 }) {
   const { jsPDF } = await import("jspdf");
   const autoTable = (await import("jspdf-autotable")).default;
@@ -116,6 +119,15 @@ export async function exportPDF(opts: {
     y += subLines.length * 13 + 4;
   }
 
+  if (opts.intro) {
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9.5);
+    doc.setTextColor(...INK);
+    const introLines = doc.splitTextToSize(opts.intro, W - 80);
+    doc.text(introLines, 40, y + 6);
+    y += introLines.length * 13 + 10;
+  }
+
   // ===== KPIs =====
   if (opts.kpis?.length) {
     y += 6;
@@ -142,30 +154,60 @@ export async function exportPDF(opts: {
     y += 66;
   }
 
-  // ===== tabela =====
-  autoTable(doc, {
-    startY: y,
-    head: [opts.table.columns],
-    body: opts.table.rows,
-    theme: "grid",
-    styles: { font: "helvetica", fontSize: 8.5, cellPadding: 5.5, textColor: INK, lineColor: [232, 237, 245], lineWidth: 0.5 },
-    headStyles: { fillColor: NAVY, textColor: [255, 255, 255], fontStyle: "bold", fontSize: 9, halign: "left" },
-    alternateRowStyles: { fillColor: [247, 249, 252] },
-    margin: { left: 40, right: 40 },
-    didDrawPage: () => {
-      // rodapé em cada página
-      doc.setDrawColor(228, 234, 244);
-      doc.setLineWidth(0.8);
-      doc.line(40, H - 38, W - 40, H - 38);
-      doc.setFontSize(7.6);
-      doc.setTextColor(...MUTED);
-      doc.text("Fontes: TSE (Dados Abertos) e IBGE  ·  rn-analytics.vercel.app", 40, H - 24);
-      doc.setTextColor(...ROYAL);
-      doc.setFont("helvetica", "bold");
-      doc.text("RN Analytics", W - 40, H - 24, { align: "right" });
+  // rodapé reutilizável (desenhado em cada página de cada tabela)
+  const drawFooter = () => {
+    doc.setDrawColor(228, 234, 244);
+    doc.setLineWidth(0.8);
+    doc.line(40, H - 38, W - 40, H - 38);
+    doc.setFontSize(7.6);
+    doc.setTextColor(...MUTED);
+    doc.text("Fontes: TSE (Dados Abertos) e IBGE  ·  rn-analytics.vercel.app", 40, H - 24);
+    doc.setTextColor(...ROYAL);
+    doc.setFont("helvetica", "bold");
+    doc.text("RN Analytics", W - 40, H - 24, { align: "right" });
+    doc.setFont("helvetica", "normal");
+  };
+
+  const renderTable = (t: PdfTable, startY: number) => {
+    autoTable(doc, {
+      startY,
+      head: [t.columns],
+      body: t.rows,
+      theme: "grid",
+      styles: { font: "helvetica", fontSize: 8.5, cellPadding: 5.5, textColor: INK, lineColor: [232, 237, 245], lineWidth: 0.5 },
+      headStyles: { fillColor: NAVY, textColor: [255, 255, 255], fontStyle: "bold", fontSize: 9, halign: "left" },
+      alternateRowStyles: { fillColor: [247, 249, 252] },
+      margin: { left: 40, right: 40, bottom: 50 },
+      didDrawPage: drawFooter,
+    });
+    return (doc as unknown as { lastAutoTable: { finalY: number } }).lastAutoTable.finalY;
+  };
+
+  // ===== tabela principal =====
+  let cursorY = renderTable(opts.table, y);
+
+  // ===== seções extras =====
+  for (const sec of opts.sections ?? []) {
+    if (cursorY > H - 140) { doc.addPage(); cursorY = 60; }
+    cursorY += 24;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(11.5);
+    doc.setTextColor(...NAVY);
+    doc.text(sec.heading, 40, cursorY);
+    doc.setDrawColor(...GOLD);
+    doc.setLineWidth(2.2);
+    doc.line(40, cursorY + 5, 64, cursorY + 5);
+    cursorY += 10;
+    if (sec.note) {
       doc.setFont("helvetica", "normal");
-    },
-  });
+      doc.setFontSize(8.8);
+      doc.setTextColor(...MUTED);
+      const nl = doc.splitTextToSize(sec.note, W - 80);
+      doc.text(nl, 40, cursorY + 8);
+      cursorY += nl.length * 11 + 6;
+    }
+    cursorY = renderTable(sec.table, cursorY + 8);
+  }
 
   // numeração de páginas (após saber o total)
   const pages = doc.getNumberOfPages();

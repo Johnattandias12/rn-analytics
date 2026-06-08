@@ -212,8 +212,12 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
       {/* TABELA + PARTIDOS */}
       <div className="grid lg:grid-cols-[1.6fr_1fr] gap-4">
         <Card className="p-0 overflow-hidden">
+          <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[color:var(--line)] bg-[#f8fafd] text-[11px] font-semibold text-[color:var(--royal)]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 11l3 3 8-8" /><path d="M21 12a9 9 0 1 1-6.2-8.5" /></svg>
+            Toque em um candidato para ver os colégios onde teve votos e baixar o relatório em PDF
+          </div>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+            <table className="w-full text-sm min-w-[420px]">
               <thead>
                 <tr className="text-left text-[11px] uppercase tracking-wide text-[color:var(--muted)] border-b border-[color:var(--line)]">
                   <th className="py-3 px-4 font-bold">#</th>
@@ -230,14 +234,14 @@ export default function VereadoresTab({ b }: { b: Bundle }) {
                     <tr
                       key={c.sq}
                       onClick={() => setSel(c)}
-                      title="Ver resumo, seções e relatório"
+                      title="Ver resumo, colégios e relatório PDF"
                       className="group border-b border-[color:var(--line-2)] hover:bg-[#f1f6fd] cursor-pointer transition-colors"
                     >
-                      <td className="py-2.5 px-4 tnum font-bold text-[color:var(--muted)]">{i + 1}</td>
-                      <td className="py-2.5 px-2 font-semibold text-[color:var(--ink)]">
+                      <td className="py-2.5 px-4 tnum font-bold text-[color:var(--muted)] group-hover:text-[color:var(--royal)]">{i + 1}</td>
+                      <td className="py-2.5 px-2 font-semibold text-[color:var(--ink)] group-hover:text-[color:var(--royal)]">
                         <span className="inline-flex items-center gap-1.5">
                           {c.nome}
-                          <svg className="text-[color:var(--muted)] opacity-0 group-hover:opacity-100" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M9 6l6 6-6 6" /></svg>
+                          <svg className="text-[color:var(--royal)] opacity-35 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
                         </span>
                       </td>
                       <td className="py-2.5 px-2"><span className="text-xs font-semibold text-[color:var(--royal)] bg-[#eef4fb] px-2 py-0.5 rounded">{partidoLabel(c.partido_num)}</span></td>

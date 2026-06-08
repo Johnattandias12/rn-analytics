@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { Bundle } from "../App";
 import { Card, Mini, SectionTitle } from "../ui";
 import { fmtInt, fmtReaisCheio, partidoLabel } from "../../lib/data";
+import { exportPDF } from "../../lib/export";
 
 type Cand = { sq: string; numero: string; nome: string; partido_num: string; votos: number; rank: number; por_local: Record<string, number> };
 type Local = { nr: string; nome: string; bairro: string; eleitores: number; vereador_total: number };
@@ -37,10 +38,31 @@ function Comparador({ cn }: { cn: CNData }) {
     return { background: `rgba(12,82,154,${0.08 + t * 0.85})`, color: t > 0.5 ? "#fff" : "var(--ink)" };
   };
 
+  const doPDF = () => {
+    if (!cands.length) return;
+    exportPDF({
+      filename: `comparador_redutos_cn_2024.pdf`,
+      title: "Comparador de redutos · Vereadores 2024",
+      subtitle: `Currais Novos · ${cands.map((c) => c.nome.split(" ").slice(0, 2).join(" ")).join(" · ")}`,
+      intro: "Votos por local de votação (colégio) para os candidatos selecionados. Permite cruzar onde cada base é mais forte.",
+      table: {
+        columns: ["Colégio", ...cands.map((c) => c.nome.split(" ")[0])],
+        rows: locais.map((l) => [l.nome, ...cands.map((c) => fmtInt(c.por_local[l.nr] ?? 0))]),
+      },
+    });
+  };
+
   return (
     <Card className="p-5">
-      <h3 className="font-bold text-[color:var(--navy)]">Comparador de redutos · Vereadores 2024</h3>
-      <p className="text-sm text-[color:var(--muted)] mb-3">Escolha até 4 candidatos e veja onde cada um é forte (votos por local).</p>
+      <div className="flex items-start justify-between gap-3 flex-wrap">
+        <div>
+          <h3 className="font-bold text-[color:var(--navy)]">Comparador de redutos · Vereadores 2024</h3>
+          <p className="text-sm text-[color:var(--muted)] mb-3">Escolha até 4 candidatos e veja onde cada um é forte (votos por local).</p>
+        </div>
+        <button onClick={doPDF} className="btn btn-ghost text-xs py-1.5 px-3 shrink-0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg> PDF
+        </button>
+      </div>
       <div className="flex flex-wrap gap-1.5 mb-4">
         {top.map((c) => {
           const on = sel.includes(c.sq);
@@ -122,6 +144,25 @@ function Abstencao({ cn }: { cn: CNData }) {
   const max = Math.max(...rows.map((r) => r.taxa));
   const totalEl = rows.reduce((a, r) => a + r.eleitores, 0), totalAbs = rows.reduce((a, r) => a + r.abst, 0);
 
+  const doPDF = () => {
+    exportPDF({
+      filename: `abstencao_cn_2024.pdf`,
+      title: "Abstenção por local · Currais Novos 2024",
+      subtitle: `Abstenção geral: ${((totalAbs / totalEl) * 100).toFixed(1)}% · ${fmtInt(totalAbs)} de ${fmtInt(totalEl)} eleitores`,
+      intro: "Eleitores aptos que não compareceram, por colégio. Indica onde há maior potencial de mobilização.",
+      kpis: [
+        { label: "Abstenção geral", value: `${((totalAbs / totalEl) * 100).toFixed(1)}%` },
+        { label: "Não compareceram", value: fmtInt(totalAbs) },
+        { label: "Eleitores aptos", value: fmtInt(totalEl) },
+        { label: "Colégios", value: fmtInt(rows.length) },
+      ],
+      table: {
+        columns: ["#", "Colégio", "Bairro", "Abstenção", "Eleitores", "Taxa"],
+        rows: rows.map((r, i) => [i + 1, r.nome, r.bairro || "—", fmtInt(r.abst), fmtInt(r.eleitores), `${r.taxa.toFixed(1)}%`]),
+      },
+    });
+  };
+
   return (
     <Card className="p-5">
       <div className="flex items-center justify-between flex-wrap gap-2">
@@ -129,7 +170,12 @@ function Abstencao({ cn }: { cn: CNData }) {
           <h3 className="font-bold text-[color:var(--navy)]">Abstenção por local · 2024</h3>
           <p className="text-sm text-[color:var(--muted)]">Eleitores que não compareceram (potencial de mobilização)</p>
         </div>
-        <Mini label="Abstenção geral" value={`${((totalAbs / totalEl) * 100).toFixed(1)}%`} />
+        <div className="flex items-center gap-2">
+          <Mini label="Abstenção geral" value={`${((totalAbs / totalEl) * 100).toFixed(1)}%`} />
+          <button onClick={doPDF} className="btn btn-ghost text-xs py-1.5 px-3 shrink-0">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 3h7l5 5v13H7z" /><path d="M14 3v5h5" /></svg> PDF
+          </button>
+        </div>
       </div>
       <div className="space-y-2 mt-4">
         {rows.map((r) => (

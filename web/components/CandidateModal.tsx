@@ -12,10 +12,17 @@ export type CandCtx = {
   totalNominais: number;
 };
 
-// O detalhamento por seção só existe para Currais Novos 2024 (arquivo dedicado do TSE).
+// O detalhamento por colégio (local de votação) existe para Currais Novos,
+// nos anos com arquivo dedicado do TSE com coordenadas e nome do colégio.
 const CN_IBGE = 2403103;
-type SecaoVoto = { zona: number; secao: number; sq: string; votos: number };
-type SecaoAgg = { zona: number; secao: number; votos: number };
+const CN_ANOS = [2016, 2020, 2024];
+
+type LocalCN = { nr: string; nome: string; endereco?: string; bairro: string; eleitores: number; n_secoes: number };
+type CandCN = { sq: string; por_local?: Record<string, number> };
+type CNFile = { locais: LocalCN[]; vereador: { candidatos: CandCN[] }; prefeito: { candidatos: CandCN[] } };
+
+// linha de votação por colégio, já com o nome do local
+type Colegio = { nr: string; nome: string; bairro: string; n_secoes: number; eleitores: number; votos: number };
 
 export default function CandidateModal({
   cand,
@@ -26,175 +33,181 @@ export default function CandidateModal({
   ctx: CandCtx;
   onClose: () => void;
 }) {
-  const temSecoes = ctx.codigoIbge === CN_IBGE && ctx.ano === 2024;
-  const [secoes, setSecoes] = useState<SecaoAgg[] | null>(null);
-  const [loading, setLoading] = useState(temSecoes);
+  const temColegios = ctx.codigoIbge === CN_IBGE && CN_ANOS.includes(ctx.ano);
+  const [colegios, setColegios] = useState<Colegio[] | null>(null);
+  const [loading, setLoading] = useState(temColegios);
 
   useEffect(() => {
-    if (!temSecoes) {
-      setSecoes(null);
+    if (!temColegios) {
+      setColegios(null);
       setLoading(false);
       return;
     }
     let alive = true;
     setLoading(true);
-    fetch("/data/eleicao/currais-novos-vereador-2024-secao.json")
+    fetch(`/data/eleicao/cn/currais-novos-${ctx.ano}.json`)
       .then((r) => r.json())
-      .then((d: { votos_por_secao: SecaoVoto[] }) => {
+      .then((d: CNFile) => {
         if (!alive) return;
-        const agg = new Map<string, SecaoAgg>();
-        for (const v of d.votos_por_secao) {
-          if (v.sq !== cand.sq) continue;
-          const k = `${v.zona}-${v.secao}`;
-          const cur = agg.get(k);
-          if (cur) cur.votos += v.votos;
-          else agg.set(k, { zona: v.zona, secao: v.secao, votos: v.votos });
-        }
-        setSecoes([...agg.values()].sort((a, b) => b.votos - a.votos));
+        const byNr = new Map(d.locais.map((l) => [l.nr, l]));
+        // o mesmo candidato pode estar em vereador OU prefeito; procura nos dois
+        const pool = [...d.vereador.candidatos, ...d.prefeito.candidatos];
+        const found = pool.find((c) => c.sq === cand.sq);
+        const porLocal = found?.por_local ?? {};
+        const arr: Colegio[] = Object.entries(porLocal)
+          .map(([nr, votos]) => {
+            const l = byNr.get(nr);
+            return {
+              nr,
+              nome: l?.nome ?? `Local ${nr}`,
+              bairro: l?.bairro ?? "",
+              n_secoes: l?.n_secoes ?? 0,
+              eleitores: l?.eleitores ?? 0,
+              votos: votos as number,
+            };
+          })
+          .filter((c) => c.votos > 0)
+          .sort((a, b) => b.votos - a.votos);
+        setColegios(arr);
         setLoading(false);
       })
       .catch(() => {
         if (alive) {
-          setSecoes([]);
+          setColegios([]);
           setLoading(false);
         }
       });
     return () => {
       alive = false;
     };
-  }, [cand.sq, temSecoes]);
+  }, [cand.sq, ctx.ano, temColegios]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
   }, [onClose]);
 
   const pct = ctx.totalNominais ? (cand.votos / ctx.totalNominais) * 100 : 0;
-  const totalSecaoVotos = secoes?.reduce((a, s) => a + s.votos, 0) ?? 0;
-  const topSecao = secoes && secoes.length ? secoes[0] : null;
+  const totalColegioVotos = colegios?.reduce((a, s) => a + s.votos, 0) ?? 0;
+  const top = colegios && colegios.length ? colegios[0] : null;
+  const maxVoto = colegios && colegios.length ? colegios[0].votos : 1;
 
   const doPDF = () => {
-    const rows = (secoes ?? []).map((s, i) => [
+    const rows = (colegios ?? []).map((c, i) => [
       i + 1,
-      `Zona ${s.zona}`,
-      `Seção ${s.secao}`,
-      fmtInt(s.votos),
-      totalSecaoVotos ? ((s.votos / totalSecaoVotos) * 100).toFixed(1).replace(".", ",") + "%" : "—",
+      c.nome,
+      c.bairro || "—",
+      fmtInt(c.votos),
+      totalColegioVotos ? ((c.votos / totalColegioVotos) * 100).toFixed(1).replace(".", ",") + "%" : "—",
     ]);
     exportPDF({
       filename: `relatorio_${cand.nome.replace(/\s+/g, "_").toLowerCase()}_${ctx.ano}.pdf`,
-      title: `${cand.nome} · Vereador · ${ctx.munNome} ${ctx.ano}`,
-      subtitle: `${partidoLabel(cand.partido_num)} · nº ${cand.numero} · ${fmtInt(cand.votos)} votos · ${pct.toFixed(2)}% dos válidos`,
+      title: `${cand.nome} · ${ctx.munNome} ${ctx.ano}`,
+      subtitle: `${partidoLabel(cand.partido_num)} · nº ${cand.numero} · ${fmtInt(cand.votos)} votos · ${pct.toFixed(2)}% dos válidos${top ? ` · reduto: ${top.nome}` : ""}`,
       kpis: [
         { label: "Votos totais", value: fmtInt(cand.votos) },
         { label: "% válidos", value: `${pct.toFixed(2)}%` },
-        { label: "Seções com voto", value: temSecoes ? fmtInt(secoes?.length ?? 0) : "—" },
-        {
-          label: "Seção mais forte",
-          value: topSecao ? `Z${topSecao.zona}·S${topSecao.secao} (${fmtInt(topSecao.votos)})` : "—",
-        },
+        { label: "Colégios com voto", value: temColegios ? fmtInt(colegios?.length ?? 0) : "—" },
+        { label: "Maior reduto", value: top ? `${top.nome.split(" ").slice(0, 2).join(" ")} (${fmtInt(top.votos)})` : "—" },
       ],
       table: {
-        columns: ["#", "Zona", "Seção", "Votos", "% do candidato"],
-        rows: rows.length ? rows : [["—", "—", "Sem detalhamento por seção", "—", "—"]],
+        columns: ["#", "Colégio (local de votação)", "Bairro", "Votos", "% do candidato"],
+        rows: rows.length ? rows : [["—", "Sem detalhamento por colégio", "—", "—", "—"]],
       },
     });
   };
 
   return (
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-4">
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose} />
+      <div className="absolute inset-0 bg-black/45 backdrop-blur-sm" onClick={onClose} />
 
-      <div className="relative bg-white w-full sm:max-w-2xl max-h-[92vh] rounded-t-2xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col rise">
+      <div className="relative bg-white w-full sm:max-w-2xl max-h-[94vh] sm:max-h-[90vh] rounded-t-2xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col rise">
         {/* cabeçalho */}
         <div className="p-5 sm:p-6 text-white relative shrink-0" style={{ background: "linear-gradient(120deg, var(--navy), var(--royal))" }}>
-          <button onClick={onClose} className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-white/15" aria-label="Fechar">
+          <button onClick={onClose} className="absolute top-3.5 right-3.5 p-2 rounded-lg hover:bg-white/15 active:scale-90 transition" aria-label="Fechar">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M18 6 6 18M6 6l12 12" /></svg>
           </button>
-          <div className="text-[11px] font-bold uppercase tracking-[0.14em] opacity-80">Vereador · {ctx.munNome} · {ctx.ano}</div>
-          <h3 className="text-xl sm:text-2xl font-extrabold mt-1 leading-tight pr-8">{cand.nome}</h3>
+          <div className="text-[11px] font-bold uppercase tracking-[0.14em] opacity-80">Candidato · {ctx.munNome} · {ctx.ano}</div>
+          <h3 className="text-lg sm:text-2xl font-extrabold mt-1 leading-tight pr-10">{cand.nome}</h3>
           <div className="flex flex-wrap gap-2 mt-3">
             <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-full">{partidoLabel(cand.partido_num)}</span>
             <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-full">nº {cand.numero}</span>
-            <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-full">rank {cand.rank}</span>
+            <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-full">{cand.rank}º mais votado</span>
           </div>
         </div>
 
         {/* corpo */}
-        <div className="p-5 sm:p-6 overflow-y-auto">
-          <div className="grid grid-cols-3 gap-3 mb-5">
+        <div className="p-4 sm:p-6 overflow-y-auto overscroll-contain">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
             <Stat label="Votos" value={fmtInt(cand.votos)} />
             <Stat label="% válidos" value={`${pct.toFixed(2)}%`} />
-            <Stat label="Seções" value={temSecoes ? (loading ? "…" : fmtInt(secoes?.length ?? 0)) : "—"} />
+            <Stat label="Colégios" value={temColegios ? (loading ? "…" : fmtInt(colegios?.length ?? 0)) : "—"} />
           </div>
 
-          {temSecoes ? (
+          {temColegios ? (
             <>
               <div className="flex items-center justify-between mb-2 gap-3 flex-wrap">
-                <h4 className="text-sm font-bold text-[color:var(--navy)]">Seções onde teve votos</h4>
-                {topSecao && (
-                  <span className="text-xs text-[color:var(--muted)]">
-                    Reduto: Zona {topSecao.zona} · Seção {topSecao.secao} ({fmtInt(topSecao.votos)})
+                <h4 className="text-sm font-bold text-[color:var(--navy)]">Votação por colégio</h4>
+                {top && (
+                  <span className="text-[11px] sm:text-xs text-[color:var(--muted)]">
+                    Maior reduto: <b className="text-[color:var(--navy)]">{top.nome}</b> ({fmtInt(top.votos)})
                   </span>
                 )}
               </div>
               {loading ? (
-                <div className="py-10 text-center text-[color:var(--muted)] text-sm">Carregando seções…</div>
-              ) : secoes && secoes.length ? (
-                <div className="border border-[color:var(--line)] rounded-xl overflow-hidden">
-                  <div className="max-h-[42vh] overflow-y-auto">
-                    <table className="w-full text-sm">
-                      <thead className="sticky top-0 bg-[#f8fafd] z-10">
-                        <tr className="text-left text-[11px] uppercase tracking-wide text-[color:var(--muted)] border-b border-[color:var(--line)]">
-                          <th className="py-2.5 px-3 font-bold">Zona</th>
-                          <th className="py-2.5 px-3 font-bold">Seção</th>
-                          <th className="py-2.5 px-3 font-bold text-right">Votos</th>
-                          <th className="py-2.5 px-3 font-bold text-right">% do candidato</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {secoes.map((s) => {
-                          const p = totalSecaoVotos ? (s.votos / totalSecaoVotos) * 100 : 0;
-                          return (
-                            <tr key={`${s.zona}-${s.secao}`} className="border-b border-[color:var(--line-2)]">
-                              <td className="py-2 px-3 tnum">{s.zona}</td>
-                              <td className="py-2 px-3 tnum font-semibold text-[color:var(--ink)]">{s.secao}</td>
-                              <td className="py-2 px-3 text-right tnum font-bold text-[color:var(--navy)]">{fmtInt(s.votos)}</td>
-                              <td className="py-2 px-3 text-right">
-                                <div className="flex items-center gap-2 justify-end">
-                                  <div className="h-1.5 w-16 rounded-full bg-[#eef2f8] overflow-hidden">
-                                    <div className="h-full rounded-full" style={{ width: `${Math.min(100, p * 2)}%`, background: "linear-gradient(90deg, var(--royal-2), var(--navy))" }} />
-                                  </div>
-                                  <span className="tnum text-xs text-[color:var(--muted)] w-10 text-right">{p.toFixed(1)}%</span>
-                                </div>
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
+                <div className="py-10 text-center text-[color:var(--muted)] text-sm">Carregando colégios…</div>
+              ) : colegios && colegios.length ? (
+                <div className="space-y-2">
+                  {colegios.map((c, i) => {
+                    const p = totalColegioVotos ? (c.votos / totalColegioVotos) * 100 : 0;
+                    return (
+                      <div key={c.nr} className="rounded-xl border border-[color:var(--line)] bg-[#fbfcfe] p-3">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-1.5">
+                              <span className="w-5 h-5 shrink-0 grid place-items-center rounded-md text-[10px] font-bold tnum text-white" style={{ background: i === 0 ? "var(--gold)" : "var(--royal)" }}>{i + 1}</span>
+                              <span className="font-bold text-[13px] text-[color:var(--navy)] leading-tight">{c.nome}</span>
+                            </div>
+                            <div className="text-[11px] text-[color:var(--muted)] mt-0.5 ml-[26px]">
+                              {c.bairro ? `${c.bairro} · ` : ""}{c.n_secoes ? `${c.n_secoes} seções · ` : ""}{fmtInt(c.eleitores)} eleitores
+                            </div>
+                          </div>
+                          <div className="text-right shrink-0">
+                            <div className="tnum font-extrabold text-[color:var(--navy)] leading-none">{fmtInt(c.votos)}</div>
+                            <div className="tnum text-[11px] text-[color:var(--muted)]">{p.toFixed(1)}%</div>
+                          </div>
+                        </div>
+                        <div className="h-1.5 mt-2 rounded-full bg-[#eef2f8] overflow-hidden">
+                          <div className="h-full rounded-full" style={{ width: `${Math.max(4, (c.votos / maxVoto) * 100)}%`, background: i === 0 ? "linear-gradient(90deg, var(--gold), #d9a900)" : "linear-gradient(90deg, var(--royal-2), var(--navy))" }} />
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               ) : (
-                <div className="py-8 text-center text-[color:var(--muted)] text-sm">Sem registro de votos por seção para este candidato.</div>
+                <div className="py-8 text-center text-[color:var(--muted)] text-sm">Sem registro de votos por colégio para este candidato.</div>
               )}
             </>
           ) : (
             <div className="rounded-xl bg-[#f8fafd] border border-[color:var(--line)] p-4 text-sm text-[color:var(--muted)]">
-              O detalhamento por seção está disponível para <b className="text-[color:var(--navy)]">Currais Novos (2024)</b>. Para os demais municípios e anos, o relatório traz o resumo do candidato.
+              O detalhamento por colégio está disponível para <b className="text-[color:var(--navy)]">Currais Novos</b> (2016, 2020 e 2024). Para os demais municípios e anos, o relatório traz o resumo do candidato.
             </div>
           )}
         </div>
 
         {/* rodapé */}
-        <div className="p-4 sm:px-6 border-t border-[color:var(--line)] flex justify-between items-center gap-3 shrink-0">
-          <span className="text-xs text-[color:var(--muted)] hidden sm:inline">Fonte: TSE · votação por seção</span>
-          <div className="flex gap-2 ml-auto">
-            <button onClick={onClose} className="btn btn-ghost text-sm">Fechar</button>
-            <button onClick={doPDF} className="btn btn-primary text-sm"><IconPdf /> Relatório PDF</button>
+        <div className="p-3.5 sm:px-6 border-t border-[color:var(--line)] flex justify-between items-center gap-3 shrink-0 bg-white">
+          <span className="text-xs text-[color:var(--muted)] hidden sm:inline">Fonte: TSE · votação por local</span>
+          <div className="flex gap-2 ml-auto w-full sm:w-auto">
+            <button onClick={onClose} className="btn btn-ghost text-sm flex-1 sm:flex-none justify-center">Fechar</button>
+            <button onClick={doPDF} className="btn btn-primary text-sm flex-1 sm:flex-none justify-center"><IconPdf /> Relatório PDF</button>
           </div>
         </div>
       </div>
@@ -204,9 +217,9 @@ export default function CandidateModal({
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl p-3 border border-[color:var(--line)] bg-[#f8fafd] text-center">
-      <div className="text-[10px] font-bold uppercase tracking-wide text-[color:var(--muted)]">{label}</div>
-      <div className="text-lg font-bold tnum text-[color:var(--navy)] mt-0.5">{value}</div>
+    <div className="rounded-xl p-2.5 sm:p-3 border border-[color:var(--line)] bg-[#f8fafd] text-center">
+      <div className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wide text-[color:var(--muted)]">{label}</div>
+      <div className="text-base sm:text-lg font-bold tnum text-[color:var(--navy)] mt-0.5">{value}</div>
     </div>
   );
 }

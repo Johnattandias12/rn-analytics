@@ -95,7 +95,7 @@ export default function DashboardTab({ b }: { b: Bundle }) {
                       <span className="truncate font-medium flex items-center gap-1">
                         {it.cand.nome}
                         <span className="text-[color:var(--muted)]">· {partidoLabel(it.cand.partido_num)} · {it.munNome}</span>
-                        <svg className="opacity-0 group-hover:opacity-100 transition text-[color:var(--royal)]" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
+                        <svg className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-[color:var(--royal)] shrink-0" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M9 6l6 6-6 6" /></svg>
                       </span>
                       <span className="tnum font-bold text-[color:var(--navy)] ml-2">{fmtInt(it.cand.votos)}</span>
                     </div>

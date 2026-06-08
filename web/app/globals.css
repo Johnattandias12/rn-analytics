@@ -144,3 +144,31 @@ tr.row-click:hover { background: #f1f6fd; }
 /* animação de entrada do mapa */
 @keyframes mapEnter { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: scale(1); } }
 .map-enter { animation: mapEnter .85s cubic-bezier(.2,.7,.2,1) both; transform-origin: center; }
+
+/* ===================== MOBILE / iPhone ===================== */
+/* toque mais limpo (sem flash cinza) e rolagem com inércia */
+* { -webkit-tap-highlight-color: transparent; }
+body { -webkit-overflow-scrolling: touch; }
+
+/* Leaflet sempre abaixo do header e dos modais */
+.leaflet-container { font: inherit; }
+.leaflet-pane, .leaflet-top, .leaflet-bottom { z-index: 0 !important; }
+
+@media (max-width: 640px) {
+  /* iOS dá zoom quando o input tem fonte < 16px — força 16px só no mobile */
+  input, select, textarea { font-size: 16px !important; }
+  /* respiro lateral e tipografia mais compacta */
+  .h-display { letter-spacing: -0.03em; }
+  /* segmented control rola horizontalmente quando tem muitos itens */
+  .segment { max-width: 100%; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; }
+  .segment::-webkit-scrollbar { display: none; }
+  /* alvos de toque mais generosos */
+  .segment button { padding: 8px 13px; }
+  /* tabelas roláveis com pista sutil */
+  .scroll-x { -webkit-overflow-scrolling: touch; }
+}
+
+/* respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}
