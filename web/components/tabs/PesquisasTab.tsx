@@ -314,8 +314,62 @@ function CompareCargo({ cargo }: { cargo: Cargo }) {
     ? selPolls.slice().sort((a, b) => a.data.localeCompare(b.data)).map((p) => ({ label: `${p.instituto.split("/")[0]} ${fmtData(p.data).slice(0, 5)}`, pct: pctOf(p, cand) }))
     : [];
 
+  // ===== insights automáticos do comparativo =====
+  const insights = useMemo(() => {
+    if (selPolls.length < 1 || !candNames.length) return [];
+    const out: string[] = [];
+    const ordenadasData = selPolls.slice().sort((a, b) => a.data.localeCompare(b.data));
+    const liderMedia = candNames.map((n) => ({ n, m: mediaOf(n) })).sort((a, b) => b.m - a.m);
+    if (liderMedia[0]) out.push(`Na média de ${selPolls.length} pesquisa(s), ${liderMedia[0].n} lidera com ${liderMedia[0].m.toFixed(1)}%.`);
+    if (liderMedia[1]) {
+      const dif = liderMedia[0].m - liderMedia[1].m;
+      out.push(`Diferença para o 2º colocado (${liderMedia[1].n}): ${dif.toFixed(1)} pontos.`);
+    }
+    // maior variação entre a primeira e a última pesquisa selecionada
+    if (ordenadasData.length >= 2) {
+      const a = ordenadasData[0], z = ordenadasData[ordenadasData.length - 1];
+      let melhor: { n: string; d: number } | null = null;
+      for (const n of candNames) {
+        const va = pctOf(a, n), vz = pctOf(z, n);
+        if (va != null && vz != null) {
+          const d = vz - va;
+          if (!melhor || Math.abs(d) > Math.abs(melhor.d)) melhor = { n, d };
+        }
+      }
+      if (melhor) out.push(`Maior movimento entre ${fmtData(a.data)} e ${fmtData(z.data)}: ${melhor.n} ${melhor.d >= 0 ? "subiu" : "caiu"} ${Math.abs(melhor.d).toFixed(1)} ponto(s).`);
+    }
+    const semRegistro = selPolls.filter((p) => !p.registro_tse).length;
+    if (semRegistro) out.push(`${semRegistro} de ${selPolls.length} pesquisa(s) sem registro do TSE informado; confira a fonte antes de citar.`);
+    return out;
+  }, [selPolls, candNames]);
+
+  const doPDF = () => {
+    if (!selPolls.length || !candNames.length) return;
+    exportPDF({
+      filename: `comparativo_pesquisas_${cargo.cargo.toLowerCase().replace(/\s+/g, "_")}_rn2026.pdf`,
+      title: `Comparativo de pesquisas · ${cargo.cargo} · RN 2026`,
+      subtitle: `${selPolls.length} pesquisas cruzadas: ${selPolls.map((p) => `${p.instituto.split("/")[0]} (${fmtData(p.data)})`).join(", ")}`,
+      intro: insights.join("  "),
+      kpis: [
+        { label: "Pesquisas", value: fmtInt(selPolls.length) },
+        { label: "Candidatos", value: fmtInt(candNames.length) },
+        { label: "Líder (média)", value: candNames.map((n) => ({ n, m: mediaOf(n) })).sort((a, b) => b.m - a.m)[0]?.n.split(" ").slice(0, 2).join(" ") ?? "—" },
+        { label: "Período", value: `${fmtData(selPolls.slice().sort((a, b) => a.data.localeCompare(b.data))[0].data)} a ${fmtData(selPolls.slice().sort((a, b) => a.data.localeCompare(b.data))[selPolls.length - 1].data)}` },
+      ],
+      table: {
+        columns: ["Candidato", ...selPolls.map((p) => `${p.instituto.split("/")[0]} ${fmtData(p.data).slice(0, 5)}`), "Média"],
+        rows: candNames.map((n) => [n, ...selPolls.map((p) => { const v = pctOf(p, n); return v == null ? "—" : `${v}%`; }), `${mediaOf(n).toFixed(1)}%`]),
+      },
+    });
+  };
+
   return (
     <div className="space-y-4">
+      <div className="flex items-center justify-end">
+        <button onClick={doPDF} className="btn btn-primary text-sm">
+          <IconPdf /> Exportar comparativo (PDF)
+        </button>
+      </div>
       <Card className="p-4">
         <div className="text-[11px] font-bold uppercase tracking-wide text-[color:var(--muted)] mb-2">Pesquisas no comparativo ({selPolls.length})</div>
         <div className="flex flex-wrap gap-1.5">
@@ -365,6 +419,23 @@ function CompareCargo({ cargo }: { cargo: Cargo }) {
           </table>
         </div>
       </Card>
+
+      {insights.length > 0 && (
+        <Card className="p-5">
+          <h4 className="text-sm font-bold text-[color:var(--navy)] mb-2 flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--royal)" strokeWidth="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z" /></svg>
+            Leitura do comparativo
+          </h4>
+          <ul className="space-y-1.5">
+            {insights.map((t, i) => (
+              <li key={i} className="text-sm text-[color:var(--ink-2)] flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[color:var(--royal)] mt-2 shrink-0" />
+                {t}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
 
       {cand && serie.length > 0 && (
         <Card className="p-5">

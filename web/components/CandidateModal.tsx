@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { fmtInt, partidoLabel, type Candidato } from "../lib/data";
 import { exportPDF } from "../lib/export";
+import type { Situacao } from "../lib/eleicao";
 
 // Contexto do candidato clicado (de qual município/ano ele veio).
 export type CandCtx = {
@@ -27,15 +29,19 @@ type Colegio = { nr: string; nome: string; bairro: string; n_secoes: number; ele
 export default function CandidateModal({
   cand,
   ctx,
+  situacao,
   onClose,
 }: {
   cand: Candidato;
   ctx: CandCtx;
+  situacao?: Situacao | null;
   onClose: () => void;
 }) {
   const temColegios = ctx.codigoIbge === CN_IBGE && CN_ANOS.includes(ctx.ano);
   const [colegios, setColegios] = useState<Colegio[] | null>(null);
   const [loading, setLoading] = useState(temColegios);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!temColegios) {
@@ -124,8 +130,10 @@ export default function CandidateModal({
     });
   };
 
-  return (
-    <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-4">
+  if (!mounted) return null;
+
+  return createPortal(
+    <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center sm:p-4">
       <div className="absolute inset-0 bg-black/45 backdrop-blur-sm" onClick={onClose} />
 
       <div className="relative bg-white w-full sm:max-w-2xl max-h-[94vh] sm:max-h-[90vh] rounded-t-2xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col rise">
@@ -136,7 +144,15 @@ export default function CandidateModal({
           </button>
           <div className="text-[11px] font-bold uppercase tracking-[0.14em] opacity-80">Candidato · {ctx.munNome} · {ctx.ano}</div>
           <h3 className="text-lg sm:text-2xl font-extrabold mt-1 leading-tight pr-10">{cand.nome}</h3>
-          <div className="flex flex-wrap gap-2 mt-3">
+          <div className="flex flex-wrap gap-2 mt-3 items-center">
+            {situacao && (
+              <span className="text-xs font-bold px-2.5 py-1 rounded-full inline-flex items-center gap-1.5" style={{
+                background: situacao.eleito ? "var(--green)" : situacao.rotulo === "Suplente" ? "var(--gold)" : "rgba(255,255,255,0.18)",
+                color: situacao.eleito || situacao.rotulo === "Suplente" ? "#fff" : "#fff",
+              }}>
+                {situacao.eleito ? "✓ " : ""}{situacao.rotulo}
+              </span>
+            )}
             <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-full">{partidoLabel(cand.partido_num)}</span>
             <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-full">nº {cand.numero}</span>
             <span className="text-xs font-semibold bg-white/15 px-2.5 py-1 rounded-full">{cand.rank}º mais votado</span>
@@ -145,11 +161,25 @@ export default function CandidateModal({
 
         {/* corpo */}
         <div className="p-4 sm:p-6 overflow-y-auto overscroll-contain">
-          <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
             <Stat label="Votos" value={fmtInt(cand.votos)} />
             <Stat label="% válidos" value={`${pct.toFixed(2)}%`} />
             <Stat label="Colégios" value={temColegios ? (loading ? "…" : fmtInt(colegios?.length ?? 0)) : "—"} />
           </div>
+
+          {situacao && (
+            <div className="mb-5 rounded-xl border p-3.5 flex items-start gap-2.5" style={{
+              borderColor: situacao.eleito ? "var(--green)" : situacao.rotulo === "Suplente" ? "var(--gold)" : "var(--line)",
+              background: situacao.eleito ? "#eafaf0" : situacao.rotulo === "Suplente" ? "#fff7da" : "#f8fafd",
+            }}>
+              <span className="text-base leading-none mt-0.5">{situacao.eleito ? "✅" : situacao.rotulo === "Suplente" ? "🟡" : "⚪"}</span>
+              <div>
+                <div className="text-sm font-bold text-[color:var(--navy)]">{situacao.rotulo}</div>
+                <div className="text-[12px] text-[color:var(--ink-2)] leading-snug">{situacao.motivo}</div>
+                {!situacao.oficial && <div className="text-[11px] text-[color:var(--muted)] mt-1">Projeção pelo método do quociente eleitoral a partir dos votos oficiais do TSE. A diplomação oficial é do TSE.</div>}
+              </div>
+            </div>
+          )}
 
           {temColegios ? (
             <>
@@ -211,7 +241,8 @@ export default function CandidateModal({
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
