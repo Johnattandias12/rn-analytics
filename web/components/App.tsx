@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { FeatureCollection, Geometry } from "geojson";
 import type { Socio, SeridoVereador } from "../lib/data";
 import OverviewTab from "./tabs/OverviewTab";
+import DashboardTab from "./tabs/DashboardTab";
 import MapTab from "./tabs/MapTab";
 import PesquisasTab from "./tabs/PesquisasTab";
 import VereadoresTab from "./tabs/VereadoresTab";
@@ -20,12 +21,13 @@ export type Bundle = {
   nameByCode: Map<number, string>;
 };
 
-export type SectionId = "visao" | "mapa" | "pesquisas" | "vereadores" | "analise" | "tendencias" | "sobre";
+export type SectionId = "visao" | "dashboard" | "mapa" | "pesquisas" | "vereadores" | "analise" | "tendencias" | "sobre";
 
 type Item = { id: SectionId; label: string; desc: string; icon: (a: boolean) => React.ReactNode };
 const GROUPS: { grupo: string; itens: Item[] }[] = [
   { grupo: "Panorama do RN", itens: [
     { id: "visao", label: "Visão Geral", desc: "Resumo e mapa do estado", icon: (a) => <IGrid a={a} /> },
+    { id: "dashboard", label: "Dashboard", desc: "Gráficos e analytics", icon: (a) => <IBars a={a} /> },
     { id: "mapa", label: "Mapa do RN", desc: "167 municípios", icon: (a) => <IMap a={a} /> },
     { id: "pesquisas", label: "Pesquisas 2026", desc: "Governo, Senado e mais", icon: (a) => <IPoll a={a} /> },
   ]},
@@ -112,6 +114,7 @@ export default function App() {
           ) : (
             <div key={section} className="rise">
               {section === "visao" && <OverviewTab b={bundle} goTo={go} />}
+              {section === "dashboard" && <DashboardTab b={bundle} />}
               {section === "mapa" && <MapTab b={bundle} />}
               {section === "pesquisas" && <PesquisasTab />}
               {section === "vereadores" && <VereadoresTab b={bundle} />}
@@ -240,3 +243,4 @@ const ITrend = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M3 17l6-6 4 
 const IInfo = ({ a }: { a: boolean }) => (<svg {...ic(a)}><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></svg>);
 const IPin = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></svg>);
 const IPoll = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>);
+const IBars = ({ a }: { a: boolean }) => (<svg {...ic(a)}><path d="M3 3v18h18" /><rect x="7" y="11" width="3" height="6" rx="1" /><rect x="12" y="7" width="3" height="10" rx="1" /><rect x="17" y="13" width="3" height="4" rx="1" /></svg>);
